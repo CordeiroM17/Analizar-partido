@@ -1,0 +1,572 @@
+<title>Analizar partido · Chaco For Ever</title>
+<meta name="description" content="Plan del pipeline open-source que convierte el video de un partido de Chaco For Ever en un flujo de eventos y su red de pases.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root {
+    --ground: #f4f3ef;
+    --paper: #ffffff;
+    --paper-sunk: #edece6;
+    --ink: #1b1d19;
+    --ink-soft: #40443d;
+    --muted: #6c7167;
+    --line: #dedcd3;
+    --line-strong: #c9c7bb;
+    --accent: #37743f;
+    --accent-ink: #2a5c31;
+    --accent-wash: #e7efe4;
+    --amber: #9a6714;
+    --amber-wash: #f6ecd8;
+    --brick: #a8402c;
+    --brick-wash: #f6e2dc;
+    --spine: #1c1e1a;
+    --shadow: 0 1px 2px rgba(20,22,18,.05), 0 8px 24px -12px rgba(20,22,18,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #121410;
+      --paper: #1b1e19;
+      --paper-sunk: #16180f;
+      --ink: #e9eae3;
+      --ink-soft: #c2c5ba;
+      --muted: #969b8c;
+      --line: #2f332b;
+      --line-strong: #3d4237;
+      --accent: #6bb175;
+      --accent-ink: #8ac794;
+      --accent-wash: #1c2a1d;
+      --amber: #d6a24c;
+      --amber-wash: #2a2313;
+      --brick: #d67a63;
+      --brick-wash: #2d1a15;
+      --spine: #4a5142;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #121410;
+    --paper: #1b1e19;
+    --paper-sunk: #16180f;
+    --ink: #e9eae3;
+    --ink-soft: #c2c5ba;
+    --muted: #969b8c;
+    --line: #2f332b;
+    --line-strong: #3d4237;
+    --accent: #6bb175;
+    --accent-ink: #8ac794;
+    --accent-wash: #1c2a1d;
+    --amber: #d6a24c;
+    --amber-wash: #2a2313;
+    --brick: #d67a63;
+    --brick-wash: #2d1a15;
+    --spine: #4a5142;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Masthead ---- */
+  header.mast {
+    border-bottom: 2px solid var(--spine);
+    background:
+      repeating-linear-gradient(90deg, var(--paper) 0 14px, var(--paper-sunk) 14px 28px);
+  }
+  .mast-inner { padding: 44px 0 34px; }
+  .kicker {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Barlow Condensed", "IBM Plex Sans", sans-serif;
+    font-weight: 700; font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: .98; letter-spacing: .005em; text-transform: uppercase;
+    margin: 0; text-wrap: balance;
+  }
+  h1 .sub { display: block; color: var(--accent-ink); font-weight: 600; }
+  .lede {
+    margin: 18px 0 0; max-width: 60ch; font-size: 1.08rem; color: var(--ink-soft);
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .chip {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px;
+    background: var(--paper); border: 1px solid var(--line-strong);
+    padding: 5px 10px; border-radius: 2px; color: var(--ink-soft);
+  }
+  .chip b { color: var(--ink); font-weight: 500; }
+
+  /* ---- Sections ---- */
+  section { padding: 46px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin: 0 0 22px; }
+  .sec-num {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--accent-ink);
+    font-weight: 500; padding-top: 4px;
+  }
+  h2 {
+    font-family: "Barlow Condensed", sans-serif; font-weight: 600;
+    font-size: clamp(1.6rem, 3.6vw, 2.15rem); line-height: 1.05;
+    text-transform: uppercase; letter-spacing: .01em; margin: 0; text-wrap: balance;
+  }
+  h3 {
+    font-family: "Barlow Condensed", sans-serif; font-weight: 600;
+    font-size: 1.28rem; text-transform: uppercase; letter-spacing: .015em;
+    margin: 0 0 6px;
+  }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  p.tight { max-width: 66ch; }
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  code, .mono {
+    font-family: "IBM Plex Mono", monospace; font-size: .88em;
+    background: var(--paper-sunk); padding: 1px 5px; border-radius: 2px;
+  }
+
+  /* ---- Integration diagram ---- */
+  .flow {
+    display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px;
+    align-items: stretch; margin: 4px 0 8px;
+  }
+  .flow .node {
+    background: var(--paper); border: 1px solid var(--line-strong);
+    border-radius: 3px; padding: 16px 14px; box-shadow: var(--shadow);
+  }
+  .flow .node.mid { border-color: var(--accent); border-width: 2px; }
+  .flow .node h4 {
+    font-family: "Barlow Condensed", sans-serif; text-transform: uppercase;
+    font-size: 1.05rem; margin: 0 0 6px; letter-spacing: .02em;
+  }
+  .flow .node p { font-size: .82rem; margin: 0; color: var(--muted); max-width: none; }
+  .flow .arrow {
+    align-self: center; font-family: "IBM Plex Mono", monospace; color: var(--accent);
+    font-size: 1.1rem;
+  }
+  .flow .io {
+    font-family: "IBM Plex Mono", monospace; font-size: .74rem; color: var(--ink-soft);
+    margin-top: 8px; display: block; word-break: break-all;
+  }
+  @media (max-width: 720px) {
+    .flow { grid-template-columns: 1fr; }
+    .flow .arrow { transform: rotate(90deg); }
+  }
+
+  /* ---- Layer pipeline ---- */
+  .layers { display: flex; flex-direction: column; gap: 0; margin-top: 6px; }
+  .layer {
+    display: grid; grid-template-columns: 58px 1fr auto; gap: 16px; align-items: start;
+    padding: 14px 0; border-top: 1px solid var(--line);
+    position: relative;
+  }
+  .layer:first-child { border-top: 0; }
+  .layer .lid {
+    font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.5rem;
+    color: var(--spine); line-height: 1; padding-top: 2px;
+  }
+  .layer .lbody h4 {
+    font-family: "IBM Plex Sans", sans-serif; font-weight: 600; font-size: 1rem;
+    margin: 0 0 3px; text-transform: none; letter-spacing: 0;
+  }
+  .layer .lbody p { margin: 0; font-size: .9rem; color: var(--muted); max-width: 62ch; }
+
+  /* ---- Status tags ---- */
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .06em;
+    text-transform: uppercase; padding: 3px 8px; border-radius: 2px; white-space: nowrap;
+    border: 1px solid transparent; align-self: center;
+  }
+  .tag.done { background: var(--accent-wash); color: var(--accent-ink); border-color: var(--accent); }
+  .tag.next { background: var(--amber-wash); color: var(--amber); border-color: var(--amber); }
+  .tag.new  { background: transparent; color: var(--muted); border-color: var(--line-strong); }
+  .tag.cond { background: transparent; color: var(--amber); border-style: dashed; border-color: var(--amber); }
+
+  /* ---- Roadmap ---- */
+  .phases { display: flex; flex-direction: column; gap: 14px; }
+  .phase {
+    background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--spine);
+    border-radius: 3px; padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .phase.is-done { border-left-color: var(--accent); }
+  .phase.is-next { border-left-color: var(--amber); }
+  .phase-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .phase-id {
+    font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.5rem;
+    color: var(--accent-ink); line-height: 1;
+  }
+  .phase-name {
+    font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 1.3rem;
+    text-transform: uppercase; letter-spacing: .01em;
+  }
+  .phase dl { margin: 10px 0 0; display: grid; grid-template-columns: 130px 1fr; gap: 4px 14px; }
+  .phase dt {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--muted); padding-top: 3px;
+  }
+  .phase dd { margin: 0; font-size: .93rem; }
+  .phase dd.done-when { color: var(--accent-ink); font-weight: 500; }
+  @media (max-width: 620px) { .phase dl { grid-template-columns: 1fr; gap: 2px 0; } .phase dt { padding-top: 8px; } }
+
+  /* ---- Tables ---- */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { text-align: left; padding: 9px 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--muted); background: var(--paper-sunk);
+    position: sticky; top: 0;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.col-key code { background: transparent; padding: 0; color: var(--accent-ink); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* ---- Callouts ---- */
+  .callouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 8px; }
+  .callout {
+    background: var(--brick-wash); border: 1px solid var(--brick); border-radius: 3px;
+    padding: 13px 15px;
+  }
+  .callout h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .05em; color: var(--brick); margin: 0 0 5px;
+  }
+  .callout p { margin: 0; font-size: .86rem; color: var(--ink-soft); max-width: none; }
+
+  /* ---- Lists ---- */
+  ul.clean { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  ul.clean li { padding-left: 20px; position: relative; font-size: .95rem; max-width: 70ch; }
+  ul.clean li::before {
+    content: "›"; position: absolute; left: 4px; color: var(--accent); font-weight: 700;
+  }
+  ol.steps { margin: 0; padding-left: 0; counter-reset: s; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  ol.steps li { counter-increment: s; padding-left: 44px; position: relative; max-width: 68ch; }
+  ol.steps li::before {
+    content: counter(s); position: absolute; left: 0; top: -2px;
+    font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.35rem;
+    color: var(--accent-ink); width: 30px; text-align: center;
+    border-bottom: 2px solid var(--accent); line-height: 1.2;
+  }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 16px; font-size: .82rem; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 11px; height: 11px; border-radius: 2px; border: 1px solid; display: inline-block; }
+  .sw.done { background: var(--accent-wash); border-color: var(--accent); }
+  .sw.next { background: var(--amber-wash); border-color: var(--amber); }
+  .sw.new { background: transparent; border-color: var(--line-strong); }
+
+  footer { padding: 34px 0 60px; color: var(--muted); font-size: .84rem; }
+  footer code { font-size: .82em; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="mast">
+  <div class="wrap mast-inner">
+    <p class="kicker">Plan de proyecto · planificado con grilling · 2026-09-10</p>
+    <h1>Analizar partido<span class="sub">Chaco For Ever · video a eventos</span></h1>
+    <p class="lede">
+      Un pipeline gratis y open-source que toma el video de la transmisión de un partido
+      de la Primera Nacional y devuelve un flujo de eventos —quién pasa a quién, desde
+      dónde, cómo termina— y, sobre eso, la red de pases del equipo.
+    </p>
+    <div class="chips">
+      <span class="chip"><b>repo</b> Analizar-partido</span>
+      <span class="chip"><b>stack</b> roboflow/sports · ByteTrack · SigLIP · PARSeq · mplsoccer</span>
+      <span class="chip"><b>cómputo</b> Colab / Kaggle</span>
+      <span class="chip"><b>coords</b> OPTA 0–100</span>
+      <span class="chip"><b>estadio base</b> Juan Alberto García</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Cómo se conecta</h2></div>
+    <p>
+      <code>Analizar-partido</code> es un repo <b>independiente</b>. Toma el video de un
+      partido más la ficha de Sofascore de ese mismo partido, y produce un
+      <code>events.csv</code> canónico. El proyecto <code>Chaco For Ever Analisis</code>
+      queda como <b>consumidor</b> de ese CSV: ahí viven los informes, las placas de
+      Instagram y el modelo de la liga.
+    </p>
+    <div class="flow">
+      <div class="node">
+        <h4>Entrada</h4>
+        <p>Por partido, una carpeta.</p>
+        <span class="io">video/*.mp4<br>sofascore/lineups_clean.csv</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node mid">
+        <h4>Analizar-partido</h4>
+        <p>Visión por computadora + motor de posesión + motor de eventos.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node">
+        <h4>Salida</h4>
+        <p>Consumida por el proyecto de stats.</p>
+        <span class="io">events.csv · pass_view.csv<br>red de pases · video anotado</span>
+      </div>
+    </div>
+    <p class="tight" style="margin-top:16px">
+      <b><code>match_key</code></b>: <code>YYYY-MM-DD_vs_&lt;rival&gt;_&lt;h|a&gt;</code>, la
+      misma convención del otro proyecto. Coordenadas <b>OPTA 0–100</b>, anisotrópicas
+      (x sobre ~105&nbsp;m, y sobre ~68&nbsp;m); para medir distancias se pasa a metros.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Estado actual</h2></div>
+    <p>Ya existe una base en el repo original <code>Chaco.git</code>, a portar acá:</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Pieza</th><th>Archivo</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>Descarga de video</td><td class="col-key"><code>downloader.py</code></td><td><span class="tag done">funciona</span> LPF Play = HLS sin DRM</td></tr>
+          <tr><td>Prototipo de tracking</td><td class="col-key"><code>pipeline.py</code></td><td><span class="tag next">sin validar</span> detección + ByteTrack + equipos + homografía</td></tr>
+          <tr><td>Contrato de datos</td><td class="col-key"><code>schema.py</code></td><td><span class="tag done">listo</span> positions.csv + validadores</td></tr>
+          <tr><td>Validación vs Sofascore</td><td class="col-key"><code>validation.py</code></td><td><span class="tag done">listo</span></td></tr>
+          <tr><td>Diseño de eventos</td><td class="col-key"><code>DISENO_eventos.md</code></td><td><span class="tag done">F0 congelado</span> esquema canónico</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callouts">
+      <div class="callout"><h4>Pelota</h4><p>Detectada en ~74% de los frames. Los huecos rompen la posesión. Hay un modelo dedicado sin integrar.</p></div>
+      <div class="callout"><h4>Fragmentación</h4><p>~700 track_ids para 22 jugadores; ~36% efímeros. Limitante nº1 para una red con nombres.</p></div>
+      <div class="callout"><h4>Validación</h4><p>El único video de prueba no está en Sofascore. Hace falta un partido que sí esté para validar números.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Pipeline por capas</h2></div>
+    <p class="tight">
+      Tesis del diseño: el corazón no es "detectar pases" sino <b>asignar posesión bien</b>.
+      Cada evento es una transición en la línea de tiempo de posesión.
+    </p>
+    <div class="layers">
+      <div class="layer"><span class="lid">L0</span><div class="lbody"><h4>Descarga</h4><p>Navegador headless captura el <code>master.m3u8</code>, yt-dlp baja el partido.</p></div><span class="tag done">hecho</span></div>
+      <div class="layer"><span class="lid">L1</span><div class="lbody"><h4>Preparación</h4><p>Recorte a "juego en vivo" (PySceneDetect + ratio de verde + éxito de homografía + OCR del marcador); anclaje manual del minuto.</p></div><span class="tag new">nuevo</span></div>
+      <div class="layer"><span class="lid">L2</span><div class="lbody"><h4>Tracking</h4><p>Detección + ByteTrack + clasificador de equipos + homografía → <code>positions.csv</code>, <code>ball_positions.csv</code> en OPTA.</p></div><span class="tag next">portar + endurecer</span></div>
+      <div class="layer"><span class="lid">L3</span><div class="lbody"><h4>Motor de posesión</h4><p>Pelota limpia (interpolar + suavizar) + poseedor por frame en metros → <code>possession.csv</code>.</p></div><span class="tag new">F1</span></div>
+      <div class="layer"><span class="lid">L4</span><div class="lbody"><h4>Identidad</h4><p>SigLIP por track → clustering intra-equipo → OCR de dorsal (set cerrado del lineup) → etiquetado humano de ~25–30 clusters.</p></div><span class="tag new">F3</span></div>
+      <div class="layer"><span class="lid">L5</span><div class="lbody"><h4>Segmentación de eventos</h4><p>Transiciones de posesión → pase / pérdida / intercepción / recuperación / conducción / tiro; confianza por evento.</p></div><span class="tag new">F2 · F4</span></div>
+      <div class="layer"><span class="lid">L6</span><div class="lbody"><h4>Enriquecimiento</h4><p>Longitud, dirección, progresivo, a último tercio, al área, termina en tiro/gol, subtipo.</p></div><span class="tag new">F5</span></div>
+      <div class="layer"><span class="lid">L7</span><div class="lbody"><h4>Revisión</h4><p>Notebook con widgets: etiquetado de identidad + cola de dudosos (clip + actor/receptor propuestos → aceptar / editar / rechazar).</p></div><span class="tag new">nuevo</span></div>
+      <div class="layer"><span class="lid">L8</span><div class="lbody"><h4>Salidas</h4><p><code>events.csv</code> + <code>pass_view.csv</code> + red de pases + video anotado + reporte de validación.</p></div><span class="tag new">F6</span></div>
+    </div>
+    <div class="callout" style="margin-top:18px;background:var(--accent-wash);border-color:var(--accent)">
+      <h4 style="color:var(--accent-ink)">Salida en dos niveles — nunca inventar un pase</h4>
+      <p><b><code>events.csv</code></b> = eventos de alta confianza + los confirmados a mano.
+      <b><code>review_queue.csv</code></b> = todo lo dudoso. Un evento no entra al CSV limpio
+      sin superar el umbral o tu confirmación. Costo: más revisión. Beneficio: casi cero eventos inventados.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Hoja de ruta</h2></div>
+    <p class="tight">Sin deadline. Cada fase termina en un entregable verificable; se avanza de a una.</p>
+
+    <div class="phases">
+      <div class="phase is-done">
+        <div class="phase-top"><span class="phase-id">F0</span><span class="phase-name">Setup del repo</span><span class="tag done">en curso</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Esqueleto standalone: <code>config.py</code> propio, split de requirements, <code>.gitignore</code>; portar el código existente adaptado.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when"><code>import config; from src.video import pipeline, schema</code> corre limpio y <code>descargar_video.ipynb</code> baja a la carpeta correcta.</dd>
+        </dl>
+      </div>
+
+      <div class="phase is-next">
+        <div class="phase-top"><span class="phase-id">F1</span><span class="phase-name">Video de prueba + tracking base</span><span class="tag next">próximo</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Elegir un partido de <b>local que esté en Sofascore</b>, bajarlo, recortar los <b>primeros 15 min del primer tiempo</b>, correr el tracking portado y medir.</dd>
+          <dt>Tu parte</dt><dd>Elegir y bajar el partido; traer sus CSV de Sofascore; marcar el frame del saque inicial.</dd>
+          <dt>Entregable</dt><dd><code>positions.csv</code> + <code>ball_positions.csv</code> del clip + reporte de métricas (detección, jugadores/frame, plausibilidad de homografía, fragmentación, cobertura de pelota).</dd>
+          <dt>Hecho cuando</dt><dd class="done-when">Existe el reporte y se decide: ¿el tracking alcanza o hace falta fine-tuning (F2)?</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F2</span><span class="phase-name">Endurecer el tracking</span><span class="tag cond">condicional</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Si las métricas flojean: etiquetar 300–800 frames de partidos históricos del Juan Alberto García (YouTube, descargables) y fine-tunear detector + keypoints. Integrar modelo dedicado de pelota. Suavizado temporal de la homografía + compuerta de confianza. Segmentación de "juego en vivo".</dd>
+          <dt>Tu parte</dt><dd>La tanda de etiquetado (CVAT / Roboflow), una vez.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when">Las métricas del clip de 15 min superan el umbral acordado.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F3</span><span class="phase-name">Identidad · track → jugador</span><span class="tag new">nuevo</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>SigLIP por track → clustering intra-equipo (restricción de coexistencia) en ~14–18 identidades. OCR de dorsal (PARSeq) restringido al <b>set cerrado de números del lineup</b> + voto temporal.</dd>
+          <dt>Tu parte</dt><dd>Etiquetar ~25–30 clusters una vez (recorte → nombre desde <code>lineups_clean.csv</code>).</dd>
+          <dt>Entregable</dt><dd>Mapa <code>track_id → jugador</code>. Chaco obligatorio; visitante oportunista.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F4</span><span class="phase-name">Eventos base + salida en dos niveles</span><span class="tag new">nuevo</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Transiciones de posesión → pase / pérdida / intercepción / recuperación. Pelota parada incluida y etiquetada. <code>events.csv</code> vs <code>review_queue.csv</code>. Notebook de revisión con clips.</dd>
+          <dt>Validación</dt><dd>Totales vs Sofascore (pases/equipo, % de acierto, intercepciones, posesión) — objetivo <b>±20–30%</b>.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when"><code>events.csv</code> del clip con <b>≥95%</b> de precisión en muestra revisada y <b>0 pases inventados</b> en el set limpio.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F5</span><span class="phase-name">Enriquecimiento + subtipos</span><span class="tag new">nuevo</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Longitud, dirección, progresivo, a último tercio, al área, <code>leads_to_shot</code>/<code>leads_to_goal</code>, subtipos de pase.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when">El <code>events.csv</code> del clip lleva todas las columnas derivadas del esquema.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F6</span><span class="phase-name">Vista de pases + red + video anotado</span><span class="tag new">nuevo</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd><code>pass_view.csv</code> (estilo SPADL). Red de pases con <code>mplsoccer</code> (posición media, aristas ≥ umbral, ventana hasta el primer cambio). Video anotado del clip. Reporte de validación.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when">Los 3 entregables existen para los 15 min y la red pasa la prueba de la vista.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F7</span><span class="phase-name">Escalar</span><span class="tag next">hito</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Correr el pipeline completo sobre el primer tiempo entero (45 min), después el partido completo. Presupuesto de revisión: ~2–4 h/partido al principio.</dd>
+          <dt>Hito cumplido</dt><dd class="done-when">Para un partido de local: <code>events.csv</code> ≥95% de precisión (0 inventados), red de pases del once inicial que pasa la prueba de la vista, y video anotado del primer tiempo.</dd>
+        </dl>
+      </div>
+
+      <div class="phase">
+        <div class="phase-top"><span class="phase-id">F8</span><span class="phase-name">Generalizar</span><span class="tag new">después</span></div>
+        <dl>
+          <dt>Objetivo</dt><dd>Partidos de visitante (cada cancha), identidad completa del rival (→ su red de pases, scouting), tiros y conducciones, otros tipos de evento, dashboard.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><span class="sw done"></span> hecho / listo</span>
+      <span><span class="sw next"></span> próximo / hito</span>
+      <span><span class="sw new"></span> planificado</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Cómputo</h2></div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Momento</th><th>Plataforma</th><th>Notas</th></tr></thead>
+        <tbody>
+          <tr><td>Ahora (F0–F6)</td><td>Kaggle free · Colab free</td><td>Kaggle P100 16 GB, ~30 h/semana, corre en background con "Save &amp; Run All" — más estable para lotes. Colab free se corta a los ~90 min → procesar en trozos de 10–15 min con checkpoints.</td></tr>
+          <tr><td>Cuando funcione</td><td>Colab Pro · US$9,99/mes</td><td>100 unidades ≈ 84 h de T4/mes. El usuario paga cuando haga falta.</td></tr>
+          <tr><td>Storage</td><td>Google Drive · 5 TB</td><td>Guardar frames como archivos comprimidos, no imágenes sueltas (cuotas de la API). Partido 720p ≈ 3–4 GB.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px" class="tight num">
+      Tiempos estimados: clip de 15 min ≈ 15–40 min de proceso. Partido completo ≈ 3–8 h en
+      T4/P100 → siempre en trozos con checkpoint.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Esquema <code style="font-size:.7em">events.csv</code></h2></div>
+    <p class="tight">Una fila por evento. <code>pass_view.csv</code> es la vista de pases: filtrar <code>type == 'pass'</code> y renombrar a columnas estilo SPADL.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Columna</th><th>Descripción</th></tr></thead>
+        <tbody>
+          <tr><td class="col-key"><code>event_id · seq_id</code></td><td>id del evento · id de la cadena de posesión (secuencias pre-gol / pre-tiro)</td></tr>
+          <tr><td class="col-key"><code>match_key · period · t_sec · minute</code></td><td>cuándo</td></tr>
+          <tr><td class="col-key"><code>type</code></td><td><span class="mono">pass · shot · interception · recovery · loss · carry · duel · clearance</span></td></tr>
+          <tr><td class="col-key"><code>subtype · pass_type · body_part</code></td><td>pase: short/long/through/cross/switch · <span class="mono">open_play/throw_in/corner/goal_kick/free_kick/kickoff</span> · foot/head/other</td></tr>
+          <tr><td class="col-key"><code>team</code></td><td>equipo del actor (home / away)</td></tr>
+          <tr><td class="col-key"><code>actor_id · actor_name</code></td><td>quién hace la acción (track → jugador vía <code>lineups_clean</code>)</td></tr>
+          <tr><td class="col-key"><code>recipient_* · opponent_*</code></td><td>receptor del pase · quién interviene en contra (intercepción / duelo)</td></tr>
+          <tr><td class="col-key"><code>start_x · start_y · end_x · end_y</code></td><td>dónde, en OPTA 0–100</td></tr>
+          <tr><td class="col-key"><code>zone</code></td><td>respaldo robusto (tercio × canal) cuando la homografía es dudosa</td></tr>
+          <tr><td class="col-key"><code>outcome</code></td><td>complete · incomplete · won · lost</td></tr>
+          <tr><td class="col-key"><code>length · direction · progressive · to_final_third · into_box</code></td><td>derivados</td></tr>
+          <tr><td class="col-key"><code>ball_speed · duration</code></td><td>cinemática</td></tr>
+          <tr><td class="col-key"><code>leads_to_shot · leads_to_goal</code></td><td>la cadena terminó en peligro</td></tr>
+          <tr><td class="col-key"><code>confidence · review_status</code></td><td>confianza (0–1) · <span class="mono">auto_high / human_confirmed / needs_review</span></td></tr>
+          <tr><td class="col-key"><code>source · src_track_*</code></td><td><span class="mono">video_tracking</span> · track_ids internos para auditar</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px" class="tight">
+      <b>Validación</b> (no hay ground-truth pase-a-pase): revisión manual de una muestra
+      aleatoria (objetivo ≥95% correctos, 0 inventados) + cruce de totales por jugador y por
+      equipo contra los agregados de Sofascore.
+    </p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Tu checklist manual</h2></div>
+    <h3>Una vez (si se dispara F2)</h3>
+    <ul class="clean"><li>Etiquetar 300–800 frames de partidos históricos para el fine-tuning.</li></ul>
+    <h3 style="margin-top:20px">Por cada partido</h3>
+    <ul class="clean">
+      <li>Bajar el video y subirlo a Drive.</li>
+      <li>Traer <code>lineups_clean.csv</code> + <code>incidents_clean.csv</code> + <code>statistics_clean.csv</code> de ese partido.</li>
+      <li>Marcar el frame del saque inicial (y el del segundo tiempo).</li>
+      <li>Etiquetar ~25–30 clusters de identidad una vez (recorte → nombre).</li>
+      <li>Revisar la cola <code>review_queue.csv</code> (~2–4 h al principio): aceptar / editar / rechazar.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">08</span><h2>Decisiones cerradas · riesgos</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 32px">
+      <div>
+        <h3>Decisiones (grilling)</h3>
+        <ul class="clean">
+          <li>Uso <b>no comercial</b> → licencias AGPL / CC-BY-NC aceptables.</li>
+          <li><b>Precisión &gt; exhaustividad.</b> Nunca inventar un evento.</li>
+          <li><b>Humano en el loop</b> obligatorio.</li>
+          <li>Prueba de concepto sobre <b>15 min de un partido de local</b>.</li>
+          <li><code>events.csv</code> del diseño es canónico; el de pases es una vista.</li>
+          <li>Coordenadas <b>OPTA 0–100</b>.</li>
+          <li>Identidad sembrada desde <code>lineups_clean.csv</code> + OCR + etiquetado.</li>
+          <li>Fine-tuning: primero medir, después etiquetar dirigido.</li>
+          <li>Repo standalone; el otro proyecto consume el CSV.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Riesgos</h3>
+        <ul class="clean">
+          <li>Una sola cámara → <b>cobertura parcial</b>. Esperado: los eventos relevantes pasan cerca de la pelota.</li>
+          <li>Identidad fragmentada → limitante nº1 para nombres. Mitiga: clustering + set cerrado de dorsales + etiquetado.</li>
+          <li>Pelota en jugadas rápidas → limitante nº1 de precisión. Mitiga: modelo dedicado + interpolación.</li>
+          <li>Sin ground-truth → validación por muestra + totales de Sofascore.</li>
+          <li>LPF Play podría agregar DRM → YouTube histórico como respaldo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">09</span><h2>Próximos pasos</h2></div>
+    <ol class="steps">
+      <li><b>F0</b> — armar el esqueleto del repo y portar el código existente, adaptado a standalone.</li>
+      <li>El usuario elige y baja <b>un partido de local que esté en Sofascore</b>, y trae sus CSV.</li>
+      <li><b>F1</b> — correr el tracking portado sobre los primeros 15 min y sacar el reporte de métricas.</li>
+      <li>Con las métricas, decidir si F2 (fine-tuning) es necesario o se pasa directo a F3/F4.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  Planificado con el protocolo <i>grilling</i> (mattpocock/skills) · 2026-09-10 ·
+  referencia completa en <code>PLAN.md</code> y <code>docs/DISENO_eventos.md</code> del repo
+  <code>Analizar-partido</code>.
+</footer>
