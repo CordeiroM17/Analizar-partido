@@ -1,0 +1,66 @@
+{
+  "bestHomeTeamPlayer": {
+    "value": "8.5",
+    "label": "rating",
+    "player": {
+      "name": "Lázaro Romero",
+      "slug": "lazaro-romero",
+      "shortName": "L. Romero",
+      "position": "F",
+      "jerseyNumber": "20",
+      "height": 176,
+      "userCount": 18,
+      "gender": "M",
+      "id": 974722,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 818812800,
+      "proposedMarketValueRaw": {
+        "value": 180000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "لازارو روميرو",
+          "ru": "Лазаро Ромеро"
+        },
+        "shortNameTranslation": {
+          "ar": "ل. روميرو",
+          "ru": "Л. Ромеро"
+        }
+      }
+    }
+  },
+  "bestAwayTeamPlayer": {
+    "value": "7.1",
+    "label": "rating",
+    "player": {
+      "name": "Gabriel Ramirez",
+      "firstName": "",
+      "lastName": "",
+      "slug": "ramirez-gabriel",
+      "shortName": "G. Ramirez",
+      "position": "M",
+      "jerseyNumber": "5",
+      "height": 177,
+      "userCount": 14,
+      "gender": "M",
+      "id": 849139,
+      "marketValueCurrency": "EUR",
+      "dateOfBirthTimestamp": 806976000,
+      "proposedMarketValueRaw": {
+        "value": 120000,
+        "currency": "EUR"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "راميريز، غابرييل",
+          "ru": "Габриэль Рамирес"
+        },
+        "shortNameTranslation": {
+          "ar": "غ. راميريز",
+          "ru": "Г. Рамирес"
+        }
+      }
+    }
+  }
+}

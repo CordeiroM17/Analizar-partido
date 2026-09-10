@@ -1,0 +1,373 @@
+{
+  "event": {
+    "eventState": {},
+    "tournament": {
+      "name": "Primera B Nacional",
+      "slug": "primera-b-nacional",
+      "category": {
+        "name": "Argentina",
+        "slug": "argentina",
+        "sport": {
+          "name": "Football",
+          "slug": "football",
+          "id": 1
+        },
+        "priority": 0,
+        "country": {
+          "alpha2": "AR",
+          "alpha3": "ARG",
+          "name": "Argentina",
+          "slug": "argentina"
+        },
+        "id": 48,
+        "flag": "argentina",
+        "alpha2": "AR",
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "الأرجنتين",
+            "ru": "Аргентина"
+          },
+          "shortNameTranslation": {}
+        }
+      },
+      "uniqueTournament": {
+        "name": "Primera Nacional",
+        "slug": "primera-nacional",
+        "primaryColorHex": "#145286",
+        "secondaryColorHex": "#27A4DE",
+        "category": {
+          "name": "Argentina",
+          "slug": "argentina",
+          "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+          },
+          "priority": 0,
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 48,
+          "flag": "argentina",
+          "alpha2": "AR",
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "الأرجنتين",
+              "ru": "Аргентина"
+            },
+            "shortNameTranslation": {}
+          }
+        },
+        "userCount": 7620,
+        "hasRounds": true,
+        "hasPerformanceGraphFeature": false,
+        "country": {},
+        "id": 703,
+        "hasEventPlayerStatistics": false,
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "الدوري الوطني الأول",
+            "bn": "প্রিমেরা ন্যাসিওনাল",
+            "hi": "प्राइमेरा नैशनल",
+            "ru": "Примера Националь"
+          },
+          "shortNameTranslation": {}
+        }
+      },
+      "priority": 0,
+      "isGroup": false,
+      "competitionType": 1,
+      "isLive": false,
+      "id": 5071,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "الدوري الوطني الدرجة الثانية",
+          "bn": "প্রাইমেরা বি ন্যাসিওনাল",
+          "hi": "प्राइमेरा बी नैशनल",
+          "ru": "Первая Б Национальная"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "season": {
+      "name": "Primera Nacional 2026",
+      "year": "2026",
+      "editor": false,
+      "seasonCoverageInfo": {
+        "editorCoverageLevel": 1
+      },
+      "id": 87940
+    },
+    "roundInfo": {
+      "round": 1
+    },
+    "customId": "QZUsBebc",
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "winnerCode": 1,
+    "homeTeam": {
+      "name": "Acassuso",
+      "slug": "acassuso",
+      "shortName": "Acassuso",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 3570,
+      "manager": {
+        "name": "Ángel Lema",
+        "slug": "angel-lema",
+        "shortName": "Á. Lema",
+        "country": {
+          "alpha2": "AR",
+          "alpha3": "ARG",
+          "name": "Argentina",
+          "slug": "argentina"
+        },
+        "id": 799833,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أنخيل ليما",
+            "ru": "Анхель Лема"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ليما",
+            "ru": "А. Лема"
+          }
+        }
+      },
+      "venue": {
+        "city": {
+          "name": "San Isidro",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 20289
+        },
+        "venueCoordinates": {
+          "latitude": -34.481832,
+          "longitude": -58.583719
+        },
+        "hidden": true,
+        "slug": "estadio-la-quema",
+        "name": "Estadio La Quema",
+        "capacity": 500,
+        "country": {
+          "alpha2": "AR",
+          "alpha3": "ARG",
+          "name": "Argentina",
+          "slug": "argentina"
+        },
+        "id": 12718,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ملعب لا كويما",
+            "hi": "एस्टेडियो ला क्यूमा",
+            "bn": "এস্তাদিও লা কুইমা",
+            "ru": "Стадион Estadio La Quema"
+          },
+          "shortNameTranslation": {}
+        },
+        "stadium": {
+          "name": "Estadio La Quema",
+          "capacity": 500
+        }
+      },
+      "nameCode": "ACA",
+      "national": false,
+      "type": 0,
+      "country": {
+        "alpha2": "AR",
+        "alpha3": "ARG",
+        "name": "Argentina",
+        "slug": "argentina"
+      },
+      "id": 112491,
+      "fullName": "Acassuso",
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#00005b",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "أكاسوسو",
+          "ru": "Атлетико Акассусо"
+        },
+        "shortNameTranslation": {
+          "ar": "أكاسوسو"
+        }
+      },
+      "timeActive": []
+    },
+    "awayTeam": {
+      "name": "Chaco For Ever",
+      "slug": "chaco-for-ever",
+      "shortName": "Chaco For Ever",
+      "gender": "M",
+      "sport": {
+        "name": "Football",
+        "slug": "football",
+        "id": 1
+      },
+      "userCount": 3580,
+      "manager": {
+        "name": "Santiago Ojeda",
+        "slug": "santiago-ojeda",
+        "shortName": "S. Ojeda",
+        "country": {},
+        "id": 820699,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "سانتياغو أوخيدا",
+            "ru": "Сантьяго Охеда"
+          },
+          "shortNameTranslation": {
+            "ar": "س. أوخيدا",
+            "ru": "С. Охеда"
+          }
+        }
+      },
+      "venue": {
+        "city": {
+          "name": "Resistencia",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 31830
+        },
+        "venueCoordinates": {
+          "latitude": -27.469866,
+          "longitude": -58.967124
+        },
+        "hidden": true,
+        "slug": "estadio-juan-alberto-garcia",
+        "name": "Estadio Juan Alberto Garcia",
+        "capacity": 25000,
+        "country": {
+          "alpha2": "AR",
+          "alpha3": "ARG",
+          "name": "Argentina",
+          "slug": "argentina"
+        },
+        "id": 31323,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ملعب خوان ألبرتو غارسيا",
+            "hi": "एस्टेडियो जुआन अल्बर्टो गार्सिया",
+            "bn": "এস্তাদিও হুয়ান আলবার্তো গার্সিয়া",
+            "ru": "Стадион Juan Alberto Garcia"
+          },
+          "shortNameTranslation": {}
+        },
+        "stadium": {
+          "name": "Estadio Juan Alberto Garcia",
+          "capacity": 25000
+        }
+      },
+      "nameCode": "CHA",
+      "national": false,
+      "type": 0,
+      "country": {
+        "alpha2": "AR",
+        "alpha3": "ARG",
+        "name": "Argentina",
+        "slug": "argentina"
+      },
+      "id": 252726,
+      "fullName": "Chaco For Ever",
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#ffffff",
+        "secondary": "#000000",
+        "text": "#000000"
+      },
+      "foundationDateTimestamp": -1780876800,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "تشاكو فور إيفر",
+          "ru": "Чако Фор Эвер"
+        },
+        "shortNameTranslation": {
+          "ar": "تشاكو فور إيفر"
+        }
+      },
+      "timeActive": []
+    },
+    "homeScore": {
+      "current": 2,
+      "display": 2,
+      "period1": 1,
+      "period2": 1,
+      "normaltime": 2
+    },
+    "awayScore": {
+      "current": 0,
+      "display": 0,
+      "period1": 0,
+      "period2": 0,
+      "normaltime": 0
+    },
+    "time": {
+      "injuryTime1": 2,
+      "injuryTime2": 4,
+      "currentPeriodStartTimestamp": 1771106399
+    },
+    "changes": {
+      "changes": [
+        "status.code",
+        "status.description",
+        "status.type",
+        "homeScore.normaltime",
+        "awayScore.period2",
+        "awayScore.normaltime",
+        "time.currentPeriodStart"
+      ],
+      "changeTimestamp": 1771106401
+    },
+    "hasGlobalHighlights": true,
+    "hasXg": true,
+    "hasEventPlayerStatistics": true,
+    "hasEventPlayerHeatMap": true,
+    "crowdsourcingDataDisplayEnabled": false,
+    "id": 15275383,
+    "awayRedCards": 1,
+    "defaultPeriodCount": 2,
+    "defaultPeriodLength": 45,
+    "defaultOvertimeLength": 15,
+    "slug": "chaco-for-ever-acassuso",
+    "currentPeriodStartTimestamp": 1771106399,
+    "startTimestamp": 1771099200,
+    "finalResultOnly": false,
+    "feedLocked": true,
+    "showTotoPromo": true,
+    "isEditor": false,
+    "eventFilters": {
+      "category": [
+        "club"
+      ],
+      "level": [
+        "pro"
+      ],
+      "gender": [
+        "M"
+      ]
+    }
+  }
+}

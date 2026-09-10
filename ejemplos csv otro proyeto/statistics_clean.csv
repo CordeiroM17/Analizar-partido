@@ -1,0 +1,35 @@
+group,metric,home_val,away_val,home_total,away_total
+Match overview,Ball possession,47.0,53.0,,
+Match overview,Expected goals,1.78,0.28,,
+Match overview,Total shots,9.0,7.0,,
+Match overview,Goalkeeper saves,1.0,2.0,,
+Match overview,Corner kicks,4.0,3.0,,
+Match overview,Fouls,11.0,11.0,,
+Match overview,Passes,266.0,246.0,,
+Match overview,Tackles,1.0,2.0,,
+Match overview,Free kicks,2.0,2.0,,
+Match overview,Yellow cards,0.0,2.0,,
+Match overview,Red cards,0.0,1.0,,
+Shots,Total shots,9.0,7.0,,
+Shots,Shots on target,4.0,1.0,,
+Shots,Hit woodwork,0.0,0.0,,
+Shots,Shots off target,3.0,4.0,,
+Shots,Blocked shots,2.0,2.0,,
+Shots,Shots inside box,3.0,3.0,,
+Shots,Shots outside box,6.0,4.0,,
+Attack,Through balls,0.0,3.0,,
+Attack,Offsides,3.0,1.0,,
+Passes,Accurate passes,200.0,181.0,,
+Passes,Throw-ins,21.0,28.0,,
+Passes,Long balls,26.0,29.0,43.0,53.0
+Passes,Crosses,4.0,2.0,7.0,10.0
+Duels,Duels,27.0,43.0,,
+Duels,Dispossessed,11.0,4.0,,
+Duels,Ground duels,30.0,38.0,96.0,113.0
+Duels,Aerial duels,8.0,31.0,43.0,45.0
+Duels,Dribbles,14.0,5.0,18.0,15.0
+Defending,Total tackles,1.0,2.0,,
+Defending,Interceptions,5.0,12.0,,
+Defending,Clearances,2.0,13.0,,
+Goalkeeping,Total saves,1.0,2.0,,
+Goalkeeping,Goal kicks,8.0,6.0,,

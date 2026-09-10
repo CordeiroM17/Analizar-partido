@@ -1,0 +1,3201 @@
+{
+  "confirmed": true,
+  "home": {
+    "players": [
+      {
+        "player": {
+          "name": "Mariano Monllor",
+          "slug": "monllor-mariano",
+          "shortName": "M. Monllor",
+          "position": "G",
+          "jerseyNumber": "12",
+          "height": 185,
+          "userCount": 6,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 992101,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 604627200,
+          "proposedMarketValueRaw": {
+            "value": 27000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "مونلور، ماريانو",
+              "ru": "Монльор, Мариано"
+            },
+            "shortNameTranslation": {
+              "ar": "م. مونلور",
+              "ru": "М. Монльор"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 1,
+        "jerseyNumber": "1",
+        "position": "G",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 16,
+          "accuratePass": 14,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 4,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 11,
+          "totalOwnHalfPasses": 11,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 5,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 0,
+          "duelWon": 1,
+          "challengeLost": 0,
+          "totalContest": 1,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 2,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "crossNotClaimed": 0,
+          "goodHighClaim": 0,
+          "savedShotsFromInsideTheBox": 1,
+          "saves": 1,
+          "totalKeeperSweeper": 0,
+          "accurateKeeperSweeper": 0,
+          "minutesPlayed": 90,
+          "touches": 26,
+          "rating": 7,
+          "possessionLostCtrl": 2,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Juan Cruz Ponce",
+          "firstName": "Juan Cruz Ponce",
+          "lastName": "",
+          "slug": "juan-cruz-ponce",
+          "shortName": "J. C. Ponce",
+          "position": "D",
+          "jerseyNumber": "14",
+          "height": 175,
+          "userCount": 2,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1465284,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 958953600,
+          "proposedMarketValueRaw": {
+            "value": 26000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "خوان كروز بونس",
+              "ru": "Хуан Круз Понсе"
+            },
+            "shortNameTranslation": {
+              "ar": "خ. بونس",
+              "ru": "Х. Понсе"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 4,
+        "jerseyNumber": "4",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 33,
+          "accuratePass": 24,
+          "totalLongBalls": 4,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 16,
+          "totalOwnHalfPasses": 18,
+          "accurateOppositionHalfPasses": 8,
+          "totalOppositionHalfPasses": 15,
+          "totalCross": 2,
+          "accurateCross": 0,
+          "aerialLost": 4,
+          "aerialWon": 0,
+          "duelLost": 10,
+          "duelWon": 9,
+          "challengeLost": 1,
+          "totalContest": 5,
+          "wonContest": 4,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 8,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 2,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 2,
+          "fouls": 2,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 45,
+          "rating": 6.6,
+          "possessionLostCtrl": 13,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.6,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Lucas Pioli",
+          "firstName": "",
+          "lastName": "",
+          "slug": "lucas-pioli",
+          "shortName": "L. Pioli",
+          "position": "D",
+          "jerseyNumber": "2",
+          "height": 192,
+          "userCount": 4,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1214751,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 986947200,
+          "proposedMarketValueRaw": {
+            "value": 52000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "سوخديب كاور",
+              "ru": "Лукас Пиоли"
+            },
+            "shortNameTranslation": {
+              "ar": "س. كاور",
+              "ru": "Л. Пиоли"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 2,
+        "jerseyNumber": "2",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 30,
+          "accuratePass": 23,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 20,
+          "totalOwnHalfPasses": 24,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 6,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 4,
+          "aerialWon": 3,
+          "duelLost": 7,
+          "duelWon": 3,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 2,
+          "ballRecovery": 9,
+          "totalTackle": 1,
+          "wonTackle": 1,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 34,
+          "rating": 7.1,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 7.1,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Joel Ghirardello",
+          "firstName": "Joel Ghirardello",
+          "lastName": "",
+          "slug": "ghirardello-joel",
+          "shortName": "J. Ghirardello",
+          "position": "D",
+          "jerseyNumber": "13",
+          "height": 184,
+          "userCount": 10,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1182422,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 811900800,
+          "proposedMarketValueRaw": {
+            "value": 71000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "أغوستين أماريا",
+              "ru": "Джоэль Гирардельо"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. غيهراديلو",
+              "ru": "Д. Гирардельо"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 6,
+        "jerseyNumber": "6",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 24,
+          "accuratePass": 16,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 3,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 13,
+          "totalOwnHalfPasses": 17,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 7,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 1,
+          "duelLost": 5,
+          "duelWon": 2,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 6,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 1,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 28,
+          "rating": 6.7,
+          "possessionLostCtrl": 10,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Álex Ruiz",
+          "firstName": "Álex Ruiz",
+          "slug": "alex-ruiz",
+          "shortName": "Á. Ruiz",
+          "position": "D",
+          "jerseyNumber": "3",
+          "height": 180,
+          "userCount": 3,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2465610,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 951523200,
+          "proposedMarketValueRaw": {
+            "value": 69000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "أليكس رويز",
+              "ru": "Алекс Руис"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. رويز",
+              "ru": "А. Руис"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 3,
+        "jerseyNumber": "3",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 36,
+          "accuratePass": 26,
+          "totalLongBalls": 8,
+          "accurateLongBalls": 5,
+          "goalAssist": 1,
+          "accurateOwnHalfPasses": 15,
+          "totalOwnHalfPasses": 18,
+          "accurateOppositionHalfPasses": 10,
+          "totalOppositionHalfPasses": 16,
+          "totalCross": 1,
+          "accurateCross": 1,
+          "aerialLost": 1,
+          "aerialWon": 1,
+          "duelLost": 8,
+          "duelWon": 6,
+          "challengeLost": 1,
+          "totalContest": 2,
+          "wonContest": 2,
+          "bigChanceCreated": 1,
+          "shotOffTarget": 1,
+          "onTargetScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 14,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 1,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 46,
+          "rating": 7.7,
+          "possessionLostCtrl": 10,
+          "expectedGoals": 0.13,
+          "expectedAssists": 0.45,
+          "keyPass": 2,
+          "ratingVersions": {
+            "original": 7.7,
+            "alternative": null
+          },
+          "totalShots": 2,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Joaquin Cancio",
+          "slug": "joaquin-cancio",
+          "shortName": "J. Cancio",
+          "position": "M",
+          "jerseyNumber": "16",
+          "userCount": 3,
+          "gender": "M",
+          "country": {},
+          "id": 2022732,
+          "marketValueCurrency": "EUR",
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "خواكين كانسيو",
+              "ru": "Хоакин Кансио"
+            },
+            "shortNameTranslation": {
+              "ar": "خ. كانسيو",
+              "ru": "Х. Кансио"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 5,
+        "jerseyNumber": "5",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 27,
+          "accuratePass": 20,
+          "totalLongBalls": 4,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 13,
+          "totalOwnHalfPasses": 15,
+          "accurateOppositionHalfPasses": 5,
+          "totalOppositionHalfPasses": 10,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 6,
+          "aerialWon": 0,
+          "duelLost": 10,
+          "duelWon": 1,
+          "challengeLost": 1,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 2,
+          "ballRecovery": 7,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 3,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 33,
+          "rating": 6.4,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.4,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Kevin Dubini",
+          "firstName": "",
+          "lastName": "",
+          "slug": "kevin-dubini",
+          "shortName": "K. Dubini",
+          "position": "M",
+          "jerseyNumber": "22",
+          "height": 180,
+          "userCount": 17,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 896911,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 731203200,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "كيفن دوبيني",
+              "ru": "Кевин Дубини"
+            },
+            "shortNameTranslation": {
+              "ar": "ك. دوبيني",
+              "ru": "К. Дубини"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 8,
+        "jerseyNumber": "8",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 31,
+          "accuratePass": 27,
+          "totalLongBalls": 3,
+          "accurateLongBalls": 3,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 11,
+          "totalOwnHalfPasses": 11,
+          "accurateOppositionHalfPasses": 16,
+          "totalOppositionHalfPasses": 19,
+          "totalCross": 2,
+          "accurateCross": 1,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 11,
+          "duelWon": 1,
+          "challengeLost": 1,
+          "dispossessed": 2,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "blockedScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 11,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 1,
+          "totalOffside": 1,
+          "minutesPlayed": 88,
+          "touches": 40,
+          "rating": 6.9,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.9,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Ramiro Reynoso",
+          "firstName": "",
+          "lastName": "",
+          "slug": "ramiro-reynoso",
+          "shortName": "R. Reynoso",
+          "position": "M",
+          "jerseyNumber": "17",
+          "height": 167,
+          "userCount": 4,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1468849,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 930700800,
+          "proposedMarketValueRaw": {
+            "value": 165000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "راميرو رينوسو",
+              "ru": "Рамиро Рейносо"
+            },
+            "shortNameTranslation": {
+              "ar": "ر. رينوسو",
+              "ru": "Р. Рейносо"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 7,
+        "jerseyNumber": "7",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 14,
+          "accuratePass": 7,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 4,
+          "totalOwnHalfPasses": 5,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 9,
+          "totalCross": 1,
+          "accurateCross": 1,
+          "aerialLost": 4,
+          "aerialWon": 0,
+          "duelLost": 13,
+          "duelWon": 1,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "bigChanceMissed": 1,
+          "onTargetScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 73,
+          "touches": 24,
+          "rating": 6.2,
+          "possessionLostCtrl": 9,
+          "expectedGoals": 0.43,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.2,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Felipe José Senn",
+          "firstName": "Felipe José",
+          "lastName": "Senn",
+          "slug": "felipe-jose-senn",
+          "shortName": "F. J. Senn",
+          "position": "F",
+          "userCount": 1,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2469038,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 984787200,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "فيليبي خوسيه سين",
+              "ru": "Фелипе Хосе Сенн"
+            },
+            "shortNameTranslation": {
+              "ar": "ف. سين",
+              "ru": "Ф. Сенн"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 11,
+        "jerseyNumber": "11",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 12,
+          "accuratePass": 7,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "totalOwnHalfPasses": 2,
+          "accurateOppositionHalfPasses": 7,
+          "totalOppositionHalfPasses": 10,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 0,
+          "duelLost": 12,
+          "duelWon": 3,
+          "challengeLost": 0,
+          "dispossessed": 5,
+          "totalContest": 1,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 2,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 2,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 86,
+          "touches": 25,
+          "rating": 6.3,
+          "possessionLostCtrl": 10,
+          "expectedGoals": 0,
+          "expectedAssists": 0.02,
+          "keyPass": 1,
+          "ratingVersions": {
+            "original": 6.3,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Agustín Hermoso",
+          "firstName": "",
+          "lastName": "",
+          "slug": "agustin-hermoso",
+          "shortName": "A. Hermoso",
+          "position": "M",
+          "jerseyNumber": "10",
+          "height": 167,
+          "userCount": 16,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1214755,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1036454400,
+          "proposedMarketValueRaw": {
+            "value": 140000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "شين فوروز",
+              "ru": "Агустин Эрмосо"
+            },
+            "shortNameTranslation": {
+              "ar": "ش. فوروز",
+              "ru": "А. Эрмосо"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 10,
+        "jerseyNumber": "10",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 20,
+          "accuratePass": 17,
+          "totalLongBalls": 3,
+          "accurateLongBalls": 3,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 5,
+          "totalOwnHalfPasses": 5,
+          "accurateOppositionHalfPasses": 11,
+          "totalOppositionHalfPasses": 13,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 0,
+          "duelLost": 4,
+          "duelWon": 3,
+          "challengeLost": 0,
+          "dispossessed": 1,
+          "totalContest": 2,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 5,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 86,
+          "touches": 29,
+          "rating": 6.7,
+          "possessionLostCtrl": 10,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Lázaro Romero",
+          "slug": "lazaro-romero",
+          "shortName": "L. Romero",
+          "position": "F",
+          "jerseyNumber": "20",
+          "height": 176,
+          "userCount": 18,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 974722,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 818812800,
+          "proposedMarketValueRaw": {
+            "value": 180000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "لازارو روميرو",
+              "ru": "Лазаро Ромеро"
+            },
+            "shortNameTranslation": {
+              "ar": "ل. روميرو",
+              "ru": "Л. Ромеро"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 9,
+        "jerseyNumber": "9",
+        "position": "F",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 5,
+          "accuratePass": 3,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 2,
+          "totalOwnHalfPasses": 2,
+          "accurateOppositionHalfPasses": 1,
+          "totalOppositionHalfPasses": 3,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 7,
+          "aerialWon": 2,
+          "duelLost": 13,
+          "duelWon": 5,
+          "challengeLost": 0,
+          "dispossessed": 1,
+          "totalContest": 2,
+          "wonContest": 2,
+          "shotOffTarget": 1,
+          "onTargetScoringAttempt": 2,
+          "goals": 2,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 2,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 3,
+          "fouls": 2,
+          "totalOffside": 2,
+          "minutesPlayed": 73,
+          "touches": 19,
+          "rating": 8.5,
+          "possessionLostCtrl": 9,
+          "expectedGoals": 1.18,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 8.5,
+            "alternative": null
+          },
+          "totalShots": 3,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "David Escalante",
+          "slug": "escalante-david",
+          "shortName": "D. Escalante",
+          "position": "F",
+          "jerseyNumber": "9",
+          "height": 190,
+          "userCount": 20,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 986502,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 674784000,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "إسكالانتي، ديفيد",
+              "ru": "Давид Эскаланте"
+            },
+            "shortNameTranslation": {
+              "ar": "د. إسكالانتي",
+              "ru": "Д. Эскаланте"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 19,
+        "jerseyNumber": "19",
+        "position": "F",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 4,
+          "accuratePass": 4,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 1,
+          "totalOwnHalfPasses": 1,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 3,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 1,
+          "aerialWon": 1,
+          "duelLost": 1,
+          "duelWon": 1,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "blockedScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 2,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 20,
+          "touches": 8,
+          "rating": 6.6,
+          "possessionLostCtrl": 2,
+          "expectedGoals": 0.02,
+          "expectedAssists": 0.01,
+          "keyPass": 1,
+          "ratingVersions": {
+            "original": 6.6,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Lucas Rey",
+          "firstName": "Lucas Rey",
+          "slug": "lucas-rey",
+          "shortName": "L. Rey",
+          "position": "F",
+          "jerseyNumber": "18",
+          "height": 178,
+          "userCount": 2,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2065619,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 925948800,
+          "proposedMarketValueRaw": {
+            "value": 23000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "لوكاس ري",
+              "ru": "Лукас Рей"
+            },
+            "shortNameTranslation": {
+              "ar": "ل. ري",
+              "ru": "Л. Рей"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 18,
+        "jerseyNumber": "18",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 4,
+          "accuratePass": 4,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "accurateOppositionHalfPasses": 4,
+          "totalOppositionHalfPasses": 4,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 0,
+          "duelLost": 5,
+          "duelWon": 0,
+          "challengeLost": 0,
+          "dispossessed": 1,
+          "totalContest": 0,
+          "wonContest": 0,
+          "shotOffTarget": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 0,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 20,
+          "touches": 10,
+          "rating": 6.5,
+          "possessionLostCtrl": 2,
+          "expectedGoals": 0.01,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.5,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Patricio Pérez",
+          "slug": "patricio-perez",
+          "shortName": "P. Pérez",
+          "position": "M",
+          "jerseyNumber": "10",
+          "height": 175,
+          "userCount": 12,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 992116,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 968716800,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "باتريسيو بيريز",
+              "ru": "Патрицио Перес"
+            },
+            "shortNameTranslation": {
+              "ar": "ب. بيريز",
+              "ru": "П. Перес"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 17,
+        "jerseyNumber": "17",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 5,
+          "accuratePass": 4,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 1,
+          "totalOwnHalfPasses": 1,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 4,
+          "totalCross": 1,
+          "accurateCross": 1,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 2,
+          "duelWon": 2,
+          "challengeLost": 0,
+          "dispossessed": 1,
+          "totalContest": 2,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 0,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 7,
+          "touches": 10,
+          "possessionLostCtrl": 3,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Martín Schlotthauer",
+          "firstName": "Martín",
+          "lastName": "Schlotthauer",
+          "slug": "martin-schlotthauer",
+          "shortName": "M. Schlotthauer",
+          "position": "F",
+          "jerseyNumber": "11",
+          "height": 179,
+          "userCount": 9,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2077670,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 937958400,
+          "proposedMarketValueRaw": {
+            "value": 24000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "مارتين شلوتهاور",
+              "ru": "Мартин Шлоттауэр"
+            },
+            "shortNameTranslation": {
+              "ar": "م. شلوتهاور",
+              "ru": "М. Шлоттауэр"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 20,
+        "jerseyNumber": "20",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 4,
+          "accuratePass": 3,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 1,
+          "totalOwnHalfPasses": 1,
+          "accurateOppositionHalfPasses": 2,
+          "totalOppositionHalfPasses": 3,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 0,
+          "duelWon": 0,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 7,
+          "touches": 5,
+          "possessionLostCtrl": 1,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Nahuel Petillo Mediza",
+          "firstName": "Nahuel",
+          "lastName": "Petillo Mediza",
+          "slug": "nahuel-petillo-mediza",
+          "shortName": "N. P. Mediza",
+          "position": "M",
+          "jerseyNumber": "8",
+          "height": 178,
+          "userCount": 9,
+          "gender": "M",
+          "country": {
+            "alpha2": "UY",
+            "alpha3": "URY",
+            "name": "Uruguay",
+            "slug": "uruguay"
+          },
+          "id": 1524040,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1003190400,
+          "proposedMarketValueRaw": {
+            "value": 205000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ناويل بيتيليو ميديزا",
+              "ru": "Нахуэль Петильо Медиза"
+            },
+            "shortNameTranslation": {
+              "ar": "ن. ميديزا",
+              "ru": "Н. Медиза"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 15,
+        "jerseyNumber": "15",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 1,
+          "accuratePass": 1,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOppositionHalfPasses": 1,
+          "totalOppositionHalfPasses": 1,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 0,
+          "duelWon": 0,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 0,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 5,
+          "touches": 1,
+          "possessionLostCtrl": 0,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "César Atamañuk",
+          "firstName": "César Atamañuk",
+          "lastName": "",
+          "slug": "cesar-atamanuk",
+          "shortName": "C. Atamañuk",
+          "position": "G",
+          "jerseyNumber": "1",
+          "height": 192,
+          "userCount": 3,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1182407,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 829008000,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "رونان فاهتراس",
+              "ru": "Сезар Атаманюк"
+            },
+            "shortNameTranslation": {
+              "ar": "س. أتامانيك",
+              "ru": "С. Атаманюк"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 12,
+        "jerseyNumber": "12",
+        "position": "G",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Santiago Bellatti",
+          "firstName": "Santiago Bellatti",
+          "slug": "santiago-bellatti",
+          "shortName": "S. Bellatti",
+          "position": "D",
+          "jerseyNumber": "2",
+          "height": 191,
+          "userCount": 16,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1485504,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1023580800,
+          "proposedMarketValueRaw": {
+            "value": 170000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "سانتياغو بيلاطي",
+              "ru": "Сантьяго Беллатти"
+            },
+            "shortNameTranslation": {
+              "ar": "س. بيلاطي",
+              "ru": "С. Беллатти"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 13,
+        "jerseyNumber": "13",
+        "position": "D",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Santiago Borges",
+          "firstName": "Santiago Borges",
+          "slug": "santiago-borges",
+          "shortName": "S. Borges",
+          "position": "D",
+          "jerseyNumber": "4",
+          "height": 183,
+          "userCount": 3,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2044376,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1035417600,
+          "proposedMarketValueRaw": {
+            "value": 23000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "سانتياغو بورخيس",
+              "ru": "Сантьяго Боргес"
+            },
+            "shortNameTranslation": {
+              "ar": "س. بورخيس",
+              "ru": "С. Боргес"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 14,
+        "jerseyNumber": "14",
+        "position": "D",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Jonathan Raccio",
+          "firstName": "Jonathan Raccio",
+          "slug": "raccio-jonathan",
+          "shortName": "J. Raccio",
+          "position": "M",
+          "jerseyNumber": "8",
+          "height": 161,
+          "userCount": 12,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1512575,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1112227200,
+          "proposedMarketValueRaw": {
+            "value": 77000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "راتشيو، جوناثان",
+              "ru": "Раччо, Джонатан"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. راتشيو",
+              "ru": "Д. Раччо"
+            }
+          }
+        },
+        "teamId": 112491,
+        "shirtNumber": 16,
+        "jerseyNumber": "16",
+        "position": "M",
+        "substitute": true
+      }
+    ],
+    "supportStaff": [],
+    "formation": "4-2-3-1",
+    "playerColor": {
+      "primary": "00005b",
+      "number": "ffffff",
+      "outline": "00005b",
+      "fancyNumber": "ffffff"
+    },
+    "goalkeeperColor": {
+      "primary": "fafb00",
+      "number": "000000",
+      "outline": "fafb00",
+      "fancyNumber": "222226"
+    }
+  },
+  "away": {
+    "players": [
+      {
+        "player": {
+          "name": "Gastón Canuto",
+          "firstName": "Gastón Canuto",
+          "lastName": "",
+          "slug": "gaston-canuto",
+          "shortName": "G. Canuto",
+          "position": "G",
+          "jerseyNumber": "1",
+          "height": 178,
+          "userCount": 6,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1182418,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 586051200,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "أندريا سبيتاليري",
+              "ru": "Гастон Кануту"
+            },
+            "shortNameTranslation": {
+              "ar": "غ. كانوتو",
+              "ru": "Г. Кануту"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 1,
+        "jerseyNumber": "1",
+        "position": "G",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 5,
+          "accuratePass": 4,
+          "totalLongBalls": 3,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 2,
+          "totalOwnHalfPasses": 2,
+          "accurateOppositionHalfPasses": 2,
+          "totalOppositionHalfPasses": 3,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 1,
+          "duelWon": 1,
+          "challengeLost": 1,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 1,
+          "totalOffside": 0,
+          "crossNotClaimed": 0,
+          "goodHighClaim": 0,
+          "savedShotsFromInsideTheBox": 1,
+          "saves": 2,
+          "totalKeeperSweeper": 0,
+          "accurateKeeperSweeper": 0,
+          "minutesPlayed": 50,
+          "touches": 5,
+          "rating": 5.7,
+          "possessionLostCtrl": 1,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 5.7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Alan Luque",
+          "slug": "alan-luque",
+          "shortName": "A. Luque",
+          "position": "D",
+          "jerseyNumber": "4",
+          "height": 179,
+          "userCount": 3,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 922459,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 919468800,
+          "proposedMarketValueRaw": {
+            "value": 160000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ألان لوكي",
+              "ru": "Алан Луке"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. لوكي",
+              "ru": "А. Луке"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 4,
+        "jerseyNumber": "4",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 19,
+          "accuratePass": 15,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 5,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 5,
+          "totalOwnHalfPasses": 5,
+          "accurateOppositionHalfPasses": 10,
+          "totalOppositionHalfPasses": 14,
+          "totalCross": 3,
+          "accurateCross": 1,
+          "aerialLost": 0,
+          "aerialWon": 1,
+          "duelLost": 3,
+          "duelWon": 4,
+          "challengeLost": 1,
+          "totalContest": 1,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "blockedScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 3,
+          "totalTackle": 1,
+          "wonTackle": 1,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 28,
+          "rating": 6.9,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0.01,
+          "expectedAssists": 0.01,
+          "keyPass": 1,
+          "ratingVersions": {
+            "original": 6.9,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "David Valdez",
+          "slug": "david-valdez",
+          "shortName": "D. Valdez",
+          "position": "D",
+          "jerseyNumber": "14",
+          "height": 174,
+          "userCount": 4,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 860055,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 734054400,
+          "proposedMarketValueRaw": {
+            "value": 69000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ديفيد فالديز",
+              "ru": "Давид Вальдес"
+            },
+            "shortNameTranslation": {
+              "ar": "د. فالديز",
+              "ru": "Д. Вальдес"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 2,
+        "jerseyNumber": "2",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 31,
+          "accuratePass": 25,
+          "totalLongBalls": 10,
+          "accurateLongBalls": 7,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 13,
+          "totalOwnHalfPasses": 14,
+          "accurateOppositionHalfPasses": 11,
+          "totalOppositionHalfPasses": 16,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 3,
+          "aerialWon": 3,
+          "duelLost": 5,
+          "duelWon": 7,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 11,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 1,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 40,
+          "rating": 7,
+          "possessionLostCtrl": 6,
+          "expectedGoals": 0,
+          "expectedAssists": 0.06,
+          "keyPass": 1,
+          "ratingVersions": {
+            "original": 7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Mathias Silvera",
+          "slug": "silvera-mathias",
+          "shortName": "M. Silvera",
+          "position": "D",
+          "jerseyNumber": "13",
+          "height": 179,
+          "userCount": 22,
+          "gender": "M",
+          "country": {
+            "alpha2": "UY",
+            "alpha3": "URY",
+            "name": "Uruguay",
+            "slug": "uruguay"
+          },
+          "id": 1020990,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 921888000,
+          "proposedMarketValueRaw": {
+            "value": 285000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "سيلفيرا، ماثياس",
+              "ru": "Сильвера, Маттиас"
+            },
+            "shortNameTranslation": {
+              "ar": "م. سيلفيرا",
+              "ru": "М. Сильвера"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 6,
+        "jerseyNumber": "6",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 35,
+          "accuratePass": 28,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 4,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 19,
+          "totalOwnHalfPasses": 23,
+          "accurateOppositionHalfPasses": 9,
+          "totalOppositionHalfPasses": 11,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 2,
+          "duelLost": 7,
+          "duelWon": 5,
+          "challengeLost": 0,
+          "dispossessed": 1,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 5,
+          "outfielderBlock": 1,
+          "interceptionWon": 1,
+          "ballRecovery": 14,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 3,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 46,
+          "rating": 6.7,
+          "possessionLostCtrl": 9,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Lucas Pruzzo",
+          "slug": "lucas-pruzzo",
+          "shortName": "L. Pruzzo",
+          "position": "D",
+          "jerseyNumber": "15",
+          "height": 175,
+          "userCount": 7,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 877903,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 773452800,
+          "proposedMarketValueRaw": {
+            "value": 46000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "لوكاس بروزو",
+              "ru": "Лукас Пруззо"
+            },
+            "shortNameTranslation": {
+              "ar": "ل. بروزو",
+              "ru": "Л. Пруззо"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 3,
+        "jerseyNumber": "3",
+        "position": "D",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 12,
+          "accuratePass": 6,
+          "totalLongBalls": 5,
+          "accurateLongBalls": 3,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 2,
+          "totalOwnHalfPasses": 3,
+          "accurateOppositionHalfPasses": 4,
+          "totalOppositionHalfPasses": 9,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 5,
+          "duelLost": 7,
+          "duelWon": 8,
+          "challengeLost": 1,
+          "totalContest": 1,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 9,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 68,
+          "touches": 22,
+          "rating": 6.3,
+          "possessionLostCtrl": 12,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.3,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Santiago Valenzuela",
+          "slug": "santiago-valenzuela",
+          "shortName": "S. Valenzuela",
+          "position": "M",
+          "jerseyNumber": "5",
+          "height": 169,
+          "userCount": 7,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1192491,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1001203200,
+          "proposedMarketValueRaw": {
+            "value": 97000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "دانييلوفا أ / دي تومماسو ج",
+              "ru": "Сантьяго Валенсуэла"
+            },
+            "shortNameTranslation": {
+              "ar": "د. دي تومماسو ج",
+              "ru": "С. Валенсуэла"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 8,
+        "jerseyNumber": "8",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 10,
+          "accuratePass": 4,
+          "totalLongBalls": 2,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 1,
+          "totalOwnHalfPasses": 2,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 8,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 2,
+          "duelLost": 2,
+          "duelWon": 4,
+          "challengeLost": 2,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "ballRecovery": 5,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 51,
+          "touches": 12,
+          "rating": 6.4,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.4,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Gabriel Ramirez",
+          "firstName": "",
+          "lastName": "",
+          "slug": "ramirez-gabriel",
+          "shortName": "G. Ramirez",
+          "position": "M",
+          "jerseyNumber": "5",
+          "height": 177,
+          "userCount": 14,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 849139,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 806976000,
+          "proposedMarketValueRaw": {
+            "value": 120000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "راميريز، غابرييل",
+              "ru": "Габриэль Рамирес"
+            },
+            "shortNameTranslation": {
+              "ar": "غ. راميريز",
+              "ru": "Г. Рамирес"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 5,
+        "jerseyNumber": "5",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 40,
+          "accuratePass": 31,
+          "totalLongBalls": 6,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 21,
+          "totalOwnHalfPasses": 25,
+          "accurateOppositionHalfPasses": 7,
+          "totalOppositionHalfPasses": 10,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 3,
+          "duelLost": 4,
+          "duelWon": 6,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 3,
+          "outfielderBlock": 1,
+          "interceptionWon": 3,
+          "ballRecovery": 12,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 1,
+          "fouls": 1,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 48,
+          "rating": 7.1,
+          "possessionLostCtrl": 10,
+          "expectedGoals": 0.06,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 7.1,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Andrés Lioi",
+          "slug": "andres-lioi",
+          "shortName": "A. Lioi",
+          "position": "M",
+          "jerseyNumber": "8",
+          "height": 175,
+          "userCount": 4,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 922452,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 857692800,
+          "proposedMarketValueRaw": {
+            "value": 46000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "أندريس ليوي",
+              "ru": "Андрес Лиои"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. ليوي",
+              "ru": "А. Лиои"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 7,
+        "jerseyNumber": "7",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 14,
+          "accuratePass": 11,
+          "totalLongBalls": 2,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "accurateOppositionHalfPasses": 11,
+          "totalOppositionHalfPasses": 14,
+          "totalCross": 1,
+          "accurateCross": 1,
+          "aerialLost": 1,
+          "aerialWon": 1,
+          "duelLost": 7,
+          "duelWon": 2,
+          "challengeLost": 0,
+          "totalContest": 2,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 2,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 74,
+          "touches": 21,
+          "rating": 6.5,
+          "possessionLostCtrl": 6,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.5,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Leonardo Marinucci",
+          "firstName": "",
+          "lastName": "",
+          "slug": "leonardo-marinucci",
+          "shortName": "L. Marinucci",
+          "position": "F",
+          "jerseyNumber": "20",
+          "height": 175,
+          "userCount": 3,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 843404,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 730857600,
+          "proposedMarketValueRaw": {
+            "value": 215000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ليوناردو مارينوكي",
+              "ru": "Леонардо Маринукки"
+            },
+            "shortNameTranslation": {
+              "ar": "ل. مارينوكي",
+              "ru": "Л. Маринукки"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 10,
+        "jerseyNumber": "10",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 15,
+          "accuratePass": 12,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 1,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 3,
+          "totalOwnHalfPasses": 3,
+          "accurateOppositionHalfPasses": 8,
+          "totalOppositionHalfPasses": 11,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 1,
+          "aerialWon": 3,
+          "duelLost": 12,
+          "duelWon": 8,
+          "challengeLost": 1,
+          "dispossessed": 1,
+          "totalContest": 3,
+          "wonContest": 2,
+          "shotOffTarget": 2,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 4,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 1,
+          "totalOffside": 1,
+          "minutesPlayed": 68,
+          "touches": 32,
+          "rating": 6.7,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0.18,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.7,
+            "alternative": null
+          },
+          "totalShots": 2,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Agustín Ojeda",
+          "slug": "agustin-ojeda",
+          "shortName": "A. Ojeda",
+          "position": "D",
+          "jerseyNumber": "11",
+          "height": 175,
+          "userCount": 13,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 2045245,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 995846400,
+          "proposedMarketValueRaw": {
+            "value": 130000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "أغوستين أوخيدا",
+              "ru": "Агустин Охеда"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. أوخيدا",
+              "ru": "А. Охеда"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 11,
+        "jerseyNumber": "11",
+        "position": "M",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 25,
+          "accuratePass": 16,
+          "totalLongBalls": 7,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 6,
+          "totalOwnHalfPasses": 6,
+          "accurateOppositionHalfPasses": 9,
+          "totalOppositionHalfPasses": 17,
+          "totalCross": 3,
+          "accurateCross": 0,
+          "aerialLost": 3,
+          "aerialWon": 4,
+          "duelLost": 17,
+          "duelWon": 13,
+          "challengeLost": 3,
+          "totalContest": 2,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 1,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 7,
+          "totalTackle": 1,
+          "wonTackle": 1,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 2,
+          "wasFouled": 2,
+          "fouls": 4,
+          "totalOffside": 0,
+          "minutesPlayed": 90,
+          "touches": 44,
+          "rating": 6.4,
+          "possessionLostCtrl": 16,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.4,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Tomas Bolzicco",
+          "firstName": "",
+          "lastName": "",
+          "slug": "tomas-bolzicco",
+          "shortName": "T. Bolzicco",
+          "position": "F",
+          "jerseyNumber": "22",
+          "height": 188,
+          "userCount": 8,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 789424,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 786067200,
+          "proposedMarketValueRaw": {
+            "value": 77000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "توماس بولزيكو",
+              "ru": "Томас Больцико"
+            },
+            "shortNameTranslation": {
+              "ar": "ت. بولزيكو",
+              "ru": "Т. Больцико"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 9,
+        "jerseyNumber": "9",
+        "position": "F",
+        "substitute": false,
+        "statistics": {
+          "totalPass": 3,
+          "accuratePass": 3,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 1,
+          "totalOwnHalfPasses": 1,
+          "accurateOppositionHalfPasses": 2,
+          "totalOppositionHalfPasses": 2,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 4,
+          "duelLost": 3,
+          "duelWon": 4,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 0,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 50,
+          "touches": 5,
+          "rating": 6.5,
+          "possessionLostCtrl": 4,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.5,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Nicolás Caprio",
+          "firstName": "Nicolás Caprio",
+          "lastName": "",
+          "slug": "nicolas-caprio",
+          "shortName": "N. Caprio",
+          "position": "G",
+          "jerseyNumber": "12",
+          "height": 186,
+          "userCount": 4,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1185165,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 612144000,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "ب. ميديروس / إ. بورخيس",
+              "ru": "Николас Каприо"
+            },
+            "shortNameTranslation": {
+              "ar": "ب. بورخيس",
+              "ru": "Н. Каприо"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 12,
+        "jerseyNumber": "12",
+        "position": "G",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 10,
+          "accuratePass": 9,
+          "totalLongBalls": 3,
+          "accurateLongBalls": 2,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 6,
+          "totalOwnHalfPasses": 6,
+          "accurateOppositionHalfPasses": 2,
+          "totalOppositionHalfPasses": 3,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 1,
+          "duelWon": 0,
+          "challengeLost": 0,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 5,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "crossNotClaimed": 0,
+          "goodHighClaim": 0,
+          "saves": 0,
+          "totalKeeperSweeper": 0,
+          "accurateKeeperSweeper": 0,
+          "minutesPlayed": 44,
+          "touches": 10,
+          "rating": 6.6,
+          "possessionLostCtrl": 0,
+          "expectedGoals": 0,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.6,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Imanol Enriquez",
+          "slug": "imanol-enriquez",
+          "shortName": "I. Enriquez",
+          "position": "F",
+          "jerseyNumber": "9",
+          "height": 180,
+          "userCount": 6,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1018417,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 950400000,
+          "proposedMarketValueRaw": {
+            "value": 105000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "إيمانول إنريكيز",
+              "ru": "Иманоль Энрикес"
+            },
+            "shortNameTranslation": {
+              "ar": "إ. إنريكيز",
+              "ru": "И. Энрикес"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 19,
+        "jerseyNumber": "19",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 9,
+          "accuratePass": 8,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 3,
+          "totalOwnHalfPasses": 4,
+          "accurateOppositionHalfPasses": 4,
+          "totalOppositionHalfPasses": 4,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 2,
+          "aerialWon": 1,
+          "duelLost": 8,
+          "duelWon": 2,
+          "challengeLost": 0,
+          "totalContest": 1,
+          "wonContest": 0,
+          "shotOffTarget": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 1,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 42,
+          "touches": 17,
+          "rating": 6.5,
+          "possessionLostCtrl": 4,
+          "expectedGoals": 0.01,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.5,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Agustín Alonso",
+          "firstName": "Agustín Alonso",
+          "lastName": "",
+          "slug": "agustin-alonso",
+          "shortName": "A. Alonso",
+          "position": "M",
+          "jerseyNumber": "16",
+          "height": 171,
+          "userCount": 27,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1182395,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 980294400,
+          "proposedMarketValueRaw": {
+            "value": 93000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "حسين المهاري",
+              "ru": "Агустин Алонсо"
+            },
+            "shortNameTranslation": {
+              "ar": "أ. ألونسو",
+              "ru": "А. Алонсо"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 16,
+        "jerseyNumber": "16",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 5,
+          "accuratePass": 2,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 2,
+          "totalOwnHalfPasses": 3,
+          "totalOppositionHalfPasses": 2,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 1,
+          "aerialWon": 0,
+          "duelLost": 5,
+          "duelWon": 1,
+          "challengeLost": 1,
+          "totalContest": 2,
+          "wonContest": 0,
+          "shotOffTarget": 1,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "interceptionWon": 1,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 0,
+          "wasFouled": 1,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 24,
+          "touches": 13,
+          "rating": 6.4,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0.01,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.4,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "German Pacheco",
+          "slug": "german-pacheco",
+          "shortName": "G. Pacheco",
+          "position": "F",
+          "height": 176,
+          "userCount": 11,
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 83700,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 674611200,
+          "proposedMarketValueRaw": {
+            "value": 48000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "جيرمان باتشيكو",
+              "ru": "Герман Пачеко"
+            },
+            "shortNameTranslation": {
+              "ar": "ج. باتشيكو",
+              "ru": "Г. Пачеко"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 20,
+        "jerseyNumber": "20",
+        "position": "F",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 1,
+          "accuratePass": 0,
+          "totalLongBalls": 0,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "totalOppositionHalfPasses": 1,
+          "totalCross": 0,
+          "accurateCross": 0,
+          "aerialLost": 1,
+          "aerialWon": 2,
+          "duelLost": 3,
+          "duelWon": 3,
+          "challengeLost": 0,
+          "totalContest": 3,
+          "wonContest": 1,
+          "onTargetScoringAttempt": 0,
+          "blockedScoringAttempt": 1,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 24,
+          "touches": 6,
+          "rating": 6.5,
+          "possessionLostCtrl": 3,
+          "expectedGoals": 0.01,
+          "expectedAssists": 0,
+          "ratingVersions": {
+            "original": 6.5,
+            "alternative": null
+          },
+          "totalShots": 1,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Matias Noble",
+          "slug": "matias-noble",
+          "shortName": "M. Noble",
+          "position": "M",
+          "jerseyNumber": "19",
+          "height": 182,
+          "userCount": 21,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 815133,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 839548800,
+          "proposedMarketValueRaw": {
+            "value": 180000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "نوبل، ماتياش",
+              "ru": "Нобл, Матияс"
+            },
+            "shortNameTranslation": {
+              "ar": "م. نوبل",
+              "ru": "М. Нобл"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 18,
+        "jerseyNumber": "18",
+        "position": "M",
+        "substitute": true,
+        "statistics": {
+          "totalPass": 12,
+          "accuratePass": 7,
+          "totalLongBalls": 1,
+          "accurateLongBalls": 0,
+          "goalAssist": 0,
+          "accurateOwnHalfPasses": 4,
+          "totalOwnHalfPasses": 5,
+          "accurateOppositionHalfPasses": 3,
+          "totalOppositionHalfPasses": 7,
+          "totalCross": 3,
+          "accurateCross": 0,
+          "aerialLost": 0,
+          "aerialWon": 0,
+          "duelLost": 4,
+          "duelWon": 1,
+          "challengeLost": 0,
+          "dispossessed": 2,
+          "totalContest": 0,
+          "wonContest": 0,
+          "onTargetScoringAttempt": 0,
+          "goals": 0,
+          "totalClearance": 0,
+          "outfielderBlock": 0,
+          "ballRecovery": 1,
+          "totalTackle": 0,
+          "wonTackle": 0,
+          "errorLeadToAShot": 0,
+          "ownGoals": 0,
+          "unsuccessfulTouch": 1,
+          "wasFouled": 0,
+          "fouls": 0,
+          "totalOffside": 0,
+          "minutesPlayed": 19,
+          "touches": 21,
+          "rating": 6.7,
+          "possessionLostCtrl": 8,
+          "expectedGoals": 0,
+          "expectedAssists": 0.01,
+          "keyPass": 1,
+          "ratingVersions": {
+            "original": 6.7,
+            "alternative": null
+          },
+          "totalShots": 0,
+          "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+          }
+        }
+      },
+      {
+        "player": {
+          "name": "Raúl Zules Caicedo",
+          "slug": "raul-zules-caicedo",
+          "shortName": "R. Zules",
+          "position": "D",
+          "jerseyNumber": "2",
+          "height": 186,
+          "userCount": 9,
+          "gender": "M",
+          "country": {
+            "alpha2": "CO",
+            "alpha3": "COL",
+            "name": "Colombia",
+            "slug": "colombia"
+          },
+          "id": 898989,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 666489600,
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "راؤول زوليس كايسيدو",
+              "ru": "Рауль Зулес Кайседо"
+            },
+            "shortNameTranslation": {
+              "ar": "ر. كايسيدو",
+              "ru": "Р. Кайседо"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 13,
+        "jerseyNumber": "13",
+        "position": "D",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Ricardo Garay",
+          "firstName": "",
+          "lastName": "",
+          "slug": "garay-ricardo",
+          "shortName": "R. Garay",
+          "position": "D",
+          "jerseyNumber": "14",
+          "height": 186,
+          "userCount": 8,
+          "gender": "M",
+          "country": {
+            "alpha2": "PY",
+            "alpha3": "PRY",
+            "name": "Paraguay",
+            "slug": "paraguay"
+          },
+          "id": 936348,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 857692800,
+          "proposedMarketValueRaw": {
+            "value": 26000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "غاراي، ريكاردو",
+              "ru": "Гарай, Рикардо"
+            },
+            "shortNameTranslation": {
+              "ar": "ر. غاراي",
+              "ru": "Р. Гарай"
+            }
+          }
+        },
+        "teamId": 5990,
+        "shirtNumber": 14,
+        "jerseyNumber": "14",
+        "position": "D",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Juan Cruz Cerrudo",
+          "firstName": "Juan Cruz Cerrudo",
+          "slug": "juan-cruz-cerrudo",
+          "shortName": "J. C. Cerrudo",
+          "position": "M",
+          "jerseyNumber": "17",
+          "height": 168,
+          "userCount": 26,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 1117056,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 1074556800,
+          "proposedMarketValueRaw": {
+            "value": 79000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "خوان كروز سيرودو",
+              "ru": "Хуан Крус Серрудо"
+            },
+            "shortNameTranslation": {
+              "ar": "خ. سيرودو",
+              "ru": "Х. Серрудо"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 17,
+        "jerseyNumber": "17",
+        "position": "M",
+        "substitute": true
+      },
+      {
+        "player": {
+          "name": "Brian Nievas",
+          "slug": "brian-nievas",
+          "shortName": "B. Nievas",
+          "position": "M",
+          "jerseyNumber": "15",
+          "height": 180,
+          "userCount": 6,
+          "gender": "M",
+          "country": {
+            "alpha2": "AR",
+            "alpha3": "ARG",
+            "name": "Argentina",
+            "slug": "argentina"
+          },
+          "id": 979657,
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 893721600,
+          "proposedMarketValueRaw": {
+            "value": 135000,
+            "currency": "EUR"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "براين نيفاس",
+              "ru": "Брайан Ниевас"
+            },
+            "shortNameTranslation": {
+              "ar": "ب. نيفاس",
+              "ru": "Б. Ниевас"
+            }
+          }
+        },
+        "teamId": 252726,
+        "shirtNumber": 15,
+        "jerseyNumber": "15",
+        "position": "M",
+        "substitute": true
+      }
+    ],
+    "supportStaff": [],
+    "formation": "4-2-3-1",
+    "playerColor": {
+      "primary": "ff4908",
+      "number": "ffffff",
+      "outline": "ff4908",
+      "fancyNumber": "222226"
+    },
+    "goalkeeperColor": {
+      "primary": "00ff00",
+      "number": "000000",
+      "outline": "00ff00",
+      "fancyNumber": "222226"
+    }
+  },
+  "statisticalVersion": 2
+}

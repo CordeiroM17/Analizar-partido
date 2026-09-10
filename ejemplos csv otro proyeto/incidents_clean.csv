@@ -1,0 +1,20 @@
+type,minute,added_time,is_home,player,assist,incident_class,home_score,away_score,description
+period,90,999.0,,,,,2.0,0.0,FT
+injuryTime,90,0.0,,,,,,,
+substitution,82,,True,N. P. Mediza,,regular,,,OUT: K. Dubini
+substitution,81,,True,M. Schlotthauer,,regular,,,OUT: F. J. Senn
+substitution,81,,True,P. Pérez,,regular,,,OUT: A. Hermoso
+substitution,68,,False,M. Noble,,regular,,,OUT: A. Lioi
+substitution,67,,True,L. Rey,,regular,,,OUT: L. Romero
+substitution,67,,True,D. Escalante,,regular,,,OUT: R. Reynoso
+substitution,63,,False,G. Pacheco,,regular,,,OUT: L. Marinucci
+substitution,63,,False,A. Alonso,,regular,,,OUT: L. Pruzzo
+yellow,57,,False,A. Ojeda,,yellow,,,Foul
+goal,48,,True,L. Romero,Á. Ruiz,regular,2.0,0.0,regular
+period,45,999.0,,,,,1.0,0.0,HT
+substitution,45,7.0,False,I. Enriquez,,regular,,,OUT: S. Valenzuela
+substitution,45,5.0,False,N. Caprio,,regular,,,OUT: T. Bolzicco
+red,45,2.0,False,G. Canuto,,red,,,Foul
+injuryTime,45,0.0,,,,,,,
+goal,37,,True,L. Romero,,regular,1.0,0.0,regular
+yellow,16,,False,L. Pruzzo,,yellow,,,

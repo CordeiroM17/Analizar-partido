@@ -1,0 +1,1377 @@
+{
+  "home": [
+    {
+      "player": {
+        "name": "Martín Schlotthauer",
+        "firstName": "Martín",
+        "lastName": "Schlotthauer",
+        "slug": "martin-schlotthauer",
+        "shortName": "M. Schlotthauer",
+        "position": "F",
+        "jerseyNumber": "11",
+        "userCount": 9,
+        "gender": "M",
+        "id": 2077670,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "مارتين شلوتهاور",
+            "ru": "Мартин Шлоттауэр"
+          },
+          "shortNameTranslation": {
+            "ar": "م. شلوتهاور",
+            "ru": "М. Шлоттауэр"
+          }
+        }
+      },
+      "averageX": 73.6,
+      "averageY": 44.6,
+      "pointsCount": 5
+    },
+    {
+      "player": {
+        "name": "Nahuel Petillo Mediza",
+        "firstName": "Nahuel",
+        "lastName": "Petillo Mediza",
+        "slug": "nahuel-petillo-mediza",
+        "shortName": "N. P. Mediza",
+        "position": "M",
+        "jerseyNumber": "8",
+        "userCount": 9,
+        "gender": "M",
+        "id": 1524040,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ناويل بيتيليو ميديزا",
+            "ru": "Нахуэль Петильо Медиза"
+          },
+          "shortNameTranslation": {
+            "ar": "ن. ميديزا",
+            "ru": "Н. Медиза"
+          }
+        }
+      },
+      "averageX": 74,
+      "averageY": 63,
+      "pointsCount": 1
+    },
+    {
+      "player": {
+        "name": "Patricio Pérez",
+        "slug": "patricio-perez",
+        "shortName": "P. Pérez",
+        "position": "M",
+        "jerseyNumber": "10",
+        "userCount": 12,
+        "gender": "M",
+        "id": 992116,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "باتريسيو بيريز",
+            "ru": "Патрицио Перес"
+          },
+          "shortNameTranslation": {
+            "ar": "ب. بيريز",
+            "ru": "П. Перес"
+          }
+        }
+      },
+      "averageX": 62.4,
+      "averageY": 79.6,
+      "pointsCount": 10
+    },
+    {
+      "player": {
+        "name": "David Escalante",
+        "slug": "escalante-david",
+        "shortName": "D. Escalante",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 20,
+        "gender": "M",
+        "id": 986502,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إسكالانتي، ديفيد",
+            "ru": "Давид Эскаланте"
+          },
+          "shortNameTranslation": {
+            "ar": "د. إسكالانتي",
+            "ru": "Д. Эскаланте"
+          }
+        }
+      },
+      "averageX": 57.6,
+      "averageY": 55.7,
+      "pointsCount": 10
+    },
+    {
+      "player": {
+        "name": "Lucas Rey",
+        "firstName": "Lucas Rey",
+        "slug": "lucas-rey",
+        "shortName": "L. Rey",
+        "position": "F",
+        "jerseyNumber": "18",
+        "userCount": 2,
+        "gender": "M",
+        "id": 2065619,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لوكاس ري",
+            "ru": "Лукас Рей"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. ري",
+            "ru": "Л. Рей"
+          }
+        }
+      },
+      "averageX": 56.538461538462,
+      "averageY": 28.076923076923,
+      "pointsCount": 13
+    },
+    {
+      "player": {
+        "name": "Felipe José Senn",
+        "firstName": "Felipe José",
+        "lastName": "Senn",
+        "slug": "felipe-jose-senn",
+        "shortName": "F. J. Senn",
+        "position": "F",
+        "userCount": 1,
+        "gender": "M",
+        "id": 2469038,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "فيليبي خوسيه سين",
+            "ru": "Фелипе Хосе Сенн"
+          },
+          "shortNameTranslation": {
+            "ar": "ف. سين",
+            "ru": "Ф. Сенн"
+          }
+        }
+      },
+      "averageX": 66.545454545455,
+      "averageY": 41.545454545455,
+      "pointsCount": 33
+    },
+    {
+      "player": {
+        "name": "Mariano Monllor",
+        "slug": "monllor-mariano",
+        "shortName": "M. Monllor",
+        "position": "G",
+        "jerseyNumber": "12",
+        "userCount": 6,
+        "gender": "M",
+        "id": 992101,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "مونلور، ماريانو",
+            "ru": "Монльор, Мариано"
+          },
+          "shortNameTranslation": {
+            "ar": "م. مونلور",
+            "ru": "М. Монльор"
+          }
+        }
+      },
+      "averageX": 8.4054054054054,
+      "averageY": 48.702702702703,
+      "pointsCount": 37
+    },
+    {
+      "player": {
+        "name": "Ramiro Reynoso",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ramiro-reynoso",
+        "shortName": "R. Reynoso",
+        "position": "M",
+        "jerseyNumber": "17",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1468849,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "راميرو رينوسو",
+            "ru": "Рамиро Рейносо"
+          },
+          "shortNameTranslation": {
+            "ar": "ر. رينوسو",
+            "ru": "Р. Рейносо"
+          }
+        }
+      },
+      "averageX": 52.25,
+      "averageY": 18.527777777778,
+      "pointsCount": 36
+    },
+    {
+      "player": {
+        "name": "Kevin Dubini",
+        "firstName": "",
+        "lastName": "",
+        "slug": "kevin-dubini",
+        "shortName": "K. Dubini",
+        "position": "M",
+        "jerseyNumber": "22",
+        "userCount": 17,
+        "gender": "M",
+        "id": 896911,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "كيفن دوبيني",
+            "ru": "Кевин Дубини"
+          },
+          "shortNameTranslation": {
+            "ar": "ك. دوبيني",
+            "ru": "К. Дубини"
+          }
+        }
+      },
+      "averageX": 48.245283018868,
+      "averageY": 47.056603773585,
+      "pointsCount": 53
+    },
+    {
+      "player": {
+        "name": "Joel Ghirardello",
+        "firstName": "Joel Ghirardello",
+        "lastName": "",
+        "slug": "ghirardello-joel",
+        "shortName": "J. Ghirardello",
+        "position": "D",
+        "jerseyNumber": "13",
+        "userCount": 10,
+        "gender": "M",
+        "id": 1182422,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أغوستين أماريا",
+            "ru": "Джоэль Гирардельо"
+          },
+          "shortNameTranslation": {
+            "ar": "ج. غيهراديلو",
+            "ru": "Д. Гирардельо"
+          }
+        }
+      },
+      "averageX": 26.047619047619,
+      "averageY": 64.928571428571,
+      "pointsCount": 42
+    },
+    {
+      "player": {
+        "name": "Lázaro Romero",
+        "slug": "lazaro-romero",
+        "shortName": "L. Romero",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 18,
+        "gender": "M",
+        "id": 974722,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لازارو روميرو",
+            "ru": "Лазаро Ромеро"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. روميرو",
+            "ru": "Л. Ромеро"
+          }
+        }
+      },
+      "averageX": 66.333333333333,
+      "averageY": 46.179487179487,
+      "pointsCount": 39
+    },
+    {
+      "player": {
+        "name": "Lucas Pioli",
+        "firstName": "",
+        "lastName": "",
+        "slug": "lucas-pioli",
+        "shortName": "L. Pioli",
+        "position": "D",
+        "jerseyNumber": "2",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1214751,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "سوخديب كاور",
+            "ru": "Лукас Пиоли"
+          },
+          "shortNameTranslation": {
+            "ar": "س. كاور",
+            "ru": "Л. Пиоли"
+          }
+        }
+      },
+      "averageX": 23.346153846154,
+      "averageY": 27.442307692308,
+      "pointsCount": 52
+    },
+    {
+      "player": {
+        "name": "Álex Ruiz",
+        "firstName": "Álex Ruiz",
+        "slug": "alex-ruiz",
+        "shortName": "Á. Ruiz",
+        "position": "D",
+        "jerseyNumber": "3",
+        "userCount": 3,
+        "gender": "M",
+        "id": 2465610,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أليكس رويز",
+            "ru": "Алекс Руис"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. رويز",
+            "ru": "А. Руис"
+          }
+        }
+      },
+      "averageX": 44.323076923077,
+      "averageY": 77.169230769231,
+      "pointsCount": 65
+    },
+    {
+      "player": {
+        "name": "Joaquin Cancio",
+        "slug": "joaquin-cancio",
+        "shortName": "J. Cancio",
+        "position": "M",
+        "jerseyNumber": "16",
+        "userCount": 3,
+        "gender": "M",
+        "id": 2022732,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "خواكين كانسيو",
+            "ru": "Хоакин Кансио"
+          },
+          "shortNameTranslation": {
+            "ar": "خ. كانسيو",
+            "ru": "Х. Кансио"
+          }
+        }
+      },
+      "averageX": 42.6,
+      "averageY": 47.76,
+      "pointsCount": 50
+    },
+    {
+      "player": {
+        "name": "Agustín Hermoso",
+        "firstName": "",
+        "lastName": "",
+        "slug": "agustin-hermoso",
+        "shortName": "A. Hermoso",
+        "position": "M",
+        "jerseyNumber": "10",
+        "userCount": 16,
+        "gender": "M",
+        "id": 1214755,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "شين فوروز",
+            "ru": "Агустин Эрмосо"
+          },
+          "shortNameTranslation": {
+            "ar": "ش. فوروز",
+            "ru": "А. Эрмосо"
+          }
+        }
+      },
+      "averageX": 51.258064516129,
+      "averageY": 78.838709677419,
+      "pointsCount": 31
+    },
+    {
+      "player": {
+        "name": "Juan Cruz Ponce",
+        "firstName": "Juan Cruz Ponce",
+        "lastName": "",
+        "slug": "juan-cruz-ponce",
+        "shortName": "J. C. Ponce",
+        "position": "D",
+        "jerseyNumber": "14",
+        "userCount": 2,
+        "gender": "M",
+        "id": 1465284,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "خوان كروز بونس",
+            "ru": "Хуан Круз Понсе"
+          },
+          "shortNameTranslation": {
+            "ar": "خ. بونس",
+            "ru": "Х. Понсе"
+          }
+        }
+      },
+      "averageX": 42.828571428571,
+      "averageY": 12.2,
+      "pointsCount": 70
+    }
+  ],
+  "away": [
+    {
+      "player": {
+        "name": "Agustín Alonso",
+        "firstName": "Agustín Alonso",
+        "lastName": "",
+        "slug": "agustin-alonso",
+        "shortName": "A. Alonso",
+        "position": "M",
+        "jerseyNumber": "16",
+        "userCount": 27,
+        "gender": "M",
+        "id": 1182395,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "حسين المهاري",
+            "ru": "Агустин Алонсо"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ألونسو",
+            "ru": "А. Алонсо"
+          }
+        }
+      },
+      "averageX": 50.75,
+      "averageY": 18.375,
+      "pointsCount": 16
+    },
+    {
+      "player": {
+        "name": "Matias Noble",
+        "slug": "matias-noble",
+        "shortName": "M. Noble",
+        "position": "M",
+        "jerseyNumber": "19",
+        "userCount": 21,
+        "gender": "M",
+        "id": 815133,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "نوبل، ماتياش",
+            "ru": "Нобл, Матияс"
+          },
+          "shortNameTranslation": {
+            "ar": "م. نوبل",
+            "ru": "М. Нобл"
+          }
+        }
+      },
+      "averageX": 59.583333333333,
+      "averageY": 67.375,
+      "pointsCount": 24
+    },
+    {
+      "player": {
+        "name": "Santiago Valenzuela",
+        "slug": "santiago-valenzuela",
+        "shortName": "S. Valenzuela",
+        "position": "M",
+        "jerseyNumber": "5",
+        "userCount": 7,
+        "gender": "M",
+        "id": 1192491,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "دانييلوفا أ / دي تومماسو ج",
+            "ru": "Сантьяго Валенсуэла"
+          },
+          "shortNameTranslation": {
+            "ar": "د. دي تومماسو ج",
+            "ru": "С. Валенсуэла"
+          }
+        }
+      },
+      "averageX": 56.25,
+      "averageY": 49.35,
+      "pointsCount": 20
+    },
+    {
+      "player": {
+        "name": "Tomas Bolzicco",
+        "firstName": "",
+        "lastName": "",
+        "slug": "tomas-bolzicco",
+        "shortName": "T. Bolzicco",
+        "position": "F",
+        "jerseyNumber": "22",
+        "userCount": 8,
+        "gender": "M",
+        "id": 789424,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "توماس بولزيكو",
+            "ru": "Томас Больцико"
+          },
+          "shortNameTranslation": {
+            "ar": "ت. بولزيكو",
+            "ru": "Т. Больцико"
+          }
+        }
+      },
+      "averageX": 66.642857142857,
+      "averageY": 63.785714285714,
+      "pointsCount": 14
+    },
+    {
+      "player": {
+        "name": "David Valdez",
+        "slug": "david-valdez",
+        "shortName": "D. Valdez",
+        "position": "D",
+        "jerseyNumber": "14",
+        "userCount": 4,
+        "gender": "M",
+        "id": 860055,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ديفيد فالديز",
+            "ru": "Давид Вальдес"
+          },
+          "shortNameTranslation": {
+            "ar": "د. فالديز",
+            "ru": "Д. Вальдес"
+          }
+        }
+      },
+      "averageX": 41.054545454545,
+      "averageY": 22.654545454545,
+      "pointsCount": 55
+    },
+    {
+      "player": {
+        "name": "Andrés Lioi",
+        "slug": "andres-lioi",
+        "shortName": "A. Lioi",
+        "position": "M",
+        "jerseyNumber": "8",
+        "userCount": 4,
+        "gender": "M",
+        "id": 922452,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أندريس ليوي",
+            "ru": "Андрес Лиои"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ليوي",
+            "ru": "А. Лиои"
+          }
+        }
+      },
+      "averageX": 65.153846153846,
+      "averageY": 38.884615384615,
+      "pointsCount": 26
+    },
+    {
+      "player": {
+        "name": "Nicolás Caprio",
+        "firstName": "Nicolás Caprio",
+        "lastName": "",
+        "slug": "nicolas-caprio",
+        "shortName": "N. Caprio",
+        "position": "G",
+        "jerseyNumber": "12",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1185165,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ب. ميديروس / إ. بورخيس",
+            "ru": "Николас Каприо"
+          },
+          "shortNameTranslation": {
+            "ar": "ب. بورخيس",
+            "ru": "Н. Каприо"
+          }
+        }
+      },
+      "averageX": 11.428571428571,
+      "averageY": 40.857142857143,
+      "pointsCount": 14
+    },
+    {
+      "player": {
+        "name": "German Pacheco",
+        "slug": "german-pacheco",
+        "shortName": "G. Pacheco",
+        "position": "F",
+        "userCount": 11,
+        "id": 83700,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "جيرمان باتشيكو",
+            "ru": "Герман Пачеко"
+          },
+          "shortNameTranslation": {
+            "ar": "ج. باتشيكو",
+            "ru": "Г. Пачеко"
+          }
+        }
+      },
+      "averageX": 77.75,
+      "averageY": 33.916666666667,
+      "pointsCount": 12
+    },
+    {
+      "player": {
+        "name": "Imanol Enriquez",
+        "slug": "imanol-enriquez",
+        "shortName": "I. Enriquez",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 6,
+        "gender": "M",
+        "id": 1018417,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إيمانول إنريكيز",
+            "ru": "Иманоль Энрикес"
+          },
+          "shortNameTranslation": {
+            "ar": "إ. إنريكيز",
+            "ru": "И. Энрикес"
+          }
+        }
+      },
+      "averageX": 63.541666666667,
+      "averageY": 52.416666666667,
+      "pointsCount": 24
+    },
+    {
+      "player": {
+        "name": "Alan Luque",
+        "slug": "alan-luque",
+        "shortName": "A. Luque",
+        "position": "D",
+        "jerseyNumber": "4",
+        "userCount": 3,
+        "gender": "M",
+        "id": 922459,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ألان لوكي",
+            "ru": "Алан Луке"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. لوكي",
+            "ru": "А. Луке"
+          }
+        }
+      },
+      "averageX": 50.127659574468,
+      "averageY": 12.765957446809,
+      "pointsCount": 47
+    },
+    {
+      "player": {
+        "name": "Leonardo Marinucci",
+        "firstName": "",
+        "lastName": "",
+        "slug": "leonardo-marinucci",
+        "shortName": "L. Marinucci",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 3,
+        "gender": "M",
+        "id": 843404,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ليوناردو مارينوكي",
+            "ru": "Леонардо Маринукки"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. مارينوكي",
+            "ru": "Л. Маринукки"
+          }
+        }
+      },
+      "averageX": 68.173913043478,
+      "averageY": 53.652173913043,
+      "pointsCount": 46
+    },
+    {
+      "player": {
+        "name": "Gastón Canuto",
+        "firstName": "Gastón Canuto",
+        "lastName": "",
+        "slug": "gaston-canuto",
+        "shortName": "G. Canuto",
+        "position": "G",
+        "jerseyNumber": "1",
+        "userCount": 6,
+        "gender": "M",
+        "id": 1182418,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أندريا سبيتاليري",
+            "ru": "Гастон Кануту"
+          },
+          "shortNameTranslation": {
+            "ar": "غ. كانوتو",
+            "ru": "Г. Кануту"
+          }
+        }
+      },
+      "averageX": 22,
+      "averageY": 52.769230769231,
+      "pointsCount": 13
+    },
+    {
+      "player": {
+        "name": "Lucas Pruzzo",
+        "slug": "lucas-pruzzo",
+        "shortName": "L. Pruzzo",
+        "position": "D",
+        "jerseyNumber": "15",
+        "userCount": 7,
+        "gender": "M",
+        "id": 877903,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لوكاس بروزو",
+            "ru": "Лукас Пруззо"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. بروزو",
+            "ru": "Л. Пруззо"
+          }
+        }
+      },
+      "averageX": 41.041666666667,
+      "averageY": 88.729166666667,
+      "pointsCount": 48
+    },
+    {
+      "player": {
+        "name": "Gabriel Ramirez",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ramirez-gabriel",
+        "shortName": "G. Ramirez",
+        "position": "M",
+        "jerseyNumber": "5",
+        "userCount": 14,
+        "gender": "M",
+        "id": 849139,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "راميريز، غابرييل",
+            "ru": "Габриэль Рамирес"
+          },
+          "shortNameTranslation": {
+            "ar": "غ. راميريز",
+            "ru": "Г. Рамирес"
+          }
+        }
+      },
+      "averageX": 37.802816901408,
+      "averageY": 57.352112676056,
+      "pointsCount": 71
+    },
+    {
+      "player": {
+        "name": "Mathias Silvera",
+        "slug": "silvera-mathias",
+        "shortName": "M. Silvera",
+        "position": "D",
+        "jerseyNumber": "13",
+        "userCount": 22,
+        "gender": "M",
+        "id": 1020990,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "سيلفيرا، ماثياس",
+            "ru": "Сильвера, Маттиас"
+          },
+          "shortNameTranslation": {
+            "ar": "م. سيلفيرا",
+            "ru": "М. Сильвера"
+          }
+        }
+      },
+      "averageX": 30.242857142857,
+      "averageY": 73.9,
+      "pointsCount": 70
+    },
+    {
+      "player": {
+        "name": "Agustín Ojeda",
+        "slug": "agustin-ojeda",
+        "shortName": "A. Ojeda",
+        "position": "D",
+        "jerseyNumber": "11",
+        "userCount": 13,
+        "gender": "M",
+        "id": 2045245,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أغوستين أوخيدا",
+            "ru": "Агустин Охеда"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. أوخيدا",
+            "ru": "А. Охеда"
+          }
+        }
+      },
+      "averageX": 57.48,
+      "averageY": 83.853333333333,
+      "pointsCount": 75
+    }
+  ],
+  "substitutions": [
+    {
+      "playerIn": {
+        "name": "Imanol Enriquez",
+        "slug": "imanol-enriquez",
+        "shortName": "I. Enriquez",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 6,
+        "gender": "M",
+        "id": 1018417,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إيمانول إنريكيز",
+            "ru": "Иманоль Энрикес"
+          },
+          "shortNameTranslation": {
+            "ar": "إ. إنريكيز",
+            "ru": "И. Энрикес"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Santiago Valenzuela",
+        "slug": "santiago-valenzuela",
+        "shortName": "S. Valenzuela",
+        "position": "M",
+        "jerseyNumber": "5",
+        "userCount": 7,
+        "gender": "M",
+        "id": 1192491,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "دانييلوفا أ / دي تومماسو ج",
+            "ru": "Сантьяго Валенсуэла"
+          },
+          "shortNameTranslation": {
+            "ar": "د. دي تومماسو ج",
+            "ru": "С. Валенсуэла"
+          }
+        }
+      },
+      "id": 125519334,
+      "time": 45,
+      "addedTime": 7,
+      "timeSeconds": 3083,
+      "injury": false,
+      "isHome": false,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 1,
+      "reversedPeriodTimeSeconds": 2317,
+      "periodTimeSeconds": 383,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Nicolás Caprio",
+        "firstName": "Nicolás Caprio",
+        "lastName": "",
+        "slug": "nicolas-caprio",
+        "shortName": "N. Caprio",
+        "position": "G",
+        "jerseyNumber": "12",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1185165,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ب. ميديروس / إ. بورخيس",
+            "ru": "Николас Каприо"
+          },
+          "shortNameTranslation": {
+            "ar": "ب. بورخيس",
+            "ru": "Н. Каприо"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Tomas Bolzicco",
+        "firstName": "",
+        "lastName": "",
+        "slug": "tomas-bolzicco",
+        "shortName": "T. Bolzicco",
+        "position": "F",
+        "jerseyNumber": "22",
+        "userCount": 8,
+        "gender": "M",
+        "id": 789424,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "توماس بولزيكو",
+            "ru": "Томас Больцико"
+          },
+          "shortNameTranslation": {
+            "ar": "ت. بولزيكو",
+            "ru": "Т. Больцико"
+          }
+        }
+      },
+      "id": 125519333,
+      "time": 45,
+      "addedTime": 5,
+      "timeSeconds": 2975,
+      "injury": false,
+      "isHome": false,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 1,
+      "reversedPeriodTimeSeconds": 2425,
+      "periodTimeSeconds": 275,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "German Pacheco",
+        "slug": "german-pacheco",
+        "shortName": "G. Pacheco",
+        "position": "F",
+        "userCount": 11,
+        "id": 83700,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "جيرمان باتشيكو",
+            "ru": "Герман Пачеко"
+          },
+          "shortNameTranslation": {
+            "ar": "ج. باتشيكو",
+            "ru": "Г. Пачеко"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Leonardo Marinucci",
+        "firstName": "",
+        "lastName": "",
+        "slug": "leonardo-marinucci",
+        "shortName": "L. Marinucci",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 3,
+        "gender": "M",
+        "id": 843404,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ليوناردو مارينوكي",
+            "ru": "Леонардо Маринукки"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. مارينوكي",
+            "ru": "Л. Маринукки"
+          }
+        }
+      },
+      "id": 125519336,
+      "time": 63,
+      "timeSeconds": 3736,
+      "injury": false,
+      "isHome": false,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 28,
+      "reversedPeriodTimeSeconds": 1664,
+      "periodTimeSeconds": 1036,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Agustín Alonso",
+        "firstName": "Agustín Alonso",
+        "lastName": "",
+        "slug": "agustin-alonso",
+        "shortName": "A. Alonso",
+        "position": "M",
+        "jerseyNumber": "16",
+        "userCount": 27,
+        "gender": "M",
+        "id": 1182395,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "حسين المهاري",
+            "ru": "Агустин Алонсо"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ألونسو",
+            "ru": "А. Алонсо"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Lucas Pruzzo",
+        "slug": "lucas-pruzzo",
+        "shortName": "L. Pruzzo",
+        "position": "D",
+        "jerseyNumber": "15",
+        "userCount": 7,
+        "gender": "M",
+        "id": 877903,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لوكاس بروزو",
+            "ru": "Лукас Пруззо"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. بروزو",
+            "ru": "Л. Пруззо"
+          }
+        }
+      },
+      "id": 125519335,
+      "time": 63,
+      "timeSeconds": 3736,
+      "injury": false,
+      "isHome": false,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 28,
+      "reversedPeriodTimeSeconds": 1664,
+      "periodTimeSeconds": 1036,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "David Escalante",
+        "slug": "escalante-david",
+        "shortName": "D. Escalante",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 20,
+        "gender": "M",
+        "id": 986502,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إسكالانتي، ديفيد",
+            "ru": "Давид Эскаланте"
+          },
+          "shortNameTranslation": {
+            "ar": "د. إسكالانتي",
+            "ru": "Д. Эскаланте"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Ramiro Reynoso",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ramiro-reynoso",
+        "shortName": "R. Reynoso",
+        "position": "M",
+        "jerseyNumber": "17",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1468849,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "راميرو رينوسو",
+            "ru": "Рамиро Рейносо"
+          },
+          "shortNameTranslation": {
+            "ar": "ر. رينوسو",
+            "ru": "Р. Рейносо"
+          }
+        }
+      },
+      "id": 125519328,
+      "time": 67,
+      "timeSeconds": 3998,
+      "injury": false,
+      "isHome": true,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 24,
+      "reversedPeriodTimeSeconds": 1402,
+      "periodTimeSeconds": 1298,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Lucas Rey",
+        "firstName": "Lucas Rey",
+        "slug": "lucas-rey",
+        "shortName": "L. Rey",
+        "position": "F",
+        "jerseyNumber": "18",
+        "userCount": 2,
+        "gender": "M",
+        "id": 2065619,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لوكاس ري",
+            "ru": "Лукас Рей"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. ري",
+            "ru": "Л. Рей"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Lázaro Romero",
+        "slug": "lazaro-romero",
+        "shortName": "L. Romero",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 18,
+        "gender": "M",
+        "id": 974722,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لازارو روميرو",
+            "ru": "Лазаро Ромеро"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. روميرو",
+            "ru": "Л. Ромеро"
+          }
+        }
+      },
+      "id": 125519329,
+      "time": 67,
+      "timeSeconds": 3998,
+      "injury": false,
+      "isHome": true,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 24,
+      "reversedPeriodTimeSeconds": 1402,
+      "periodTimeSeconds": 1298,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Matias Noble",
+        "slug": "matias-noble",
+        "shortName": "M. Noble",
+        "position": "M",
+        "jerseyNumber": "19",
+        "userCount": 21,
+        "gender": "M",
+        "id": 815133,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "نوبل، ماتياش",
+            "ru": "Нобл, Матияс"
+          },
+          "shortNameTranslation": {
+            "ar": "م. نوبل",
+            "ru": "М. Нобл"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Andrés Lioi",
+        "slug": "andres-lioi",
+        "shortName": "A. Lioi",
+        "position": "M",
+        "jerseyNumber": "8",
+        "userCount": 4,
+        "gender": "M",
+        "id": 922452,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أندريس ليوي",
+            "ru": "Андрес Лиои"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ليوي",
+            "ru": "А. Лиои"
+          }
+        }
+      },
+      "id": 125519337,
+      "time": 68,
+      "timeSeconds": 4079,
+      "injury": false,
+      "isHome": false,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 23,
+      "reversedPeriodTimeSeconds": 1321,
+      "periodTimeSeconds": 1379,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Martín Schlotthauer",
+        "firstName": "Martín",
+        "lastName": "Schlotthauer",
+        "slug": "martin-schlotthauer",
+        "shortName": "M. Schlotthauer",
+        "position": "F",
+        "jerseyNumber": "11",
+        "userCount": 9,
+        "gender": "M",
+        "id": 2077670,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "مارتين شلوتهاور",
+            "ru": "Мартин Шлоттауэр"
+          },
+          "shortNameTranslation": {
+            "ar": "م. شلوتهاور",
+            "ru": "М. Шлоттауэр"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Felipe José Senn",
+        "firstName": "Felipe José",
+        "lastName": "Senn",
+        "slug": "felipe-jose-senn",
+        "shortName": "F. J. Senn",
+        "position": "F",
+        "userCount": 1,
+        "gender": "M",
+        "id": 2469038,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "فيليبي خوسيه سين",
+            "ru": "Фелипе Хосе Сенн"
+          },
+          "shortNameTranslation": {
+            "ar": "ف. سين",
+            "ru": "Ф. Сенн"
+          }
+        }
+      },
+      "id": 125519331,
+      "time": 81,
+      "timeSeconds": 4802,
+      "injury": false,
+      "isHome": true,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 10,
+      "reversedPeriodTimeSeconds": 598,
+      "periodTimeSeconds": 2102,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Patricio Pérez",
+        "slug": "patricio-perez",
+        "shortName": "P. Pérez",
+        "position": "M",
+        "jerseyNumber": "10",
+        "userCount": 12,
+        "gender": "M",
+        "id": 992116,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "باتريسيو بيريز",
+            "ru": "Патрицио Перес"
+          },
+          "shortNameTranslation": {
+            "ar": "ب. بيريز",
+            "ru": "П. Перес"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Agustín Hermoso",
+        "firstName": "",
+        "lastName": "",
+        "slug": "agustin-hermoso",
+        "shortName": "A. Hermoso",
+        "position": "M",
+        "jerseyNumber": "10",
+        "userCount": 16,
+        "gender": "M",
+        "id": 1214755,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "شين فوروز",
+            "ru": "Агустин Эрмосо"
+          },
+          "shortNameTranslation": {
+            "ar": "ش. فوروز",
+            "ru": "А. Эрмосо"
+          }
+        }
+      },
+      "id": 125519330,
+      "time": 81,
+      "timeSeconds": 4802,
+      "injury": false,
+      "isHome": true,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 10,
+      "reversedPeriodTimeSeconds": 598,
+      "periodTimeSeconds": 2102,
+      "incidentType": "substitution"
+    },
+    {
+      "playerIn": {
+        "name": "Nahuel Petillo Mediza",
+        "firstName": "Nahuel",
+        "lastName": "Petillo Mediza",
+        "slug": "nahuel-petillo-mediza",
+        "shortName": "N. P. Mediza",
+        "position": "M",
+        "jerseyNumber": "8",
+        "userCount": 9,
+        "gender": "M",
+        "id": 1524040,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ناويل بيتيليو ميديزا",
+            "ru": "Нахуэль Петильо Медиза"
+          },
+          "shortNameTranslation": {
+            "ar": "ن. ميديزا",
+            "ru": "Н. Медиза"
+          }
+        }
+      },
+      "playerOut": {
+        "name": "Kevin Dubini",
+        "firstName": "",
+        "lastName": "",
+        "slug": "kevin-dubini",
+        "shortName": "K. Dubini",
+        "position": "M",
+        "jerseyNumber": "22",
+        "userCount": 17,
+        "gender": "M",
+        "id": 896911,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "كيفن دوبيني",
+            "ru": "Кевин Дубини"
+          },
+          "shortNameTranslation": {
+            "ar": "ك. دوبيني",
+            "ru": "К. Дубини"
+          }
+        }
+      },
+      "id": 125519332,
+      "time": 82,
+      "timeSeconds": 4910,
+      "injury": false,
+      "isHome": true,
+      "incidentClass": "regular",
+      "reversedPeriodTime": 9,
+      "reversedPeriodTimeSeconds": 490,
+      "periodTimeSeconds": 2210,
+      "incidentType": "substitution"
+    }
+  ]
+}

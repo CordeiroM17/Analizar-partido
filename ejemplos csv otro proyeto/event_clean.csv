@@ -1,0 +1,2 @@
+match_key,event_id,start_time_utc,tournament,season,round,status,home_team,away_team,home_team_id,away_team_id,home_score,away_score,home_score_ht,away_score_ht,chaco_home,chaco_goals,rival_goals,venue,attendance,referee
+2026-02-14_vs_acassusso_a,15275383,2026-02-14T20:00:00+00:00,Primera Nacional,Primera Nacional 2026,1,Ended,Acassuso,Chaco For Ever,112491,252726,2,0,1,0,False,0,2,,,

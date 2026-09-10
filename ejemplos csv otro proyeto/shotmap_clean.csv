@@ -1,0 +1,17 @@
+time,addedTime,player_id,player_name,isHome,shotType,situation,bodyPart,xg,xgot,coord_x,coord_y,goal_mouth_x,goal_mouth_z
+80,,2065619,L. Rey,True,miss,regular,right-foot,0.01357,,22,64,58.3,19.1
+80,,986502,D. Escalante,True,block,regular,right-foot,0.01607,,18,36,50.0,20.0
+78,,1018417,I. Enriquez,False,miss,corner,head,0.01402,,9,63,41.1,43.2
+75,,2465610,Á. Ruiz,True,miss,regular,right-foot,0.05602,,25,43,43.6,53.0
+73,,1182395,A. Alonso,False,miss,regular,left-foot,0.01143,,26,71,43.7,1.4
+70,,83700,G. Pacheco,False,block,regular,right-foot,0.007004,,11,73,50.0,20.0
+68,,849139,G. Ramirez,False,save,set-piece,right-foot,0.05889,0.09468,16,32,53.0,19.6
+64,,974722,L. Romero,True,miss,regular,left-foot,0.01158,,20,29,41.9,44.3
+59,,922459,A. Luque,False,block,regular,right-foot,0.00697,,16,74,50.0,20.0
+49,,843404,L. Marinucci,False,miss,regular,right-foot,0.1554,,5,69,44.0,41.3
+48,,974722,L. Romero,True,goal,regular,head,0.4418,0.6174,4,54,49.4,7.4
+45,6.0,896911,K. Dubini,True,block,free-kick,right-foot,0.002129,,22,63,50.0,20.0
+37,,974722,L. Romero,True,goal,corner,left-foot,0.7275,0.9028,5,51,49.7,26.0
+37,,1468849,R. Reynoso,True,save,corner,right-foot,0.4318,0.5455,6,54,51.0,11.0
+13,,2465610,Á. Ruiz,True,save,free-kick,left-foot,0.07861,0.08727,24,69,47.9,6.3
+7,,843404,L. Marinucci,False,miss,throw-in-set-piece,right-foot,0.02561,,26,33,47.9,43.8

@@ -1,0 +1,1005 @@
+{
+  "shotmap": [
+    {
+      "player": {
+        "name": "Lucas Rey",
+        "firstName": "Lucas Rey",
+        "slug": "lucas-rey",
+        "shortName": "L. Rey",
+        "position": "F",
+        "jerseyNumber": "18",
+        "userCount": 2,
+        "gender": "M",
+        "id": 2065619,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لوكاس ري",
+            "ru": "Лукас Рей"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. ري",
+            "ru": "Л. Рей"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "miss",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 22,
+        "y": 64,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "close-left",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 58.3,
+        "z": 19.1
+      },
+      "xg": 0.01357,
+      "id": 6753955,
+      "time": 80,
+      "timeSeconds": 4761,
+      "draw": {
+        "start": {
+          "x": 64,
+          "y": 22
+        },
+        "end": {
+          "x": 41.7,
+          "y": 0
+        },
+        "goal": {
+          "x": 41.7,
+          "y": 80.9
+        }
+      },
+      "reversedPeriodTime": 11,
+      "reversedPeriodTimeSeconds": 639,
+      "periodTimeSeconds": 2061,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "David Escalante",
+        "slug": "escalante-david",
+        "shortName": "D. Escalante",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 20,
+        "gender": "M",
+        "id": 986502,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إسكالانتي، ديفيد",
+            "ru": "Давид Эскаланте"
+          },
+          "shortNameTranslation": {
+            "ar": "د. إسكالانتي",
+            "ru": "Д. Эскаланте"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "block",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 18,
+        "y": 36,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 50,
+        "z": 20
+      },
+      "blockCoordinates": {
+        "x": 18,
+        "y": 36,
+        "z": 0
+      },
+      "xg": 0.01607,
+      "id": 6753954,
+      "time": 80,
+      "timeSeconds": 4756,
+      "draw": {
+        "start": {
+          "x": 36,
+          "y": 18
+        },
+        "block": {
+          "x": 36,
+          "y": 18
+        },
+        "end": {
+          "x": 50,
+          "y": 0
+        },
+        "goal": {
+          "x": 50,
+          "y": 80
+        }
+      },
+      "reversedPeriodTime": 11,
+      "reversedPeriodTimeSeconds": 644,
+      "periodTimeSeconds": 2056,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Imanol Enriquez",
+        "slug": "imanol-enriquez",
+        "shortName": "I. Enriquez",
+        "position": "F",
+        "jerseyNumber": "9",
+        "userCount": 6,
+        "gender": "M",
+        "id": 1018417,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "إيمانول إنريكيز",
+            "ru": "Иманоль Энрикес"
+          },
+          "shortNameTranslation": {
+            "ar": "إ. إنريكيز",
+            "ru": "И. Энрикес"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "miss",
+      "situation": "corner",
+      "playerCoordinates": {
+        "x": 9,
+        "y": 63,
+        "z": 0
+      },
+      "bodyPart": "head",
+      "goalMouthLocation": "close-high-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 41.1,
+        "z": 43.2
+      },
+      "xg": 0.01402,
+      "id": 6753953,
+      "time": 78,
+      "timeSeconds": 4635,
+      "draw": {
+        "start": {
+          "x": 63,
+          "y": 9
+        },
+        "end": {
+          "x": 58.9,
+          "y": 0
+        },
+        "goal": {
+          "x": 58.9,
+          "y": 56.8
+        }
+      },
+      "reversedPeriodTime": 13,
+      "reversedPeriodTimeSeconds": 765,
+      "periodTimeSeconds": 1935,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Álex Ruiz",
+        "firstName": "Álex Ruiz",
+        "slug": "alex-ruiz",
+        "shortName": "Á. Ruiz",
+        "position": "D",
+        "jerseyNumber": "3",
+        "userCount": 3,
+        "gender": "M",
+        "id": 2465610,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أليكس رويز",
+            "ru": "Алекс Руис"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. رويز",
+            "ru": "А. Руис"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "miss",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 25,
+        "y": 43,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "close-high-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 43.6,
+        "z": 53
+      },
+      "xg": 0.05602,
+      "id": 6753952,
+      "time": 75,
+      "timeSeconds": 4458,
+      "draw": {
+        "start": {
+          "x": 43,
+          "y": 25
+        },
+        "end": {
+          "x": 56.4,
+          "y": 0
+        },
+        "goal": {
+          "x": 56.4,
+          "y": 47
+        }
+      },
+      "reversedPeriodTime": 16,
+      "reversedPeriodTimeSeconds": 942,
+      "periodTimeSeconds": 1758,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Agustín Alonso",
+        "firstName": "Agustín Alonso",
+        "lastName": "",
+        "slug": "agustin-alonso",
+        "shortName": "A. Alonso",
+        "position": "M",
+        "jerseyNumber": "16",
+        "userCount": 27,
+        "gender": "M",
+        "id": 1182395,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "حسين المهاري",
+            "ru": "Агустин Алонсо"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. ألونسو",
+            "ru": "А. Алонсо"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "miss",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 26,
+        "y": 71,
+        "z": 0
+      },
+      "bodyPart": "left-foot",
+      "goalMouthLocation": "close-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 43.7,
+        "z": 1.4
+      },
+      "xg": 0.01143,
+      "id": 6753951,
+      "time": 73,
+      "timeSeconds": 4342,
+      "draw": {
+        "start": {
+          "x": 71,
+          "y": 26
+        },
+        "end": {
+          "x": 56.3,
+          "y": 0
+        },
+        "goal": {
+          "x": 56.3,
+          "y": 98.6
+        }
+      },
+      "reversedPeriodTime": 18,
+      "reversedPeriodTimeSeconds": 1058,
+      "periodTimeSeconds": 1642,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "German Pacheco",
+        "slug": "german-pacheco",
+        "shortName": "G. Pacheco",
+        "position": "F",
+        "userCount": 11,
+        "id": 83700,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "جيرمان باتشيكو",
+            "ru": "Герман Пачеко"
+          },
+          "shortNameTranslation": {
+            "ar": "ج. باتشيكو",
+            "ru": "Г. Пачеко"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "block",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 11,
+        "y": 73,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 50,
+        "z": 20
+      },
+      "blockCoordinates": {
+        "x": 11,
+        "y": 73,
+        "z": 0
+      },
+      "xg": 0.007004,
+      "id": 6753950,
+      "time": 70,
+      "timeSeconds": 4153,
+      "draw": {
+        "start": {
+          "x": 73,
+          "y": 11
+        },
+        "block": {
+          "x": 73,
+          "y": 11
+        },
+        "end": {
+          "x": 50,
+          "y": 0
+        },
+        "goal": {
+          "x": 50,
+          "y": 80
+        }
+      },
+      "reversedPeriodTime": 21,
+      "reversedPeriodTimeSeconds": 1247,
+      "periodTimeSeconds": 1453,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Gabriel Ramirez",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ramirez-gabriel",
+        "shortName": "G. Ramirez",
+        "position": "M",
+        "jerseyNumber": "5",
+        "userCount": 14,
+        "gender": "M",
+        "id": 849139,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "راميريز، غابرييل",
+            "ru": "Габриэль Рамирес"
+          },
+          "shortNameTranslation": {
+            "ar": "غ. راميريز",
+            "ru": "Г. Рамирес"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "save",
+      "situation": "set-piece",
+      "playerCoordinates": {
+        "x": 16,
+        "y": 32,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-left",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 53,
+        "z": 19.6
+      },
+      "xg": 0.05889,
+      "xgot": 0.09468,
+      "id": 6753949,
+      "time": 68,
+      "timeSeconds": 4023,
+      "draw": {
+        "start": {
+          "x": 32,
+          "y": 16
+        },
+        "end": {
+          "x": 47,
+          "y": 0
+        },
+        "goal": {
+          "x": 47,
+          "y": 80.4
+        }
+      },
+      "reversedPeriodTime": 23,
+      "reversedPeriodTimeSeconds": 1377,
+      "periodTimeSeconds": 1323,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Lázaro Romero",
+        "slug": "lazaro-romero",
+        "shortName": "L. Romero",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 18,
+        "gender": "M",
+        "id": 974722,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لازارو روميرو",
+            "ru": "Лазаро Ромеро"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. روميرو",
+            "ru": "Л. Ромеро"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "miss",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 20,
+        "y": 29,
+        "z": 0
+      },
+      "bodyPart": "left-foot",
+      "goalMouthLocation": "close-high-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 41.9,
+        "z": 44.3
+      },
+      "xg": 0.01158,
+      "id": 6753948,
+      "time": 64,
+      "timeSeconds": 3811,
+      "draw": {
+        "start": {
+          "x": 29,
+          "y": 20
+        },
+        "end": {
+          "x": 58.1,
+          "y": 0
+        },
+        "goal": {
+          "x": 58.1,
+          "y": 55.7
+        }
+      },
+      "reversedPeriodTime": 27,
+      "reversedPeriodTimeSeconds": 1589,
+      "periodTimeSeconds": 1111,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Alan Luque",
+        "slug": "alan-luque",
+        "shortName": "A. Luque",
+        "position": "D",
+        "jerseyNumber": "4",
+        "userCount": 3,
+        "gender": "M",
+        "id": 922459,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ألان لوكي",
+            "ru": "Алан Луке"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. لوكي",
+            "ru": "А. Луке"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "block",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 16,
+        "y": 74,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 50,
+        "z": 20
+      },
+      "blockCoordinates": {
+        "x": 16,
+        "y": 74,
+        "z": 0
+      },
+      "xg": 0.00697,
+      "id": 6753947,
+      "time": 59,
+      "timeSeconds": 3538,
+      "draw": {
+        "start": {
+          "x": 74,
+          "y": 16
+        },
+        "block": {
+          "x": 74,
+          "y": 16
+        },
+        "end": {
+          "x": 50,
+          "y": 0
+        },
+        "goal": {
+          "x": 50,
+          "y": 80
+        }
+      },
+      "reversedPeriodTime": 32,
+      "reversedPeriodTimeSeconds": 1862,
+      "periodTimeSeconds": 838,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Leonardo Marinucci",
+        "firstName": "",
+        "lastName": "",
+        "slug": "leonardo-marinucci",
+        "shortName": "L. Marinucci",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 3,
+        "gender": "M",
+        "id": 843404,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ليوناردو مارينوكي",
+            "ru": "Леонардо Маринукки"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. مارينوكي",
+            "ru": "Л. Маринукки"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "miss",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 5,
+        "y": 69,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "close-high-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 44,
+        "z": 41.3
+      },
+      "xg": 0.1554,
+      "id": 6753946,
+      "time": 49,
+      "timeSeconds": 2939,
+      "draw": {
+        "start": {
+          "x": 69,
+          "y": 5
+        },
+        "end": {
+          "x": 56,
+          "y": 0
+        },
+        "goal": {
+          "x": 56,
+          "y": 58.7
+        }
+      },
+      "reversedPeriodTime": 42,
+      "reversedPeriodTimeSeconds": 2461,
+      "periodTimeSeconds": 239,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Lázaro Romero",
+        "slug": "lazaro-romero",
+        "shortName": "L. Romero",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 18,
+        "gender": "M",
+        "id": 974722,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لازارو روميرو",
+            "ru": "Лазаро Ромеро"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. روميرو",
+            "ru": "Л. Ромеро"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "goal",
+      "goalType": "regular",
+      "situation": "regular",
+      "playerCoordinates": {
+        "x": 4,
+        "y": 54,
+        "z": 0
+      },
+      "bodyPart": "head",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 49.4,
+        "z": 7.4
+      },
+      "xg": 0.4418,
+      "xgot": 0.6174,
+      "id": 6753945,
+      "time": 48,
+      "timeSeconds": 2860,
+      "draw": {
+        "start": {
+          "x": 54,
+          "y": 4
+        },
+        "end": {
+          "x": 50.6,
+          "y": 0
+        },
+        "goal": {
+          "x": 50.6,
+          "y": 92.6
+        }
+      },
+      "reversedPeriodTime": 43,
+      "reversedPeriodTimeSeconds": 2540,
+      "periodTimeSeconds": 160,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Kevin Dubini",
+        "firstName": "",
+        "lastName": "",
+        "slug": "kevin-dubini",
+        "shortName": "K. Dubini",
+        "position": "M",
+        "jerseyNumber": "22",
+        "userCount": 17,
+        "gender": "M",
+        "id": 896911,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "كيفن دوبيني",
+            "ru": "Кевин Дубини"
+          },
+          "shortNameTranslation": {
+            "ar": "ك. دوبيني",
+            "ru": "К. Дубини"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "block",
+      "situation": "free-kick",
+      "playerCoordinates": {
+        "x": 22,
+        "y": 63,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 50,
+        "z": 20
+      },
+      "blockCoordinates": {
+        "x": 22,
+        "y": 63,
+        "z": 0
+      },
+      "xg": 0.002129,
+      "id": 6753957,
+      "time": 45,
+      "addedTime": 6,
+      "timeSeconds": 3047,
+      "draw": {
+        "start": {
+          "x": 63,
+          "y": 22
+        },
+        "block": {
+          "x": 63,
+          "y": 22
+        },
+        "end": {
+          "x": 50,
+          "y": 0
+        },
+        "goal": {
+          "x": 50,
+          "y": 80
+        }
+      },
+      "reversedPeriodTime": 1,
+      "reversedPeriodTimeSeconds": 2353,
+      "periodTimeSeconds": 347,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Lázaro Romero",
+        "slug": "lazaro-romero",
+        "shortName": "L. Romero",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 18,
+        "gender": "M",
+        "id": 974722,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "لازارو روميرو",
+            "ru": "Лазаро Ромеро"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. روميرو",
+            "ru": "Л. Ромеро"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "goal",
+      "goalType": "regular",
+      "situation": "corner",
+      "playerCoordinates": {
+        "x": 5,
+        "y": 51,
+        "z": 0
+      },
+      "bodyPart": "left-foot",
+      "goalMouthLocation": "high-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 49.7,
+        "z": 26
+      },
+      "xg": 0.7275,
+      "xgot": 0.9028,
+      "id": 6753944,
+      "time": 37,
+      "timeSeconds": 2177,
+      "draw": {
+        "start": {
+          "x": 51,
+          "y": 5
+        },
+        "end": {
+          "x": 50.3,
+          "y": 0
+        },
+        "goal": {
+          "x": 50.3,
+          "y": 74
+        }
+      },
+      "reversedPeriodTime": 9,
+      "reversedPeriodTimeSeconds": 523,
+      "periodTimeSeconds": 2177,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Ramiro Reynoso",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ramiro-reynoso",
+        "shortName": "R. Reynoso",
+        "position": "M",
+        "jerseyNumber": "17",
+        "userCount": 4,
+        "gender": "M",
+        "id": 1468849,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "راميرو رينوسو",
+            "ru": "Рамиро Рейносо"
+          },
+          "shortNameTranslation": {
+            "ar": "ر. رينوسو",
+            "ru": "Р. Рейносо"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "save",
+      "situation": "corner",
+      "playerCoordinates": {
+        "x": 6,
+        "y": 54,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "low-centre",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 51,
+        "z": 11
+      },
+      "xg": 0.4318,
+      "xgot": 0.5455,
+      "id": 6753943,
+      "time": 37,
+      "timeSeconds": 2175,
+      "draw": {
+        "start": {
+          "x": 54,
+          "y": 6
+        },
+        "end": {
+          "x": 49,
+          "y": 0
+        },
+        "goal": {
+          "x": 49,
+          "y": 89
+        }
+      },
+      "reversedPeriodTime": 9,
+      "reversedPeriodTimeSeconds": 525,
+      "periodTimeSeconds": 2175,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Álex Ruiz",
+        "firstName": "Álex Ruiz",
+        "slug": "alex-ruiz",
+        "shortName": "Á. Ruiz",
+        "position": "D",
+        "jerseyNumber": "3",
+        "userCount": 3,
+        "gender": "M",
+        "id": 2465610,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "أليكس رويز",
+            "ru": "Алекс Руис"
+          },
+          "shortNameTranslation": {
+            "ar": "أ. رويز",
+            "ru": "А. Руис"
+          }
+        }
+      },
+      "isHome": true,
+      "shotType": "save",
+      "situation": "free-kick",
+      "playerCoordinates": {
+        "x": 24,
+        "y": 69,
+        "z": 0
+      },
+      "bodyPart": "left-foot",
+      "goalMouthLocation": "low-right",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 47.9,
+        "z": 6.3
+      },
+      "xg": 0.07861,
+      "xgot": 0.08727,
+      "id": 6753956,
+      "time": 13,
+      "timeSeconds": 725,
+      "draw": {
+        "start": {
+          "x": 69,
+          "y": 24
+        },
+        "end": {
+          "x": 52.1,
+          "y": 0
+        },
+        "goal": {
+          "x": 52.1,
+          "y": 93.7
+        }
+      },
+      "reversedPeriodTime": 33,
+      "reversedPeriodTimeSeconds": 1975,
+      "periodTimeSeconds": 725,
+      "incidentType": "shot"
+    },
+    {
+      "player": {
+        "name": "Leonardo Marinucci",
+        "firstName": "",
+        "lastName": "",
+        "slug": "leonardo-marinucci",
+        "shortName": "L. Marinucci",
+        "position": "F",
+        "jerseyNumber": "20",
+        "userCount": 3,
+        "gender": "M",
+        "id": 843404,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "ليوناردو مارينوكي",
+            "ru": "Леонардо Маринукки"
+          },
+          "shortNameTranslation": {
+            "ar": "ل. مارينوكي",
+            "ru": "Л. Маринукки"
+          }
+        }
+      },
+      "isHome": false,
+      "shotType": "miss",
+      "situation": "throw-in-set-piece",
+      "playerCoordinates": {
+        "x": 26,
+        "y": 33,
+        "z": 0
+      },
+      "bodyPart": "right-foot",
+      "goalMouthLocation": "close-high",
+      "goalMouthCoordinates": {
+        "x": 0,
+        "y": 47.9,
+        "z": 43.8
+      },
+      "xg": 0.02561,
+      "id": 6753942,
+      "time": 7,
+      "timeSeconds": 392,
+      "draw": {
+        "start": {
+          "x": 33,
+          "y": 26
+        },
+        "end": {
+          "x": 52.1,
+          "y": 0
+        },
+        "goal": {
+          "x": 52.1,
+          "y": 56.2
+        }
+      },
+      "reversedPeriodTime": 39,
+      "reversedPeriodTimeSeconds": 2308,
+      "periodTimeSeconds": 392,
+      "incidentType": "shot"
+    }
+  ]
+}
