@@ -18,6 +18,8 @@ umap-learn>=0.5
 
 # Backend de modelos por defecto (config.VIDEO_MODEL_BACKEND="roboflow"):
 # descarga los modelos automáticamente con la API key gratuita de Roboflow.
-inference>=0.9
+# OJO: instalar "inference-gpu", NO "inference" a secas — ese trae onnxruntime
+# solo-CPU y el pipeline corre mucho más lento sin avisar con un error claro.
+inference-gpu>=0.9
 # Si en F2 se entrena y se usan pesos .pt locales (backend "local"):
 # ultralytics>=8.0
