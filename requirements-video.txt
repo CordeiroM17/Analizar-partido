@@ -18,8 +18,17 @@ umap-learn>=0.5
 
 # Backend de modelos por defecto (config.VIDEO_MODEL_BACKEND="roboflow"):
 # descarga los modelos automáticamente con la API key gratuita de Roboflow.
-# OJO: instalar "inference-gpu", NO "inference" a secas — ese trae onnxruntime
-# solo-CPU y el pipeline corre mucho más lento sin avisar con un error claro.
-inference-gpu>=0.9
+#
+# OJO con la GPU: `pip install inference` a secas trae onnxruntime SOLO-CPU
+# (el pipeline corre igual, mucho más lento, sin ningún error visible). NO usar
+# `inference-gpu` tampoco — arrastra `pycuda`, que necesita compilar contra el
+# toolkit CUDA completo (nvcc) y falla en Colab. La combinación que funciona:
+#   pip install inference supervision "git+https://github.com/roboflow/sports.git"
+#   pip uninstall -y onnxruntime
+#   pip install onnxruntime-gpu
+# (onnxruntime-gpu es un wheel precompilado, no se compila localmente). Ver
+# notebooks/procesar_video_colab.ipynb, celda 1, que ya hace esto.
+inference>=0.9
+onnxruntime-gpu
 # Si en F2 se entrena y se usan pesos .pt locales (backend "local"):
 # ultralytics>=8.0
