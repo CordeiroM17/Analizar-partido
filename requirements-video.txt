@@ -19,16 +19,21 @@ umap-learn>=0.5
 # Backend de modelos por defecto (config.VIDEO_MODEL_BACKEND="roboflow"):
 # descarga los modelos automáticamente con la API key gratuita de Roboflow.
 #
-# OJO con la GPU: `pip install inference` a secas trae onnxruntime SOLO-CPU
-# (el pipeline corre igual, mucho más lento, sin ningún error visible). NO usar
-# `inference-gpu` tampoco — arrastra `pycuda`, que necesita compilar contra el
-# toolkit CUDA completo (nvcc) y falla en Colab. La combinación que funciona:
-#   pip install inference supervision "git+https://github.com/roboflow/sports.git"
-#   pip uninstall -y onnxruntime
-#   pip install onnxruntime-gpu
-# (onnxruntime-gpu es un wheel precompilado, no se compila localmente). Ver
-# notebooks/procesar_video_colab.ipynb, celda 1, que ya hace esto.
+# GPU: NO se pudo lograr que los modelos de Roboflow (jugadores/cancha, via
+# `inference`) corran por GPU en Colab. Dos intentos fallidos, en orden:
+#   1. `inference-gpu` -> arrastra `pycuda`, que necesita compilar contra el
+#      toolkit CUDA completo (nvcc) y falla al construir el wheel en Colab.
+#   2. `inference` + reemplazar onnxruntime por onnxruntime-gpu a mano ->
+#      onnxruntime SÍ carga CUDA, pero la libreria interna de Roboflow
+#      (`inference_models`) exige `pycuda` en tiempo de ejecución para el
+#      camino GPU del backend ONNX ("Running model with ONNX backend on GPU
+#      requires pycuda installation") -- mismo bloqueo que el punto 1.
+# Conclusión: se usa `inference` normal (onnxruntime CPU) para jugadores y
+# cancha. El clasificador de equipos (torch/SigLIP, en sports.common.team) SÍ
+# usa GPU sin problema -- es una librería distinta, no depende de pycuda.
+# Si en el futuro se quiere GPU para jugadores/cancha, la alternativa más
+# realista es el backend "local" (ultralytics + pesos .pt propios, ver abajo),
+# que usa PyTorch (sin este problema) en vez de onnxruntime.
 inference>=0.9
-onnxruntime-gpu
 # Si en F2 se entrena y se usan pesos .pt locales (backend "local"):
 # ultralytics>=8.0
