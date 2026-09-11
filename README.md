@@ -17,8 +17,8 @@ tiros, conducciones — quién interviene, dónde y cuándo) y, sobre eso, la **
   `validation.py` portados y adaptados desde `Chaco For Ever Analisis` (que queda como
   consumidor del `events.csv`).
 - 🔜 **F1** — partido de prueba listo (`data/temporadas/2026/partidos/2026-09-06_vs_estudiantes_caseros_h/`,
-  video + CSV de Sofascore). Falta el timestamp del saque inicial para correr
-  `notebooks/procesar_video_colab.ipynb` sobre los primeros 15 minutos.
+  video + CSV de Sofascore, saque inicial ubicado en el segundo 969). Falta correr
+  `notebooks/procesar_video_colab.ipynb` en Colab sobre los primeros 15 minutos.
 
 ## Instalación
 

@@ -286,11 +286,17 @@ totales por jugador y por equipo contra los agregados de Sofascore (`total_passe
 1. ~~**F0** — armar el esqueleto del repo y portar el código existente.~~ ✅ hecho.
 2. ~~El usuario elige y baja un partido de local que esté en Sofascore, y trae sus CSV.~~ ✅
    `2026-09-06_vs_estudiantes_caseros_h` (Chaco 1–0 Estudiantes de Caseros, local, confirmado
-   en Sofascore). Video (720p) + los 3 CSV ya están en la carpeta del partido.
-3. **Pendiente del usuario:** el timestamp del saque inicial en el archivo de video
-   (`START_SECONDS` en los notebooks) — la transmisión arranca antes del partido.
-4. **F1** — correr `procesar_video_colab.ipynb` sobre los primeros 15 min (desde el
-   saque inicial) y validar con `analisis_video.ipynb` (`positions_plausibility`,
+   en Sofascore). Video (1080p, 30fps) + los 3 CSV ya están en la carpeta del partido.
+3. ~~Timestamp del saque inicial.~~ ✅ **Segundo 969 del archivo** (16:09) — encontrado
+   revisando fotogramas: a los 15:00 los capitanes están en el círculo central, a los
+   16:06 la cámara muestra al árbitro con el silbato en la boca, y a los 16:15 aparece el
+   cartel `CHF 0-0 EST 00:06 1T` (975 s − 6 s = 969 s). Ya cargado como `START_SECONDS`
+   en `notebooks/procesar_video_colab.ipynb` y `analisis_video.ipynb`.
+   Nota para L1: la transmisión **sí tiene un cartel de reloj** (contra lo que decía la
+   investigación previa), aunque no permanente — se puede usar para OCR de sincronización
+   más adelante.
+4. **F1** — correr `procesar_video_colab.ipynb` sobre los primeros 15 min (desde
+   `START_SECONDS=969`) y validar con `analisis_video.ipynb` (`positions_plausibility`,
    `players_per_frame`, `compare_with_lineups`). Ojo: hay una expulsión visitante al
    minuto 11 — desde ahí el clip es 11 vs 10, no 11 vs 11.
 5. Con las métricas en la mano, decidir si F2 (fine-tuning) es necesario o se pasa directo a F3/F4.
