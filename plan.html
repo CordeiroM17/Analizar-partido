@@ -376,20 +376,20 @@
 
     <div class="phases">
       <div class="phase is-done">
-        <div class="phase-top"><span class="phase-id">F0</span><span class="phase-name">Setup del repo</span><span class="tag done">en curso</span></div>
+        <div class="phase-top"><span class="phase-id">F0</span><span class="phase-name">Setup del repo</span><span class="tag done">hecho · 2026-09-10</span></div>
         <dl>
           <dt>Objetivo</dt><dd>Esqueleto standalone: <code>config.py</code> propio, split de requirements, <code>.gitignore</code>; portar el código existente adaptado.</dd>
-          <dt>Hecho cuando</dt><dd class="done-when"><code>import config; from src.video import pipeline, schema</code> corre limpio y <code>descargar_video.ipynb</code> baja a la carpeta correcta.</dd>
+          <dt>Hecho cuando</dt><dd class="done-when"><code>import config; from src.video import pipeline, schema</code> corre limpio y <code>descargar_video.ipynb</code> baja a la carpeta correcta. Verificado.</dd>
         </dl>
       </div>
 
       <div class="phase is-next">
         <div class="phase-top"><span class="phase-id">F1</span><span class="phase-name">Video de prueba + tracking base</span><span class="tag next">próximo</span></div>
         <dl>
-          <dt>Objetivo</dt><dd>Elegir un partido de <b>local que esté en Sofascore</b>, bajarlo, recortar los <b>primeros 15 min del primer tiempo</b>, correr el tracking portado y medir.</dd>
-          <dt>Tu parte</dt><dd>Elegir y bajar el partido; traer sus CSV de Sofascore; marcar el frame del saque inicial.</dd>
+          <dt>Objetivo</dt><dd>Partido elegido: <code>2026-09-06_vs_estudiantes_caseros_h</code> (Chaco 1–0, local, confirmado en Sofascore). Video + CSV ya están. Falta correr los primeros 15 min del primer tiempo.</dd>
+          <dt>Pendiente</dt><dd>El usuario debe dar el <b>timestamp del saque inicial</b> en el archivo (la transmisión arranca antes).</dd>
           <dt>Entregable</dt><dd><code>positions.csv</code> + <code>ball_positions.csv</code> del clip + reporte de métricas (detección, jugadores/frame, plausibilidad de homografía, fragmentación, cobertura de pelota).</dd>
-          <dt>Hecho cuando</dt><dd class="done-when">Existe el reporte y se decide: ¿el tracking alcanza o hace falta fine-tuning (F2)?</dd>
+          <dt>Hecho cuando</dt><dd class="done-when">Existe el reporte y se decide: ¿el tracking alcanza o hace falta fine-tuning (F2)? (Ojo: expulsión visitante al min 11 → 11 vs 10 desde ahí.)</dd>
         </dl>
       </div>
 

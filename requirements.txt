@@ -1,0 +1,14 @@
+# Dependencias base (local, sin GPU): descarga del video + notebooks de
+# revisión/validación/gráficos. Para el pipeline de visión pesado, ver
+# requirements-video.txt (se instala aparte, en Colab/Kaggle).
+
+pandas
+numpy
+opencv-python
+mplsoccer
+networkx
+
+# Descarga del video (notebooks/descargar_video.ipynb)
+yt-dlp>=2025.1
+undetected-chromedriver
+selenium

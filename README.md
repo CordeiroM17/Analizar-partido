@@ -13,11 +13,21 @@ tiros, conducciones — quién interviene, dónde y cuándo) y, sobre eso, la **
 
 ## Estado
 
-Planificado (grilling, 2026-09-10). Repo recién separado del proyecto `Chaco For Ever
-Analisis`, que queda como consumidor del `events.csv`.
+- ✅ **F0** — repo standalone armado; `downloader.py` / `pipeline.py` / `schema.py` /
+  `validation.py` portados y adaptados desde `Chaco For Ever Analisis` (que queda como
+  consumidor del `events.csv`).
+- 🔜 **F1** — partido de prueba listo (`data/temporadas/2026/partidos/2026-09-06_vs_estudiantes_caseros_h/`,
+  video + CSV de Sofascore). Falta el timestamp del saque inicial para correr
+  `notebooks/procesar_video_colab.ipynb` sobre los primeros 15 minutos.
 
-Próximo paso: **F0** — armar el esqueleto del repo y portar el código de descarga y
-tracking que ya existe.
+## Instalación
+
+```bash
+python -m venv .venv
+.venv/Scripts/activate        # Windows
+pip install -r requirements.txt          # base (descarga, notebooks locales)
+pip install -r requirements-video.txt    # solo en Colab/Kaggle (pipeline pesado)
+```
 
 ## Restricciones de diseño
 

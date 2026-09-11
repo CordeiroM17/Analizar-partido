@@ -1,0 +1,23 @@
+# Dependencias del pipeline de visión (L2 tracking) — instalar aparte, en
+# Colab/Kaggle:
+#
+#   pip install -r requirements-video.txt
+#
+# Nota: el paquete `inference` (backend roboflow, ver config.VIDEO_MODEL_BACKEND)
+# no corre en Python 3.13 -> por eso el pipeline corre en Colab/Kaggle
+# (Python 3.11) y no en la PC local, aunque la GTX 1050 Ti (4GB VRAM)
+# alcanzaría para YOLOv8n/s en modo "local" (pesos .pt propios, tras F2).
+
+supervision>=0.20
+opencv-python>=4.8
+# Roboflow sports: detección de cancha, clasificador de equipos, homografía
+git+https://github.com/roboflow/sports.git
+# Clasificador de equipos (SigLIP + clustering)
+transformers>=4.40
+umap-learn>=0.5
+
+# Backend de modelos por defecto (config.VIDEO_MODEL_BACKEND="roboflow"):
+# descarga los modelos automáticamente con la API key gratuita de Roboflow.
+inference>=0.9
+# Si en F2 se entrena y se usan pesos .pt locales (backend "local"):
+# ultralytics>=8.0

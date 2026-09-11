@@ -111,12 +111,14 @@ L8  Salidas             events.csv + pass_view.csv + red de pases +   [F6 — nu
 
 Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una.
 
-### F0 — Setup del repo standalone
+### F0 — Setup del repo standalone ✅ (2026-09-10)
 - Estructura de carpetas, `config.py` propio (sin nada de Sofascore), split de
-  requirements (`base` / `video` / `colab`), `.gitignore` (ignora `data/`, `models/`, `*.mp4`).
-- Portar `downloader.py`, `schema.py`, `pipeline.py`, `validation.py`, el `DISENO` y los 3
-  notebooks; adaptarlos para que no dependan del otro repo.
-- **Hecho cuando:** `python -c "import config; from src.video import pipeline, schema, validation"` corre limpio y `descargar_video.ipynb` baja un video a la carpeta correcta.
+  requirements (`requirements.txt` liviano/local, `requirements-video.txt` pesado/Colab),
+  `.gitignore` (ignora `data/`, `models/`, `*.mp4`, `.venv/`).
+- Portados y adaptados: `downloader.py`, `schema.py`, `pipeline.py` (+ `start_seconds`
+  para anclar el saque inicial sin recortar el archivo), `validation.py`, el `DISENO` y
+  los 3 notebooks (`descargar_video`, `analisis_video`, `procesar_video_colab`).
+- **Hecho cuando:** `python -c "import config; from src.video import pipeline, schema, validation"` corre limpio y `descargar_video.ipynb` baja un video a la carpeta correcta. ✅ Verificado con un venv local (`pandas`/`numpy`); `find_match_video` encuentra el `.mp4` de `2026-09-06_vs_estudiantes_caseros_h`.
 
 ### F1 — Video de prueba + tracking base (medición)
 - Elegir un partido de **local** que **esté en Sofascore**. Bajarlo. Traer su
@@ -281,7 +283,14 @@ totales por jugador y por equipo contra los agregados de Sofascore (`total_passe
 
 ## 9. Próximos pasos inmediatos
 
-1. **F0** — armar el esqueleto del repo y portar el código existente (adaptado a standalone).
-2. El usuario elige y baja **un partido de local que esté en Sofascore**, y trae sus CSV.
-3. **F1** — correr el tracking portado sobre los primeros 15 min y sacar el reporte de métricas.
-4. Con las métricas en la mano, decidir si F2 (fine-tuning) es necesario o se pasa directo a F3/F4.
+1. ~~**F0** — armar el esqueleto del repo y portar el código existente.~~ ✅ hecho.
+2. ~~El usuario elige y baja un partido de local que esté en Sofascore, y trae sus CSV.~~ ✅
+   `2026-09-06_vs_estudiantes_caseros_h` (Chaco 1–0 Estudiantes de Caseros, local, confirmado
+   en Sofascore). Video (720p) + los 3 CSV ya están en la carpeta del partido.
+3. **Pendiente del usuario:** el timestamp del saque inicial en el archivo de video
+   (`START_SECONDS` en los notebooks) — la transmisión arranca antes del partido.
+4. **F1** — correr `procesar_video_colab.ipynb` sobre los primeros 15 min (desde el
+   saque inicial) y validar con `analisis_video.ipynb` (`positions_plausibility`,
+   `players_per_frame`, `compare_with_lineups`). Ojo: hay una expulsión visitante al
+   minuto 11 — desde ahí el clip es 11 vs 10, no 11 vs 11.
+5. Con las métricas en la mano, decidir si F2 (fine-tuning) es necesario o se pasa directo a F3/F4.
