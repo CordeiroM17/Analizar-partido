@@ -62,8 +62,15 @@ repetir el mismo camino.
 | Filas de `ball_positions.csv` | 1.230 | cobertura de pelota: **49,8%** de los frames muestreados |
 | Tracks únicos | **2.877** | para ~14,9 min → **~193 tracks nuevos por minuto** para 22 jugadores. Fragmentación severa, como advertía la investigación previa (y peor que el prototipo anterior en la PC, que tenía ~700 en un alcance mayor — a revisar si es este partido en particular o el pipeline reportado). |
 | Posiciones dentro de la cancha (0-100) | 95,9% | El 4,1% restante tiene valores extremos (x hasta -4274, y hasta 1925) — homografía rota en esos frames puntuales, no ruido menor. Necesita una compuerta de confianza + suavizado temporal (ya estaba en el plan de F2). |
-| Jugadores detectados por frame (promedio) | ~3,7 (equipo 0) / ~4,2 (equipo 1) | Muy por debajo de 11 por equipo — esperable: la cámara de TV solo muestra una parte de la cancha a la vez, no los 22 jugadores. |
+| Jugadores detectados por frame (promedio) | ~3,7 (equipo 0) / ~4,2 (equipo 1); total por frame: media 7,5, mediana 7 | Por debajo de 11 por equipo. Parte es esperable (la cámara no muestra toda la cancha), pero **no es solo eso** — ver el hallazgo del arquero abajo, que muestra que también hay detecciones reales que se pierden. |
+| **Detección de arquero** | **6 filas `role=goalkeeper` sobre 18.425 totales** (vs. 17.713 de jugadores de campo y 706 de árbitro) | **Hallazgo del usuario, confirmado con los datos.** El arquero está en cancha los 15 minutos enteros y prácticamente no se detecta — no es un problema de framing de cámara (se lo ve nítido en la transmisión), es un hueco sistemático del modelo con esa clase puntual. Nueva prioridad de F2. |
 | Cruce con Sofascore (minutos totales) | 124 min trackeados vs 1866 oficiales (partido completo) | La función de comparación asume partido completo; nuestro clip es ~15 min de 90, así que esta alerta es la esperada para el alcance actual, no un fallo. |
+
+**Nota metodológica:** el frame usado en la captura "un instante" (más abajo) se comparó
+a mano contra el fotograma real de la transmisión en ese mismo segundo. El frame real
+muestra ~9-10 jugadores + arquero distinguibles a simple vista; los datos crudos de ese
+frame exacto tienen 8 filas de `role=player` (4 por equipo) y **ninguna de arquero** —
+confirma que hay margen real de mejora en detección, no solo un límite de encuadre.
 
 ### Capturas
 

@@ -137,14 +137,21 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
   intentar identidad (F3).
 
 ### F2 — Endurecer el tracking — disparado por el resultado de F1, orden de prioridad:
-1. **Compuerta de confianza + suavizado temporal de la homografía** (EMA/Kalman sobre H,
+1. **Detección de arquero casi nula** (6 filas `role=goalkeeper` sobre 18.425 totales en
+   ~15 min donde el arquero está en cancha todo el tiempo — hallazgo del usuario
+   revisando `f1_instante.png` contra el frame real de la transmisión, confirmado con
+   los datos). No es límite de cámara: se lo ve nítido y no se detecta. Prioridad nueva,
+   más alta que las de abajo — sin arquero no hay saques de arco ni parte de la red de
+   pases. Revisar el confidence threshold de esa clase puntual, o si hace falta
+   fine-tuning dirigido a esa clase antes que a las demás.
+2. **Compuerta de confianza + suavizado temporal de la homografía** (EMA/Kalman sobre H,
    "mantener la última buena" en frames malos). Ataca el 4,1% de posiciones con valores
    catastróficamente fuera de rango detectado en F1.
-2. **Modelo dedicado de pelota** + interpolación de trayectoria. F1 midió 49,8% de
+3. **Modelo dedicado de pelota** + interpolación de trayectoria. F1 midió 49,8% de
    cobertura de pelota — hay margen concreto de mejora.
-3. **Filtrar el cluster de banco/árbitro** fuera del rectángulo de juego (regla
+4. **Filtrar el cluster de banco/árbitro** fuera del rectángulo de juego (regla
    geométrica simple, visto en el mapa de cobertura de F1).
-4. **Fine-tuning** (300–800 frames de partidos históricos del Juan Alberto García —
+5. **Fine-tuning** (300–800 frames de partidos históricos del Juan Alberto García —
    DeporTV 2021–2025, TyC 2022–2025 en YouTube, descargables con `yt-dlp`) — evaluar
    recién después de 1-3, no etiquetar a ciegas.
 - L1: segmentación de "juego en vivo" como preproceso (descartar repes, publicidad, primeros planos).
