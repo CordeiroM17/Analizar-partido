@@ -60,8 +60,37 @@ círculo central, lógico en los primeros minutos), y **se confirma visualmente 
 del banco** (amarillo, abajo a la izquierda) — consistente con lo diagnosticado, sigue
 ahí a propósito hasta F3/F4.
 
+## Consolidado — mismos fixes sobre los 15 minutos completos (no solo la muestra)
+
+Corrido dos veces (la primera se cortó por falta de memoria del sistema a los 539/900s
+—no es un bug del código—, checkpoint intacto, se liberó memoria y se relanzó desde
+cero). Terminó en **75,8 minutos** (mejor que la estimación de ~2,3h).
+
+| Métrica | F1 original (2026-09-29 madrugada) | F1 + fixes de F2 (mismo día, más tarde) |
+|---|---|---|
+| Rango de x | -4274,3 a 803,9 | **-15,0 a 114,9** |
+| Rango de y | -2821,2 a 1925,4 | **-14,6 a 114,7** |
+| % dentro de cancha | 95,9% | 96,8% |
+| Cobertura de pelota | 49,8% | **56,9%** (+7,1 puntos) |
+| Tracks únicos | 2.877 | 2.733 |
+| Filas de posiciones | 18.425 | 16.820 |
+
+Los fixes se sostienen en el clip completo, no solo en la muestra de 3 minutos usada
+para desarrollarlos — la mejora de pelota fue incluso mayor (+7,1 puntos vs +4,3 en la
+muestra).
+
+![Consolidado F1+F2, 15 min completos](f1f2_consolidado.png)
+
+Se ve la pelota (blanco) siguiendo el juego con dos concentraciones cerca del círculo
+central (reinicios), y sigue presente el cluster del banco (amarillo, abajo a la
+izquierda) — como corresponde, todavía sin filtrar a propósito.
+
 ## Qué falta de F2
 
-- Correr el clip completo de 15 minutos con todos los fixes de hoy, para tener un F1
-  limpio y consolidado (no solo los 3 minutos de prueba).
-- Decidir si hace falta fine-tuning (ítem 5) con el resultado consolidado en la mano.
+- ~~Correr el clip completo de 15 minutos con todos los fixes de hoy~~ ✅ hecho, ver
+  consolidado arriba.
+- **Decidir si hace falta fine-tuning (ítem 5)** con el resultado consolidado en la
+  mano. La fragmentación de tracking (2.733 tracks para ~22 jugadores en 15 min) sigue
+  siendo el número más llamativo, pero es el problema que F3 (identidad) está diseñado
+  para atacar, no algo que el fine-tuning del detector resuelva por sí solo — probable
+  que convenga pasar directo a F3 y volver a fine-tuning más adelante si hace falta.

@@ -166,10 +166,16 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
    a la capa de eventos (F3/F4), no al tracking crudo — ahí se hace bien y de una vez
    junto con el resto de la limpieza por comportamiento del track.
 5. **Fine-tuning** (300–800 frames de partidos históricos del Juan Alberto García —
-   DeporTV 2021–2025, TyC 2022–2025 en YouTube, descargables con `yt-dlp`) — evaluar
-   recién después de 1-3, no etiquetar a ciegas.
+   DeporTV 2021–2025, TyC 2022–2025 en YouTube, descargables con `yt-dlp`) — pendiente de
+   decidir. La fragmentación de tracking (ver abajo) es el número más llamativo del
+   consolidado, pero es lo que F3 ataca, no el fine-tuning — probable pasar directo a F3.
 - L1: segmentación de "juego en vivo" como preproceso (descartar repes, publicidad, primeros planos).
 - **Hecho cuando:** las métricas de tracking del clip de 15 min superan el umbral acordado.
+  **✅ Verificado sobre los 15 min completos (2026-09-29, misma tarde), no solo la
+  muestra de 3 min**: rango x de (-4274, 804) a (-15, 115); rango y de (-2821, 1925) a
+  (-14,6, 115); cobertura de pelota 49,8%→56,9% (+7,1 puntos, mejor que en la muestra).
+  Tracks únicos 2.877→2.733 (la fragmentación no se resuelve acá, es tarea de F3).
+  Informe completo: [`docs/informes/f2/INFORME_F2.md`](docs/informes/f2/INFORME_F2.md).
 
 ### F3 — Identidad (`track_id → jugador`) *(se puede solapar con F5)*
 - SigLIP embedding por track → clustering **dentro de cada equipo** en ~14–18 identidades,
