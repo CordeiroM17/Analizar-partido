@@ -45,15 +45,19 @@ def empty_positions_df():
 def validate_positions_df(df):
     """
     Valida el contrato de positions.csv.
-    Retorna lista de problemas (vacía = todo OK).
+    Retorna lista de problemas (vacía = todo OK). Distingue problemas FATALES
+    (dataframe vacío, faltan columnas) de problemas de CALIDAD (valores fuera
+    de rango) -- estos últimos son esperables en algunos frames (homografía
+    fallida en repeticiones, primeros planos, cancha con líneas borrosas) y
+    no deberían tirar todo el resultado a la basura; ver save_tracking().
     """
     problems = []
     if df is None or df.empty:
-        return ["DataFrame vacío"]
+        return ["FATAL: DataFrame vacío"]
 
     missing = [c for c in POSITIONS_COLUMNS if c not in df.columns]
     if missing:
-        problems.append(f"Faltan columnas: {missing}")
+        problems.append(f"FATAL: Faltan columnas: {missing}")
         return problems
 
     for col in ("x", "y"):
@@ -62,7 +66,11 @@ def validate_positions_df(df):
             problems.append(f"'{col}' tiene valores no numéricos")
         out = vals.dropna()
         if not out.empty and ((out < -5) | (out > 105)).any():
-            problems.append(f"'{col}' tiene valores fuera de rango OPTA (0-100 ±5)")
+            n_bad = int(((out < -5) | (out > 105)).sum())
+            pct = 100 * n_bad / len(out)
+            problems.append(
+                f"'{col}' tiene {n_bad}/{len(out)} valores fuera de rango "
+                f"OPTA ({pct:.1f}%) -- probable homografía fallida en esos frames")
 
     if pd.to_numeric(df["t_sec"], errors="coerce").isna().any():
         problems.append("'t_sec' tiene valores no numéricos")
@@ -73,11 +81,21 @@ def validate_positions_df(df):
 def save_tracking(df_positions, df_ball, meta, match_key, season=None):
     """
     Guarda los outputs del pipeline en la carpeta tracking/ del partido.
-    Valida el contrato antes de escribir.
+
+    Valida el contrato, pero solo aborta el guardado ante problemas FATALES
+    (vacío / faltan columnas). Problemas de calidad (posiciones fuera de
+    rango en algunos frames -- esperable, homografía no es perfecta en el
+    100% de los frames) se listan como advertencia y quedan en el CSV: es
+    tracking crudo, la limpieza/filtrado es tarea de una etapa posterior
+    (F1 motor de posesión / revisión), no del guardado. Nunca se descarta
+    una corrida completa -- puede representar horas de cómputo -- por esto.
     """
     problems = validate_positions_df(df_positions)
-    if problems:
-        raise ValueError(f"positions no cumple el contrato: {problems}")
+    fatal = [p for p in problems if p.startswith("FATAL")]
+    if fatal:
+        raise ValueError(f"positions no cumple el contrato: {fatal}")
+    for p in problems:
+        print(f"⚠️  {p}")
 
     out_dir = config.match_tracking_dir(match_key, season)
     os.makedirs(out_dir, exist_ok=True)
@@ -87,6 +105,12 @@ def save_tracking(df_positions, df_ball, meta, match_key, season=None):
         df_ball.to_csv(os.path.join(out_dir, "ball_positions.csv"), index=False)
     with open(os.path.join(out_dir, "tracking_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)
+
+    # Guardado final OK -- los checkpoints de emergencia ya no hacen falta.
+    for ckpt in ("positions.checkpoint.csv", "ball_positions.checkpoint.csv"):
+        ckpt_path = os.path.join(out_dir, ckpt)
+        if os.path.exists(ckpt_path):
+            os.remove(ckpt_path)
 
     return out_dir
 

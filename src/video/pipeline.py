@@ -339,6 +339,21 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
         processed += 1
         if processed % progress_every == 0:
             print(f"  frame {fidx}/{end_frame} ({t_sec/60:.1f} min de partido)")
+            # Checkpoint periódico: si el proceso se corta (error, corte de luz,
+            # etc.) no se pierde todo lo procesado hasta acá. Se pisa cada vez,
+            # no acumula archivos. No se valida el contrato acá a propósito --
+            # es un volcado de emergencia, no el resultado final.
+            if save:
+                try:
+                    ckpt_dir = config.match_tracking_dir(match_key, season)
+                    os.makedirs(ckpt_dir, exist_ok=True)
+                    pd.DataFrame(pos_rows, columns=POSITIONS_COLUMNS).to_csv(
+                        os.path.join(ckpt_dir, "positions.checkpoint.csv"), index=False)
+                    if ball_rows:
+                        pd.DataFrame(ball_rows, columns=BALL_COLUMNS).to_csv(
+                            os.path.join(ckpt_dir, "ball_positions.checkpoint.csv"), index=False)
+                except Exception as e:
+                    print(f"  (no se pudo escribir el checkpoint: {e})")
 
     cap.release()
 
