@@ -123,8 +123,8 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
 ### F1 — Video de prueba + tracking base (medición)
 - Elegir un partido de **local** que **esté en Sofascore**. Bajarlo. Traer su
   `lineups_clean.csv` / `incidents_clean.csv` / `statistics_clean.csv` del otro proyecto.
-- Recortar los **primeros 15 min del primer tiempo**.
-- Correr el pipeline portado en Colab/Kaggle (T4/P100, `SAMPLE_FPS=5`).
+- Recortar los **primeros 15 min del primer tiempo** (sin cortar el archivo: `start_seconds`).
+- Correr el pipeline portado **local** (Python 3.11, `.venv311/`, `SAMPLE_FPS=5`) — ver §4.
 - Medir sobre el clip: tasa de detección, jugadores/frame vs 11, plausibilidad de
   homografía (% de puntos dentro de la cancha), fragmentación de tracks, cobertura de pelota.
 - **Hecho cuando:** existe `positions.csv` + `ball_positions.csv` del clip + un reporte de
@@ -190,14 +190,35 @@ scouting), tiros y conducciones (F4 del `DISENO`), otros tipos de evento, dashbo
 
 ## 4. Plan de cómputo
 
+> **Cambio de decisión (2026-09-28): se abandona Colab, se corre 100% local.**
+> Después de ~2 semanas peleando el entorno de Colab (Python 3.11 se arma de cero en
+> cada sesión porque la VM se borra; `inference-gpu`/`onnxruntime-gpu` no funcionan por
+> `pycuda`, que exige compilar contra el toolkit CUDA completo — imposible en el
+> contenedor de Colab) sin haber completado un solo run de F1, se confirmó que **el
+> bloqueo de `pycuda` no es específico de Colab** — pasaría igual local. La diferencia
+> real es que local el entorno se arma **una sola vez** y queda, sin reinstalar nada
+> cada sesión, sin subir/bajar archivos de Drive, y con errores legibles en una
+> terminal normal. Se probó GPU con PyTorch puro (YOLOv8 + `supervision`, sin
+> `inference`/`onnxruntime`) sobre un frame real del partido — funciona sin problemas.
+>
+> **Setup local (hecho):** Python 3.11 (`winget install Python.Python.3.11`) +
+> `.venv311/` con `requirements.txt` + `requirements-video.txt` + `torch`/`torchvision`
+> reinstalados desde `https://download.pytorch.org/whl/cu126` (la build por defecto de
+> pip viene sin CUDA). Igual que en Colab: **jugadores/cancha (vía `inference`) corren
+> por CPU** (no hay forma de evitar `pycuda` para el camino GPU de esa librería);
+> **el clasificador de equipos (torch/SigLIP) sí usa GPU** (GTX 1050 Ti, confirmado).
+
 | Momento | Plataforma | Notas |
 |---|---|---|
-| **Ahora (F0–F6)** | **Kaggle free** (P100 16 GB, ~30 h/semana, sesiones 12 h, corre en background con "Save & Run All") o **Colab free** (T4, se corta a los ~90 min de inactividad, no corre con la pestaña cerrada → procesar en trozos de 10–15 min con checkpoints a Drive) | Kaggle es más estable para lotes. |
-| **Cuando el pipeline ~funcione** | **Colab Pro** US$9,99/mes (100 unidades ≈ 84 h de T4/mes) | El usuario paga cuando haga falta. Ejecución en segundo plano quizás requiera Pro+ — verificar. |
-| **Storage** | **Google Drive (5 TB, ya disponible)** | Guardar frames como **archivos comprimidos (tar/zip), no imágenes sueltas** (cuotas de la API de Drive). Video completo 720p ≈ 3–4 GB. |
+| **Ahora (F0–F6)** | **Local** — Python 3.11 en `.venv311/`, GTX 1050 Ti (4 GB) | Detección de jugadores/cancha por CPU, clasificador de equipos por GPU. Sin límite de sesión, sin reinstalar nada. |
+| **Si hace falta más potencia** (partido completo, muchos partidos) | Kaggle free (P100, ~30 h/semana) como respaldo puntual, o Colab Pro si realmente hace falta más GPU | Evaluar solo si el ritmo local no alcanza — no by default. |
+| **Storage** | Disco local + Google Drive (5 TB) como backup | Sin la urgencia de antes (no hay que subir el video a Drive para procesarlo). |
 
-**Tiempos estimados de procesamiento:** clip de 15 min ≈ 15–40 min. Partido completo ≈
-3–8 h en T4/P100 → siempre en trozos con checkpoint.
+**Tiempos estimados de procesamiento (CPU para detección):** a confirmar con la corrida
+real de 15 min — el research previo estimaba órdenes de horas para un partido completo
+en CPU pura; para 15 min debería ser bastante más acotado. Si resulta demasiado lento,
+ahí sí se evalúa Kaggle/Colab Pro puntualmente, o fine-tunear un modelo `ultralytics`
+propio en F2 (más liviano, corre por GPU sin este problema).
 
 ---
 

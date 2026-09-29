@@ -13,8 +13,13 @@ __pycache__/
 *.pyc
 *.pyo
 .venv/
+.venv*/
 venv/
 .ipynb_checkpoints/
+
+# Pesos de modelos (se descargan solos)
+*.pt
+*.onnx
 
 # Secrets
 .env
@@ -22,3 +27,4 @@ venv/
 # Sistema
 .DS_Store
 Thumbs.db
+*.stackdump
