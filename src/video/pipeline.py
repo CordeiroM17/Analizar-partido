@@ -39,6 +39,16 @@ BALL_ID, GOALKEEPER_ID, PLAYER_ID, REFEREE_ID = 0, 1, 2, 3
 ROLE_BY_CLASS = {PLAYER_ID: "player", GOALKEEPER_ID: "goalkeeper",
                  REFEREE_ID: "referee"}
 
+
+def _kp_confidence(kp):
+    """supervision >=0.29 renombró KeyPoints.confidence -> keypoint_confidence
+    (la vieja queda como alias deprecado que en 0.29.x ya devuelve None).
+    Soporta ambas versiones."""
+    conf = getattr(kp, "keypoint_confidence", None)
+    if conf is None:
+        conf = kp.confidence
+    return conf
+
 # Dimensiones de SoccerPitchConfiguration de roboflow/sports (centímetros)
 PITCH_LENGTH_CM = 12000
 PITCH_WIDTH_CM  = 7000
@@ -246,6 +256,10 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
 
     pos_rows, ball_rows = [], []
     processed = 0
+    # Cache de equipo por track_id: el clasificador de equipos (SigLIP) es caro
+    # y el equipo de un jugador no cambia durante su track -- clasificar una
+    # vez por track en vez de en cada frame es el ahorro más grande del loop.
+    team_by_track = {}
 
     for fidx in range(start_frame, end_frame, stride):
         cap.set(cv2.CAP_PROP_POS_FRAMES, fidx)
@@ -262,20 +276,34 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
 
         # 2. Homografía del frame (keypoints de la cancha)
         kp = pitch_model.infer_keypoints(frame)
-        mask = kp.confidence[0] > 0.5
+        kp_conf = _kp_confidence(kp)
+        if kp_conf is None or len(kp_conf) == 0:
+            continue  # el modelo no detectó cancha en este frame (repetición, primer plano, etc.)
+        mask = kp_conf[0] > 0.5
         if mask.sum() < 4:
-            continue  # frame sin cancha suficiente (repetición, tribuna, etc.)
+            continue  # frame sin cancha suficiente
         transformer = ViewTransformer(
             source=kp.xy[0][mask].astype(np.float32),
             target=pitch_vertices[mask].astype(np.float32),
         )
 
-        # 3. Equipos (clusters de camiseta sobre los jugadores de campo)
+        # 3. Equipos (clusters de camiseta sobre los jugadores de campo).
+        # Solo se clasifica una vez por track_id (cacheado en team_by_track);
+        # el equipo de un jugador no cambia mientras dura su track, y esto es
+        # lo que más pesa del loop (una pasada de SigLIP por jugador nuevo).
         is_player = people.class_id == PLAYER_ID
         teams = np.full(len(people), -1)
-        if is_player.sum() > 0:
-            crops = [sv.crop_image(frame, xyxy) for xyxy in people.xyxy[is_player]]
-            teams[is_player] = team_classifier.predict(crops)
+        player_idx = np.where(is_player)[0]
+        if len(player_idx) > 0:
+            new_idx = [i for i in player_idx
+                       if int(people.tracker_id[i]) not in team_by_track]
+            if new_idx:
+                crops = [sv.crop_image(frame, people.xyxy[i]) for i in new_idx]
+                preds = team_classifier.predict(crops)
+                for i, pred in zip(new_idx, preds):
+                    team_by_track[int(people.tracker_id[i])] = int(pred)
+            for i in player_idx:
+                teams[i] = team_by_track[int(people.tracker_id[i])]
 
         # 4. Píxeles -> cancha (punto de apoyo = centro inferior del bbox)
         anchors = people.get_anchors_coordinates(sv.Position.BOTTOM_CENTER)
