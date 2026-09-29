@@ -120,7 +120,7 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
   los 3 notebooks (`descargar_video`, `analisis_video`, `procesar_video_colab`).
 - **Hecho cuando:** `python -c "import config; from src.video import pipeline, schema, validation"` corre limpio y `descargar_video.ipynb` baja un video a la carpeta correcta. ✅ Verificado con un venv local (`pandas`/`numpy`); `find_match_video` encuentra el `.mp4` de `2026-09-06_vs_estudiantes_caseros_h`.
 
-### F1 — Video de prueba + tracking base (medición)
+### F1 — Video de prueba + tracking base (medición) ✅ (2026-09-29)
 - Elegir un partido de **local** que **esté en Sofascore**. Bajarlo. Traer su
   `lineups_clean.csv` / `incidents_clean.csv` / `statistics_clean.csv` del otro proyecto.
 - Recortar los **primeros 15 min del primer tiempo** (sin cortar el archivo: `start_seconds`).
@@ -129,14 +129,24 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
   homografía (% de puntos dentro de la cancha), fragmentación de tracks, cobertura de pelota.
 - **Hecho cuando:** existe `positions.csv` + `ball_positions.csv` del clip + un reporte de
   métricas. **Compuerta de decisión:** ¿el tracking alcanza, o hay que fine-tunear (F2)?
+  **✅ Corrido sobre ~14,9 min reales. Informe completo:
+  [`docs/informes/f1/INFORME_F1.md`](docs/informes/f1/INFORME_F1.md).**
+  Resultado: 18.425 posiciones, 95,9% dentro de rango, 49,8% cobertura de pelota,
+  2.877 tracks únicos (fragmentación severa, esperada). **Veredicto: pasar a F2** —
+  el tracking funciona y da señal espacial real, pero necesita endurecerse antes de
+  intentar identidad (F3).
 
-### F2 — Endurecer el tracking *(condicional al resultado de F1)*
-- Si las métricas flojean: etiquetar **300–800 frames** (CVAT / Roboflow free) tomados de
-  **partidos históricos del Juan Alberto García** (DeporTV 2021–2025, TyC 2022–2025 en
-  YouTube, descargables con `yt-dlp`); fine-tunear el detector y los keypoints de cancha.
-- Integrar el modelo **dedicado de pelota** + interpolación de trayectoria + suavizado.
-- Homografía: **suavizado temporal** (EMA/Kalman sobre H) + compuerta de confianza +
-  "mantener la última buena" en frames malos.
+### F2 — Endurecer el tracking — disparado por el resultado de F1, orden de prioridad:
+1. **Compuerta de confianza + suavizado temporal de la homografía** (EMA/Kalman sobre H,
+   "mantener la última buena" en frames malos). Ataca el 4,1% de posiciones con valores
+   catastróficamente fuera de rango detectado en F1.
+2. **Modelo dedicado de pelota** + interpolación de trayectoria. F1 midió 49,8% de
+   cobertura de pelota — hay margen concreto de mejora.
+3. **Filtrar el cluster de banco/árbitro** fuera del rectángulo de juego (regla
+   geométrica simple, visto en el mapa de cobertura de F1).
+4. **Fine-tuning** (300–800 frames de partidos históricos del Juan Alberto García —
+   DeporTV 2021–2025, TyC 2022–2025 en YouTube, descargables con `yt-dlp`) — evaluar
+   recién después de 1-3, no etiquetar a ciegas.
 - L1: segmentación de "juego en vivo" como preproceso (descartar repes, publicidad, primeros planos).
 - **Hecho cuando:** las métricas de tracking del clip de 15 min superan el umbral acordado.
 

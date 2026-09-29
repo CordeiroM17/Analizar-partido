@@ -95,7 +95,7 @@ def save_tracking(df_positions, df_ball, meta, match_key, season=None):
     if fatal:
         raise ValueError(f"positions no cumple el contrato: {fatal}")
     for p in problems:
-        print(f"⚠️  {p}")
+        print(f"[!] {p}")
 
     out_dir = config.match_tracking_dir(match_key, season)
     os.makedirs(out_dir, exist_ok=True)

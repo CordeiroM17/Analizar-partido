@@ -166,5 +166,5 @@ def download_match_video(page_url, match_key, season=None, quality="720p",
                             referer=referer, test=test, verbose=verbose)
     if verbose:
         size = os.path.getsize(final) / (1024 ** 2) if os.path.exists(final) else 0
-        print(f"✅ Video guardado: {final}  ({size:.0f} MB)")
+        print(f"OK - Video guardado: {final}  ({size:.0f} MB)")
     return final

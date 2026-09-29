@@ -377,6 +377,6 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
 
     if save and not df_positions.empty:
         out = save_tracking(df_positions, df_ball, meta, match_key, season)
-        print(f"✅ Tracking guardado en {out}")
+        print(f"OK - Tracking guardado en {out}")
 
     return df_positions, df_ball, meta
