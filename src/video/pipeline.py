@@ -161,7 +161,6 @@ def _fit_team_classifier(video_path, player_model, device, n_frames=30, stride_s
     """
     import cv2
     import supervision as sv
-    from sports.common.team import TeamClassifier
 
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS) or 25
@@ -185,7 +184,12 @@ def _fit_team_classifier(video_path, player_model, device, n_frames=30, stride_s
         raise RuntimeError(f"Solo {len(crops)} recortes de jugadores — "
                            "¿el modelo detecta algo en este video?")
 
-    classifier = TeamClassifier(device=device)
+    if config.TEAM_CLASSIFIER_BACKEND == "color":
+        from src.video.team_color import ColorTeamClassifier
+        classifier = ColorTeamClassifier()
+    else:
+        from sports.common.team import TeamClassifier
+        classifier = TeamClassifier(device=device)
     classifier.fit(crops)
     return classifier
 

@@ -139,6 +139,15 @@ VIDEO_MODELS = {
 # Frames por segundo a procesar (el video corre a ~25-30/50; muestrear baja el costo).
 VIDEO_SAMPLE_FPS = 5
 
+# Clasificador de equipos:
+#   "color"  -> histograma HSV de la camiseta + KMeans (rápido, ver team_color.py).
+#               Default: con el tracking fragmentado de broadcast (~300 track_ids/min
+#               en la prueba real), es el cuello de botella nº1 con SigLIP, muy por
+#               encima de los dos modelos de Roboflow.
+#   "siglip" -> sports.common.team.TeamClassifier (embeddings, más preciso, mucho más
+#               lento). Usar si "color" da mala separación entre camisetas parecidas.
+TEAM_CLASSIFIER_BACKEND = "color"
+
 
 def roboflow_api_key():
     """API key de Roboflow desde la variable de entorno ROBOFLOW_API_KEY.
