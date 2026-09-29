@@ -204,21 +204,36 @@ scouting), tiros y conducciones (F4 del `DISENO`), otros tipos de evento, dashbo
 > **Setup local (hecho):** Python 3.11 (`winget install Python.Python.3.11`) +
 > `.venv311/` con `requirements.txt` + `requirements-video.txt` + `torch`/`torchvision`
 > reinstalados desde `https://download.pytorch.org/whl/cu126` (la build por defecto de
-> pip viene sin CUDA). Igual que en Colab: **jugadores/cancha (vía `inference`) corren
-> por CPU** (no hay forma de evitar `pycuda` para el camino GPU de esa librería);
-> **el clasificador de equipos (torch/SigLIP) sí usa GPU** (GTX 1050 Ti, confirmado).
+> pip viene sin CUDA). El clasificador de equipos (torch/SigLIP) usa GPU sin problema.
+>
+> **Jugadores/cancha (vía `inference`) — GPU resuelta con DirectML (2026-09-28):**
+> `inference-gpu` y `onnxruntime-gpu` a mano quedan bloqueados por `pycuda` (necesita
+> compilar contra el toolkit CUDA completo). La solución real: instalar
+> `onnxruntime-directml` (usa la API de aceleración nativa de Windows, cualquier GPU,
+> sin CUDA ni pycuda) y pedirlo explícitamente por env var
+> (`ONNXRUNTIME_EXECUTION_PROVIDERS=DmlExecutionProvider,CPUExecutionProvider` en
+> `.env`) — `inference` nunca prueba DirectML por su cuenta aunque esté disponible.
+> Medido: **~2.6x más rápido** que CPU pura en la GTX 1050 Ti. Detalle completo en
+> `requirements-video.txt`.
+>
+> **Segundo hallazgo de performance:** el clasificador de equipos con SigLIP (modelo
+> pesado) se re-ejecutaba en cada frame para cada jugador porque el tracking se
+> fragmenta mucho en broadcast (298 track_ids medidos en 1 minuto para 22 jugadores).
+> Reemplazado por un histograma de color HSV + KMeans (`src/video/team_color.py`,
+> `config.TEAM_CLASSIFIER_BACKEND`), miles de veces más barato.
 
 | Momento | Plataforma | Notas |
 |---|---|---|
-| **Ahora (F0–F6)** | **Local** — Python 3.11 en `.venv311/`, GTX 1050 Ti (4 GB) | Detección de jugadores/cancha por CPU, clasificador de equipos por GPU. Sin límite de sesión, sin reinstalar nada. |
+| **Ahora (F0–F6)** | **Local** — Python 3.11 en `.venv311/`, GTX 1050 Ti (4 GB), DirectML | Detección de jugadores/cancha y clasificador de equipos, ambos con aceleración de GPU. Sin límite de sesión, sin reinstalar nada. |
 | **Si hace falta más potencia** (partido completo, muchos partidos) | Kaggle free (P100, ~30 h/semana) como respaldo puntual, o Colab Pro si realmente hace falta más GPU | Evaluar solo si el ritmo local no alcanza — no by default. |
 | **Storage** | Disco local + Google Drive (5 TB) como backup | Sin la urgencia de antes (no hay que subir el video a Drive para procesarlo). |
 
-**Tiempos estimados de procesamiento (CPU para detección):** a confirmar con la corrida
-real de 15 min — el research previo estimaba órdenes de horas para un partido completo
-en CPU pura; para 15 min debería ser bastante más acotado. Si resulta demasiado lento,
-ahí sí se evalúa Kaggle/Colab Pro puntualmente, o fine-tunear un modelo `ultralytics`
-propio en F2 (más liviano, corre por GPU sin este problema).
+**Tiempos medidos:** clip de prueba de 60s a 5 fps con DirectML + clasificador de color
+≈ 8,4s de proceso por segundo de video → **~2 h estimadas para los 15 min de F1**
+(antes: ~6 h con CPU pura + SigliP). Partido completo (90 min) quedaría en el orden de
+~12-13 h con esta configuración — aceptable para dejarlo corriendo de un día para el
+otro; optimizar más (fine-tuning en F2, bajar `VIDEO_SAMPLE_FPS`) si hace falta más
+velocidad.
 
 ---
 

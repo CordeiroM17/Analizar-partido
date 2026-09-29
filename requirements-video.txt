@@ -1,39 +1,48 @@
-# Dependencias del pipeline de visión (L2 tracking) — instalar aparte, en
-# Colab/Kaggle:
+# Dependencias del pipeline de visión (L2 tracking). Corre 100% local desde
+# 2026-09-28 (antes se intentó Colab; se abandonó por fricción de entorno —
+# ver PLAN.md sección 4). Requiere Python 3.11 (el paquete `inference` no
+# soporta 3.13, que es lo que trae la PC por defecto):
 #
-#   pip install -r requirements-video.txt
-#
-# Nota: el paquete `inference` (backend roboflow, ver config.VIDEO_MODEL_BACKEND)
-# no corre en Python 3.13 -> por eso el pipeline corre en Colab/Kaggle
-# (Python 3.11) y no en la PC local, aunque la GTX 1050 Ti (4GB VRAM)
-# alcanzaría para YOLOv8n/s en modo "local" (pesos .pt propios, tras F2).
+#   winget install Python.Python.3.11
+#   py -3.11 -m venv .venv311
+#   .venv311\Scripts\pip install -r requirements.txt -r requirements-video.txt
 
 supervision>=0.20
 opencv-python>=4.8
-# Roboflow sports: detección de cancha, clasificador de equipos, homografía
+# Roboflow sports: detección de cancha, clasificador de equipos (fallback), homografía
 git+https://github.com/roboflow/sports.git
-# Clasificador de equipos (SigLIP + clustering)
+# Clasificador de equipos rápido por color (src/video/team_color.py) — ver nota abajo
+scikit-learn
 transformers>=4.40
 umap-learn>=0.5
 
 # Backend de modelos por defecto (config.VIDEO_MODEL_BACKEND="roboflow"):
 # descarga los modelos automáticamente con la API key gratuita de Roboflow.
-#
-# GPU: NO se pudo lograr que los modelos de Roboflow (jugadores/cancha, via
-# `inference`) corran por GPU en Colab. Dos intentos fallidos, en orden:
+inference>=0.9
+
+# --- GPU para los modelos de Roboflow (jugadores/cancha), sin pycuda -----
+# Dos intentos fallidos antes de encontrar la solución, para no repetir el
+# camino:
 #   1. `inference-gpu` -> arrastra `pycuda`, que necesita compilar contra el
-#      toolkit CUDA completo (nvcc) y falla al construir el wheel en Colab.
-#   2. `inference` + reemplazar onnxruntime por onnxruntime-gpu a mano ->
-#      onnxruntime SÍ carga CUDA, pero la libreria interna de Roboflow
+#      toolkit CUDA completo (nvcc) y falla al construir el wheel.
+#   2. `inference` normal + reemplazar onnxruntime por onnxruntime-gpu a mano
+#      -> onnxruntime SÍ carga CUDA, pero la librería interna de Roboflow
 #      (`inference_models`) exige `pycuda` en tiempo de ejecución para el
 #      camino GPU del backend ONNX ("Running model with ONNX backend on GPU
 #      requires pycuda installation") -- mismo bloqueo que el punto 1.
-# Conclusión: se usa `inference` normal (onnxruntime CPU) para jugadores y
-# cancha. El clasificador de equipos (torch/SigLIP, en sports.common.team) SÍ
-# usa GPU sin problema -- es una librería distinta, no depende de pycuda.
-# Si en el futuro se quiere GPU para jugadores/cancha, la alternativa más
-# realista es el backend "local" (ultralytics + pesos .pt propios, ver abajo),
-# que usa PyTorch (sin este problema) en vez de onnxruntime.
-inference>=0.9
+#
+# Solución que SÍ funciona (Windows): DirectML, la API de aceleración nativa
+# de Windows -- funciona con cualquier GPU (NVIDIA/AMD/Intel) sin necesitar
+# el toolkit de CUDA ni pycuda. `inference` nunca la pide por su cuenta, así
+# que hay que instalar el wheel de onnxruntime con soporte DirectML Y pedirla
+# explícitamente por variable de entorno (ver .env.example):
+#
+#   pip uninstall onnxruntime
+#   pip install onnxruntime-directml
+#   # en .env: ONNXRUNTIME_EXECUTION_PROVIDERS=DmlExecutionProvider,CPUExecutionProvider
+#
+# Medido: ~2.6x más rápido que CPU pura en la GTX 1050 Ti.
+onnxruntime-directml
+
 # Si en F2 se entrena y se usan pesos .pt locales (backend "local"):
 # ultralytics>=8.0
