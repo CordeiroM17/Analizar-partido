@@ -216,8 +216,8 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
     import cv2
     import torch
     import supervision as sv
-    from sports.common.view import ViewTransformer
     from sports.configs.soccer import SoccerPitchConfiguration
+    from src.video.homography import RobustViewTransformer
 
     video_path = config.find_match_video(match_key, season)
     if not video_path:
@@ -278,18 +278,28 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
         people = tracker.update_with_detections(people)
         ball = det[det.class_id == BALL_ID]
 
-        # 2. Homografía del frame (keypoints de la cancha)
+        # 2. Homografía del frame (keypoints de la cancha), robusta a outliers
+        # (F2): RANSAC en vez del mínimos-cuadrados simple de ViewTransformer,
+        # + una compuerta de confianza en dos pasos -- primero cuántos
+        # keypoints hay, después cuántos sobrevivieron como inliers de RANSAC.
+        # Sin esto, un solo keypoint mal ubicado arruinaba el frame entero
+        # (así se originaba el 4.1% de posiciones catastróficamente fuera de
+        # rango medido en F1). Frame descartado != dato inventado: se pierde
+        # ese instante, no se guardan coordenadas de una homografía en duda.
         kp = pitch_model.infer_keypoints(frame)
         kp_conf = _kp_confidence(kp)
         if kp_conf is None or len(kp_conf) == 0:
             continue  # el modelo no detectó cancha en este frame (repetición, primer plano, etc.)
         mask = kp_conf[0] > 0.5
-        if mask.sum() < 4:
-            continue  # frame sin cancha suficiente
-        transformer = ViewTransformer(
+        if mask.sum() < config.HOMOGRAPHY_MIN_KEYPOINTS:
+            continue  # muy pocos keypoints para confiar en la homografía
+        transformer = RobustViewTransformer(
             source=kp.xy[0][mask].astype(np.float32),
             target=pitch_vertices[mask].astype(np.float32),
+            reproj_threshold=config.HOMOGRAPHY_RANSAC_REPROJ_THRESHOLD,
         )
+        if not transformer.ok or transformer.n_inliers < config.HOMOGRAPHY_MIN_INLIERS:
+            continue  # RANSAC no encontró suficientes puntos consistentes entre sí
 
         # 3. Equipos (clusters de camiseta sobre los jugadores de campo).
         # Solo se clasifica una vez por track_id (cacheado en team_by_track);
@@ -309,32 +319,54 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
             for i in player_idx:
                 teams[i] = team_by_track[int(people.tracker_id[i])]
 
-        # 4. Píxeles -> cancha (punto de apoyo = centro inferior del bbox)
+        # 4. Píxeles -> cancha (punto de apoyo = centro inferior del bbox), en
+        # coordenadas OPTA (0-100) de una vez para poder validar el RESULTADO.
         anchors = people.get_anchors_coordinates(sv.Position.BOTTOM_CENTER)
         pitch_xy = transformer.transform_points(anchors.astype(np.float32))
+        opta_x = pitch_xy[:, 0] / PITCH_LENGTH_CM * 100
+        opta_y = pitch_xy[:, 1] / PITCH_WIDTH_CM * 100
+
+        # Compuerta de confianza sobre el RESULTADO, no sobre la geometría de
+        # los keypoints (F2, segundo intento -- el primero, exigir más
+        # keypoints + RANSAC, no alcanzó: unos pocos keypoints "consistentes
+        # entre sí" pero agrupados en una zona chica de la imagen igual dan
+        # una homografía que extrapola mal para jugadores lejos de esa zona).
+        # Si la mayoría de la gente detectada en el frame no cae cerca de la
+        # cancha, la homografía de ESTE frame no es confiable para nadie --
+        # se descarta el frame entero en vez de guardar posiciones dudosas.
+        margin = 15  # tolerancia en unidades OPTA para gente justo al borde
+        dentro = (opta_x >= -margin) & (opta_x <= 100 + margin) & \
+                 (opta_y >= -margin) & (opta_y <= 100 + margin)
+        if len(people) > 0 and dentro.mean() < 0.7:
+            continue  # homografía de este frame no confiable, se pierde el instante
 
         for i in range(len(people)):
+            if not dentro[i]:
+                continue  # el resto del frame es confiable; esta persona puntual no
             pos_rows.append({
                 "frame": fidx,
                 "t_sec": round(t_sec, 2),
                 "track_id": int(people.tracker_id[i]),
                 "role": ROLE_BY_CLASS.get(int(people.class_id[i]), "player"),
                 "team": int(teams[i]),
-                "x": round(float(pitch_xy[i][0]) / PITCH_LENGTH_CM * 100, 2),
-                "y": round(float(pitch_xy[i][1]) / PITCH_WIDTH_CM * 100, 2),
+                "x": round(float(opta_x[i]), 2),
+                "y": round(float(opta_y[i]), 2),
                 "confidence": round(float(people.confidence[i]), 3),
             })
 
         if len(ball) > 0:
             b_anchor = ball.get_anchors_coordinates(sv.Position.BOTTOM_CENTER)
             b_xy = transformer.transform_points(b_anchor.astype(np.float32))
-            ball_rows.append({
-                "frame": fidx,
-                "t_sec": round(t_sec, 2),
-                "x": round(float(b_xy[0][0]) / PITCH_LENGTH_CM * 100, 2),
-                "y": round(float(b_xy[0][1]) / PITCH_WIDTH_CM * 100, 2),
-                "confidence": round(float(ball.confidence[0]), 3),
-            })
+            b_x = float(b_xy[0][0]) / PITCH_LENGTH_CM * 100
+            b_y = float(b_xy[0][1]) / PITCH_WIDTH_CM * 100
+            if -margin <= b_x <= 100 + margin and -margin <= b_y <= 100 + margin:
+                ball_rows.append({
+                    "frame": fidx,
+                    "t_sec": round(t_sec, 2),
+                    "x": round(b_x, 2),
+                    "y": round(b_y, 2),
+                    "confidence": round(float(ball.confidence[0]), 3),
+                })
 
         processed += 1
         if processed % progress_every == 0:

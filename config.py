@@ -148,6 +148,17 @@ VIDEO_SAMPLE_FPS = 5
 #               lento). Usar si "color" da mala separación entre camisetas parecidas.
 TEAM_CLASSIFIER_BACKEND = "color"
 
+# Compuerta de confianza de la homografía (F2, ver src/video/homography.py).
+# Medido en F1: sin esto, 4.1% de las posiciones quedaban con valores
+# catastróficamente fuera de rango (un solo keypoint mal ubicado arruinaba
+# el frame entero). RANSAC tolera outliers puntuales entre los keypoints
+# detectados, pero igual hace falta un mínimo de puntos "buenos" (inliers)
+# para confiar en la homografía resultante -- si no se llega, se descarta
+# el frame (se pierde ese instante, no se inventan coordenadas malas).
+HOMOGRAPHY_MIN_KEYPOINTS = 6   # keypoints detectados (antes de RANSAC) para intentarlo
+HOMOGRAPHY_MIN_INLIERS = 4     # inliers de RANSAC mínimos para aceptar la homografía
+HOMOGRAPHY_RANSAC_REPROJ_THRESHOLD = 8.0  # px, tolerancia de RANSAC
+
 
 def roboflow_api_key():
     """API key de Roboflow desde la variable de entorno ROBOFLOW_API_KEY.
