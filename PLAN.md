@@ -144,11 +144,18 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
    más alta que las de abajo — sin arquero no hay saques de arco ni parte de la red de
    pases. Revisar el confidence threshold de esa clase puntual, o si hace falta
    fine-tuning dirigido a esa clase antes que a las demás.
-2. **Compuerta de confianza + suavizado temporal de la homografía** (EMA/Kalman sobre H,
-   "mantener la última buena" en frames malos). Ataca el 4,1% de posiciones con valores
-   catastróficamente fuera de rango detectado en F1.
-3. **Modelo dedicado de pelota** + interpolación de trayectoria. F1 midió 49,8% de
-   cobertura de pelota — hay margen concreto de mejora.
+2. **Compuerta de confianza de la homografía ✅ (2026-09-29).** Verificado sobre los
+   mismos 3 min de prueba: rango de x de (-118,9, 344,8) a (-10,9, 112,1); rango de y de
+   (-262,7, 751,5) a (-14,5, 114,0); 96,2%→98,0% dentro de cancha. Primer intento
+   (RANSAC + más keypoints) no alcanzó — quedó documentado en el commit igual. El que
+   funcionó: validar el resultado de la transformación (¿la mayoría de la gente detectada
+   cae cerca de la cancha?), no la geometría de los keypoints de entrada.
+3. **Modelo dedicado de pelota ✅ (2026-09-29).** Probado primero en un frame real donde
+   el modelo general no encontraba la pelota — el dedicado sí, verificado visualmente.
+   Integrado como *fallback* (solo corre cuando el general no encuentra nada, no duplica
+   costo en la mayoría de los frames). Verificado: cobertura de pelota 54,1%→58,4%
+   (+4,3 puntos); las detecciones nuevas tienen confianza promedio *más alta* que las
+   que ya había (0,59 vs 0,50) — no es ruido. Costo: +14% de tiempo de proceso.
 4. **Cluster de banco/árbitro — diagnosticado, se difiere a F3/F4 a propósito.**
    Confirmado con los datos: 181 filas `role=player` (ya con equipo y confianza hasta
    0,89) concentradas en x∈[20,35] y∈[0,10] — casi seguro suplentes/cuerpo técnico
