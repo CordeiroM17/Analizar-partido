@@ -236,6 +236,17 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
     print(f"Cargando modelos (backend={config.VIDEO_MODEL_BACKEND}, {device})...")
     player_model = _DetectionModel("player_detection", device)
     pitch_model  = _DetectionModel("pitch_detection", device)
+    # Modelo dedicado de pelota (F2): el modelo general (player_detection) falla
+    # seguido con la pelota (motion blur, objeto chico) -- probado en un frame real
+    # donde el general no encontraba nada y el dedicado sí. Se usa solo como
+    # respaldo cuando el general no la encuentra, para no duplicar costo en los
+    # frames donde ya funciona (~54% medido en F1).
+    ball_model = None
+    if config.VIDEO_MODEL_BACKEND == "roboflow" and "ball_detection" in config.ROBOFLOW_MODELS:
+        try:
+            ball_model = _DetectionModel("ball_detection", device)
+        except Exception as e:
+            print(f"  (modelo dedicado de pelota no disponible, sigo sin él: {e})")
 
     print("Ajustando clasificador de equipos...")
     team_classifier = _fit_team_classifier(video_path, player_model, device)
@@ -277,6 +288,13 @@ def process_video(match_key, season=None, sample_fps=None, start_seconds=None,
         people = det[det.class_id != BALL_ID].with_nms(threshold=0.5)
         people = tracker.update_with_detections(people)
         ball = det[det.class_id == BALL_ID]
+        if len(ball) == 0 and ball_model is not None:
+            # Respaldo: el modelo dedicado corre más lento pero encuentra la
+            # pelota en casos que el general pierde (motion blur, tamaño chico).
+            ball_fallback = ball_model.infer(frame, conf=0.25)
+            if len(ball_fallback) > 0:
+                best = int(np.argmax(ball_fallback.confidence))
+                ball = ball_fallback[best:best + 1]
 
         # 2. Homografía del frame (keypoints de la cancha), robusta a outliers
         # (F2): RANSAC en vez del mínimos-cuadrados simple de ViewTransformer,
