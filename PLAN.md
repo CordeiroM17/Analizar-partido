@@ -149,8 +149,15 @@ Cada fase termina en un entregable verificable. Sin deadline: se avanza de a una
    catastróficamente fuera de rango detectado en F1.
 3. **Modelo dedicado de pelota** + interpolación de trayectoria. F1 midió 49,8% de
    cobertura de pelota — hay margen concreto de mejora.
-4. **Filtrar el cluster de banco/árbitro** fuera del rectángulo de juego (regla
-   geométrica simple, visto en el mapa de cobertura de F1).
+4. **Cluster de banco/árbitro — diagnosticado, se difiere a F3/F4 a propósito.**
+   Confirmado con los datos: 181 filas `role=player` (ya con equipo y confianza hasta
+   0,89) concentradas en x∈[20,35] y∈[0,10] — casi seguro suplentes/cuerpo técnico
+   parados en la línea, detectados y coloreados como jugadores en juego (~1% de las
+   filas de jugador). **No se resuelve con un corte geométrico fijo**: jugadores reales
+   pisan cerca de la línea lateral legítimamente durante el juego; lo que distingue al
+   banco es que **no se mueve**. Filtrar por varianza de movimiento del track pertenece
+   a la capa de eventos (F3/F4), no al tracking crudo — ahí se hace bien y de una vez
+   junto con el resto de la limpieza por comportamiento del track.
 5. **Fine-tuning** (300–800 frames de partidos históricos del Juan Alberto García —
    DeporTV 2021–2025, TyC 2022–2025 en YouTube, descargables con `yt-dlp`) — evaluar
    recién después de 1-3, no etiquetar a ciegas.
